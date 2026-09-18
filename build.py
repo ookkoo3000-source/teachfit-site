@@ -10,7 +10,7 @@ NAV_ITEMS = [
     ("services.html", "화상과외 소개"),
     ("process.html", "매칭 방식"),
     ("teachers.html", "선생님"),
-    ("regions.html", "군산 학교안내"),
+    ("regions.html", "군산 학교검색"),
     ("blog.html", "블로그"),
 ]
 
@@ -72,7 +72,7 @@ def footer(path_prefix):
     <div>
       <a class="logo" href="{p}index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏</a>
       <div class="fnav">
-        <a href="{p}services.html">화상과외 소개</a><a href="{p}process.html">매칭 방식</a><a href="{p}teachers.html">선생님</a><a href="{p}regions.html">군산 학교안내</a><a href="{p}blog.html">블로그</a>
+        <a href="{p}services.html">화상과외 소개</a><a href="{p}process.html">매칭 방식</a><a href="{p}teachers.html">선생님</a><a href="{p}regions.html">군산 학교검색</a><a href="{p}blog.html">블로그</a>
       </div>
       <p class="disclaimer">전화 010-3131-5305 · 운영시간 09:00–21:00 · 상담 및 매칭 신청은 무료이며, 실제 수업 진행 여부와 비용은 상담 후 안내해 드립니다. 사업자 정보는 확정 후 별도 고지 예정입니다.</p>
     </div>
@@ -83,8 +83,10 @@ def footer(path_prefix):
 </html>
 '''.format(p=path_prefix)
 
-def page(filename, title, desc, active, body, path_prefix="", canonical="", noindex=False):
+def page(filename, title, desc, active, body, path_prefix="", canonical="", noindex=False, extra_js=""):
     full = head(title, desc, path_prefix, canonical, noindex) + topbar() + header(path_prefix, active) + '<main class="wrap">\n' + body + '\n</main>\n' + footer(path_prefix)
+    if extra_js:
+        full = full.replace('</body>', extra_js + '\n</body>')
     out_path = os.path.join(ROOT, filename)
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(full)
@@ -93,25 +95,101 @@ def page(filename, title, desc, active, body, path_prefix="", canonical="", noin
 BASE_URL = "https://teachfit.example"  # placeholder domain, update once real domain is registered
 
 # ---------------------------------------------------------------
-# Single-region focus: 전북 군산시 (video tutoring only)
-# seeded 2026-09-18, real school names
+# Revised Romanization (approximate, URL-slug purposes only)
 # ---------------------------------------------------------------
-REGION = {
-    "key": "gunsan",
-    "name": "전북 군산시",
-    "blurb": "군산 전 지역 학생을 대상으로 화상과외만 전문으로 매칭합니다.",
-    "schools": [
-        {"name": "군산제일중학교", "slug": "gunsanjeil-gunsan", "note": "군산 지역 진학 실적이 잘 알려진 사립 중학교"},
-        {"name": "군산중앙중학교", "slug": "gunsanjungang-gunsan", "note": "군산 중심가 학생들이 많이 다니는 공립 중학교"},
-        {"name": "군산동산중학교", "slug": "gunsandongsan-gunsan", "note": "화상과외 문의가 꾸준히 늘고 있는 중학교"},
-        {"name": "군산남중학교", "slug": "gunsannam-gunsan", "note": "기초 개념 보완 수요가 많은 중학교"},
-        {"name": "군산월명중학교", "slug": "gunsanwolmyeong-gunsan", "note": "내신 등급 관리 문의가 많은 중학교"},
-        {"name": "군산중학교", "slug": "gunsan-gunsan", "note": "군산에서 오랜 역사를 가진 공립 중학교"},
-    ],
-}
-REGIONS = [REGION]  # kept as a list so the template loop can extend to more regions later
+CHO = ['g','kk','n','d','tt','r','m','b','pp','s','ss','','j','jj','ch','k','t','p','h']
+JUNG = ['a','ae','ya','yae','eo','e','yeo','ye','o','wa','wae','oe','yo','u','wo','we','wi','yu','eu','ui','i']
+JONG = ['','g','kk','gs','n','nj','nh','d','l','lg','lm','lb','ls','lt','lp','lh','m','b','bs','s','ss','ng','j','ch','k','t','p','h']
 
-SUBJECT_CHOICES = ["국어", "영어", "수학", "사회", "과학"]
+def romanize(text):
+    out = []
+    for ch in text:
+        code = ord(ch) - 0xAC00
+        if 0 <= code < 11172:
+            cho = code // 588
+            jung = (code % 588) // 28
+            jong = code % 28
+            out.append(CHO[cho] + JUNG[jung] + JONG[jong])
+        elif ch.isalnum():
+            out.append(ch.lower())
+    return ''.join(out)
+
+LEVEL_CODE = {'초등학교': 'es', '중학교': 'ms', '고등학교': 'hs'}
+
+def make_slug(name, level, used):
+    base = name.replace('초등학교', '').replace('중학교', '').replace('고등학교', '')
+    slug = '{}-{}-gunsan'.format(romanize(base), LEVEL_CODE[level])
+    if slug in used:
+        n = 2
+        while '{}-{}'.format(slug, n) in used:
+            n += 1
+        slug = '{}-{}'.format(slug, n)
+    used.add(slug)
+    return slug
+
+# ---------------------------------------------------------------
+# 전북 군산시 초·중·고 전체 학교 목록
+# 출처: 전북특별자치도군산교육지원청(office.jbedu.kr) 학교안내, 2026-09-18 확인
+# ---------------------------------------------------------------
+ELEMENTARY_NAMES = [
+    "개정초등학교","군산경포초등학교","군산구암초등학교","군산금광초등학교","군산나운초등학교",
+    "군산남초등학교","군산내흥초등학교","군산동초등학교","군산문화초등학교","군산미성초등학교",
+    "군산미장초등학교","군산산북초등학교","군산서초등학교","군산서해초등학교","소룡초등학교",
+    "군산수송초등학교","군산신풍초등학교","군산신흥초등학교","군산아리울초등학교","군산용문초등학교",
+    "군산월명초등학교","군산중앙초등학교","군산지곡초등학교","군산진포초등학교","군산초등학교",
+    "군산푸른솔초등학교","군산풍문초등학교","해성초등학교","군산흥남초등학교","나포초등학교",
+    "당북초등학교","대야남초등학교","대야초등학교","무녀도초등학교","문창초등학교",
+    "미룡초등학교","발산초등학교","새만금초등학교","서수초등학교","성산초등학교",
+    "술산초등학교","오봉초등학교","옥구초등학교","옥봉초등학교","옥산초등학교",
+    "임피초등학교","전주교육대학교군산부설초등학교","창오초등학교","회현초등학교","군산금빛초등학교",
+]
+MIDDLE_NAMES = [
+    "군산남중학교","군산동산중학교","군산산북중학교","군산서흥중학교","군산월명중학교",
+    "군산자양중학교","군산중학교","군산진포중학교","군산금강중학교","나포중학교",
+    "군산동원중학교","옥구중학교","임피중학교","회현중학교",
+    "군산대성중학교","군산영광중학교","군산제일중학교","군산중앙중학교",
+]
+HIGH_NAMES = [
+    "군산고등학교","군산기계공업고등학교","한들고등학교","군산동고등학교","군산상일고등학교",
+    "군산여자고등학교","군산여자상업고등학교","전북외국어고등학교","군산영광여자고등학교",
+    "군산제일고등학교","군산중앙고등학교","군산중앙여자고등학교",
+]
+
+_used_slugs = set()
+def build_school_list(names, level):
+    out = []
+    for name in names:
+        out.append({"name": name, "level": level, "slug": make_slug(name, level, _used_slugs)})
+    return out
+
+SCHOOLS = (
+    build_school_list(ELEMENTARY_NAMES, "초등학교")
+    + build_school_list(MIDDLE_NAMES, "중학교")
+    + build_school_list(HIGH_NAMES, "고등학교")
+)
+
+REGION_NAME = "전북 군산시"
+
+LEVEL_INFO = {
+    "초등학교": {
+        "stage": "초등학생",
+        "focus": "읽기·쓰기·연산 기초와 학습 습관 형성",
+        "subjects": ["국어", "영어", "수학"],
+        "worry": "아직 공부 습관이 안 잡혀서 무엇부터 시작해야 할지 모르겠다는 점",
+    },
+    "중학교": {
+        "stage": "중학생",
+        "focus": "내신 시험 범위에 맞춘 단원별 학습과 기초 개념 보완",
+        "subjects": ["국어", "영어", "수학", "사회", "과학"],
+        "worry": "시험 범위는 아는데 어디서부터 정리해야 할지 막막하다는 점",
+    },
+    "고등학교": {
+        "stage": "고등학생",
+        "focus": "내신 등급 관리와 수능 대비 학습",
+        "subjects": ["국어", "영어", "수학", "사회", "과학"],
+        "worry": "내신과 수능을 동시에 챙기기엔 시간이 부족하다는 점",
+    },
+}
 
 # ---------------------------------------------------------------
 # index.html
@@ -147,7 +225,7 @@ index_body = '''
 
 <div class="stats">
   <div class="wrap">
-    <div><div class="num mono">군산</div><div class="lbl">단일 지역 집중 서비스</div></div>
+    <div><div class="num mono">80개교</div><div class="lbl">군산 전체 초·중·고 매칭 가능</div></div>
     <div><div class="num mono">4단계</div><div class="lbl">선생님 검증 절차</div></div>
     <div><div class="num mono">24h</div><div class="lbl">이내 매칭 안내</div></div>
     <div><div class="num mono">1회</div><div class="lbl">무료 재매칭 지원</div></div>
@@ -209,12 +287,12 @@ index_body = '''
 
 <section id="regions">
   <div class="head-row">
-    <div><span class="eyebrow">군산 학교안내</span><h2>우리 학교 화상과외도 가능해요</h2></div>
-    <p><a href="regions.html">군산 학교별 안내 전체 보기 →</a></p>
+    <div><span class="eyebrow">군산 학교검색</span><h2>초등학교부터 고등학교까지, 군산 학교 80곳 모두</h2></div>
   </div>
-  <ul class="school-list" style="max-width:520px;">
-    {school_links}
-  </ul>
+  <div class="region-card" style="max-width:640px;">
+    <div class="count">초등학교 50곳 · 중학교 18곳 · 고등학교 12곳 — 어느 학교든 화상과외 매칭이 가능해요.</div>
+    <div style="margin-top:16px;"><a class="cta-btn" href="regions.html">우리 학교 검색해보기 →</a></div>
+  </div>
 </section>
 
 <section id="apply">
@@ -233,9 +311,6 @@ index_body = '''
   </div>
 </section>
 '''
-
-def school_link_li(s, prefix="schools/"):
-    return '<li><a href="{prefix}{slug}.html">{name} <span class="arrow">→</span></a></li>'.format(prefix=prefix, slug=s["slug"], name=s["name"])
 
 APPLY_FORM = '''<form class="form-card" action="https://formsubmit.co/ookkoo12@naver.com" method="POST">
       <input type="hidden" name="_subject" value="[티치핏] 새 상담 신청">
@@ -258,7 +333,7 @@ APPLY_FORM = '''<form class="form-card" action="https://formsubmit.co/ookkoo12@n
     </form>'''
 
 # ---------------------------------------------------------------
-# services.html / process.html / teachers.html
+# services.html / process.html / teachers.html  (unchanged from previous rebuild)
 # ---------------------------------------------------------------
 services_body = '''
 <section class="page-hero">
@@ -350,28 +425,74 @@ teachers_body = '''
 '''
 
 # ---------------------------------------------------------------
-# regions.html -> 군산 학교안내 (single region hub)
+# regions.html -> 군산 학교검색 (search UI over all 80 schools)
 # ---------------------------------------------------------------
-regions_body = '''
+import json as _json
+
+def regions_body_and_js():
+    data = [{"n": s["name"], "s": s["slug"], "l": s["level"]} for s in SCHOOLS]
+    groups = []
+    for level in ["초등학교", "중학교", "고등학교"]:
+        items = [s for s in SCHOOLS if s["level"] == level]
+        lis = "\n        ".join(
+            '<li data-name="{name}" data-level="{level}"><a href="schools/{slug}.html">{name} <span class="arrow">→</span></a></li>'.format(
+                name=s["name"], level=s["level"], slug=s["slug"]
+            )
+            for s in items
+        )
+        groups.append('''<div class="school-group" data-group="{level}">
+      <h3 style="font-size:15px;margin:22px 0 10px;">{level} <span class="mono" style="font-size:12px;color:var(--muted-2);font-weight:400;">({count}곳)</span></h3>
+      <ul class="school-list" id="list-{level}">
+        {lis}
+      </ul>
+    </div>'''.format(level=level, count=len(items), lis=lis))
+
+    body = '''
 <section class="page-hero">
-  <span class="eyebrow">군산 학교안내</span>
-  <h1>같은 군산이라도 학교마다 다릅니다</h1>
-  <p>티치핏은 전국이 아니라 군산 한 곳에 집중해요. 같은 학년이라도 학교마다 내신 시험 범위와 난이도, 분위기가 다르기 때문에 학교 단위로 상담을 진행합니다. 군산 학교 목록을 계속 추가하고 있어요.</p>
+  <span class="eyebrow">군산 학교검색</span>
+  <h1>우리 학교, 검색해서 바로 확인하세요</h1>
+  <p>초등학교 50곳, 중학교 18곳, 고등학교 12곳까지 군산의 모든 학교를 안내하고 있어요. 학교 이름을 입력하면 바로 찾아드려요.</p>
 </section>
 <section>
-  <div class="region-card" style="max-width:640px;">
-    <h3>{region_name}</h3>
-    <div class="count">{blurb}</div>
-    <ul class="school-list">
-      {school_links}
-    </ul>
+  <div class="field" style="max-width:480px;margin-bottom:8px;">
+    <label for="school-search">학교 이름으로 검색</label>
+    <input id="school-search" type="text" placeholder="예: 군산제일, 수송, 월명중" autocomplete="off">
+  </div>
+  <p id="search-empty" class="sample-note" hidden>검색 결과가 없어요. 학교 이름을 다시 확인해 주세요.</p>
+  <div id="school-groups">
+    {groups}
   </div>
 </section>
-'''.format(
-    region_name=REGION["name"],
-    blurb=REGION["blurb"],
-    school_links="\n      ".join(school_link_li(s, prefix="schools/") for s in REGION["schools"]),
-)
+'''.format(groups="\n    ".join(groups))
+
+    js = '''<script>
+(function(){{
+  var input = document.getElementById('school-search');
+  var empty = document.getElementById('search-empty');
+  var groups = document.querySelectorAll('.school-group');
+  if(!input) return;
+  input.addEventListener('input', function(){{
+    var q = input.value.trim().toLowerCase();
+    var anyVisible = false;
+    groups.forEach(function(g){{
+      var items = g.querySelectorAll('li');
+      var groupHasMatch = false;
+      items.forEach(function(li){{
+        var name = (li.getAttribute('data-name') || '').toLowerCase();
+        var match = q === '' || name.indexOf(q) !== -1;
+        li.hidden = !match;
+        if(match) groupHasMatch = true;
+      }});
+      g.hidden = !groupHasMatch;
+      if(groupHasMatch) anyVisible = true;
+    }});
+    empty.hidden = anyVisible;
+  }});
+}})();
+</script>'''
+    return body, js
+
+regions_body, regions_js = regions_body_and_js()
 
 # ---------------------------------------------------------------
 # blog.html (index only, cards to be added over time)
@@ -416,36 +537,43 @@ apply_body = '''
 '''.format(apply_form=APPLY_FORM)
 
 # ---------------------------------------------------------------
-# school page template
+# school page template (level-aware, templated copy + real school name)
 # ---------------------------------------------------------------
-def school_body(region, school):
-    other_schools = [s for s in region["schools"] if s["slug"] != school["slug"]]
-    other_links = "\n        ".join(school_link_li(s, prefix="") for s in other_schools)
-    subjects_row = "".join('<span>{}</span>'.format(s) for s in SUBJECT_CHOICES)
+def school_body(school):
+    level = school["level"]
+    info = LEVEL_INFO[level]
+    same_level_others = [s for s in SCHOOLS if s["level"] == level and s["slug"] != school["slug"]]
+    nearby = same_level_others[:5]
+    other_links = "\n        ".join(
+        '<li><a href="{slug}.html">{name} <span class="arrow">→</span></a></li>'.format(slug=s["slug"], name=s["name"])
+        for s in nearby
+    )
+    subjects_row = "".join('<span>{}</span>'.format(s) for s in info["subjects"])
     return '''
-<nav class="breadcrumb"><a href="../regions.html">군산 학교안내</a> / {region_name}</nav>
+<nav class="breadcrumb"><a href="../regions.html">군산 학교검색</a> / {region_name} · {level}</nav>
 <section class="page-hero">
-  <span class="eyebrow">{region_name} · 학교별 화상과외</span>
+  <span class="eyebrow">{region_name} {level} · 화상과외</span>
   <h1>{school_name} 화상과외, 학교 특성부터 확인하고 시작하세요</h1>
-  <p>{note}예요. 티치핏은 이 학교 학생들의 내신 범위와 학습 분위기를 고려해 화상 선생님을 매칭해 드려요.</p>
+  <p>{school_name} {stage} 학생을 위해, 학교 사정을 아는 선생님과 실시간 화상으로 연결해 드려요.</p>
 </section>
 <section>
   <div class="prose">
-    <h2>{school_name} 학생들에게 자주 나오는 상담 포인트</h2>
-    <p>{school_name} 학생과 학부모님이 상담에서 가장 많이 묻는 내용은 <strong>내신 시험 범위에 맞춘 단원별 학습</strong>과 <strong>기초 개념 보완</strong>이에요. 학교별로 시험 출제 방식과 난이도 체감이 다르기 때문에, 같은 학년이라도 접근 방식을 다르게 가져가야 해요.</p>
-    <p>티치핏에서는 상담 시 최근 시험 성적과 취약 단원을 먼저 확인한 뒤, {school_name} 학생을 지도해본 경험이 있거나 군산 지역 사정을 아는 선생님을 화상으로 연결해 드립니다.</p>
+    <h2>{school_name} {stage}이 상담에서 자주 이야기하는 고민</h2>
+    <p>{school_name} 학생과 학부모님이 상담에서 가장 많이 말씀하시는 건 <strong>{focus}</strong>이에요. 특히 <strong>{worry}</strong>을 어려워하는 경우가 많아요. 학교마다 진도와 분위기가 다르기 때문에, 같은 학년이라도 접근 방식을 다르게 가져가야 해요.</p>
+    <p>티치핏에서는 상담 시 최근 학습 상태와 취약 부분을 먼저 확인한 뒤, {school_name} 같은 {level} 학생을 지도해본 경험이 있거나 군산 지역 사정을 아는 선생님을 화상으로 연결해 드립니다.</p>
     <h3>왜 화상과외가 {school_name} 학생에게 잘 맞을까요</h3>
-    <p>군산 안에서 원하는 과목·시간대·스타일의 선생님을 구하기 어려운 경우가 많아요. 화상 수업이면 지역 제약 없이 훨씬 넓은 범위에서 맞는 선생님을 찾을 수 있고, 이동 시간이 없어 저녁 시간대도 유연하게 잡을 수 있어요. 수업은 녹화되어 시험 전 복습에도 활용할 수 있습니다.</p>
+    <p>군산 안에서 원하는 과목·시간대·스타일의 선생님을 구하기 어려운 경우가 많아요. 화상 수업이면 지역 제약 없이 훨씬 넓은 범위에서 맞는 선생님을 찾을 수 있고, 이동 시간이 없어 저녁 시간대도 유연하게 잡을 수 있어요. 수업은 녹화되어 복습에도 활용할 수 있습니다.</p>
     <h3>과목별 과외 안내</h3>
     <p>{school_name} 학생 대상으로는 아래 과목의 화상과외를 안내하고 있어요.</p>
     <div class="subjects" style="margin-bottom:6px;">{subjects}</div>
   </div>
 </section>
 <section>
-  <div class="head-row"><div><span class="eyebrow">군산 다른 학교</span><h2>다른 학교도 함께 보세요</h2></div></div>
+  <div class="head-row"><div><span class="eyebrow">같은 급 다른 학교</span><h2>{level} 학생이 많이 찾는 학교</h2></div></div>
   <ul class="school-list" style="max-width:480px;">
     {other_links}
   </ul>
+  <p style="margin-top:14px;font-size:13.5px;"><a href="../regions.html">군산 학교 전체 검색하기 →</a></p>
 </section>
 <section>
   <div class="apply-wrap" style="grid-template-columns:1fr;">
@@ -457,16 +585,16 @@ def school_body(region, school):
     </div>
   </div>
 </section>
-'''.format(region_name=region["name"], school_name=school["name"], note=school["note"], subjects=subjects_row, other_links=other_links)
+'''.format(
+        region_name=REGION_NAME, school_name=school["name"], level=level, stage=info["stage"],
+        focus=info["focus"], worry=info["worry"], subjects=subjects_row, other_links=other_links,
+    )
 
 # ---------------------------------------------------------------
 # generate all pages
 # ---------------------------------------------------------------
 page("index.html", "티치핏 | 군산 화상과외 매칭", "군산 학생만을 위한 1:1 화상과외 매칭 서비스, 티치핏.", "index.html",
-     index_body.format(
-         school_links="\n    ".join(school_link_li(s, prefix="schools/") for s in REGION["schools"]),
-         apply_form=APPLY_FORM,
-     ),
+     index_body.format(apply_form=APPLY_FORM),
      path_prefix="", canonical=BASE_URL + "/index.html")
 
 page("services.html", "화상과외 소개 | 티치핏", "군산 학생을 위한 실시간 화상과외, 녹화 복습, 지역 맞춤 매칭을 소개합니다.", "services.html",
@@ -478,8 +606,8 @@ page("process.html", "매칭 방식 | 티치핏", "학습 진단부터 리포트
 page("teachers.html", "선생님 소개 | 티치핏", "학력·신원·경력 검증을 거친 티치핏 화상과외 선생님 매칭 기준을 소개합니다.", "teachers.html",
      teachers_body, path_prefix="", canonical=BASE_URL + "/teachers.html")
 
-page("regions.html", "군산 학교안내 | 티치핏", "군산 학교별 내신 특성에 맞춘 티치핏의 화상과외 학교별 안내입니다.", "regions.html",
-     regions_body, path_prefix="", canonical=BASE_URL + "/regions.html")
+page("regions.html", "군산 학교검색 | 티치핏", "군산 초·중·고 80개 학교를 검색해서 바로 찾는 티치핏 화상과외 학교 안내입니다.", "regions.html",
+     regions_body, path_prefix="", canonical=BASE_URL + "/regions.html", extra_js=regions_js)
 
 page("blog.html", "블로그 | 티치핏", "군산 학교별 내신 대비, 과목별 화상과외 학습 전략을 소개하는 티치핏 블로그입니다.", "blog.html",
      blog_body, path_prefix="", canonical=BASE_URL + "/blog.html")
@@ -498,13 +626,13 @@ thanks_body = '''
 page("thanks.html", "신청 완료 | 티치핏", "티치핏 상담 신청이 정상적으로 접수되었습니다.", "",
      thanks_body, path_prefix="", canonical=BASE_URL + "/thanks.html", noindex=True)
 
-for school in REGION["schools"]:
+for school in SCHOOLS:
     page(
         "schools/{}.html".format(school["slug"]),
         "{} 화상과외 | 티치핏".format(school["name"]),
         "{} 학생을 위한 1:1 화상과외 매칭, 티치핏에서 상담해보세요.".format(school["name"]),
         "regions.html",
-        school_body(REGION, school),
+        school_body(school),
         path_prefix="../",
         canonical=BASE_URL + "/schools/{}.html".format(school["slug"]),
     )
@@ -513,7 +641,7 @@ for school in REGION["schools"]:
 # sitemap.xml (public pages only)
 # ---------------------------------------------------------------
 sitemap_urls = ["index.html", "services.html", "process.html", "teachers.html", "regions.html", "blog.html"]
-for school in REGION["schools"]:
+for school in SCHOOLS:
     sitemap_urls.append("schools/{}.html".format(school["slug"]))
 
 sitemap_items = "\n".join(
@@ -524,4 +652,4 @@ with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
     f.write(sitemap_xml)
 print("wrote sitemap.xml")
 
-print("DONE")
+print("DONE - {} schools".format(len(SCHOOLS)))
