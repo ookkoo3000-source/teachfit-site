@@ -57,12 +57,14 @@ def header(path_prefix, active):
       <button class="menu-btn" aria-label="메뉴">☰</button>
     </div>
   </div>
-  <div class="wrap mobile-nav">
-    {mlinks}
-    <a href="{p}apply.html">무료 상담 신청</a>
+  <div class="mobile-nav-wrap">
+    <nav class="mobile-nav">
+      {mlinks}
+      <a href="{p}apply.html">무료 상담 신청</a>
+    </nav>
   </div>
 </header>
-'''.format(p=path_prefix, links='\n        '.join(links), mlinks='\n    '.join(mlinks))
+'''.format(p=path_prefix, links='\n        '.join(links), mlinks='\n      '.join(mlinks))
 
 def footer(path_prefix):
     return '''<footer>
