@@ -35,7 +35,7 @@ def head(title, desc, path_prefix, canonical, noindex=False):
 def topbar():
     return '''<div class="topbar">
   <div class="wrap">
-    <span>군산 학생을 위한 화상과외 매칭, 지역 맞춤으로 도와드려요</span>
+    <span>지금 신청하면 30분 무료체험수업부터 받아보실 수 있어요</span>
     <a class="phone" href="tel:01031315305">\U0001F4DE 010-3131-5305 (09:00–21:00)</a>
   </div>
 </div>
@@ -204,13 +204,13 @@ index_body = '''
       <h1>군산 학생만을 위한<br><em>화상과외</em> 매칭</h1>
       <p class="lead">방문도, 전국 대상도 아닙니다. 군산 학생과 학부모님의 학교·내신 사정을 잘 아는 선생님을, 실시간 화상 수업으로만 연결해 드려요.</p>
       <div class="hero-ctas">
-        <a class="cta-btn" href="apply.html">내 아이 학습 진단받기</a>
+        <a class="cta-btn" href="apply.html">30분 무료체험 신청하기</a>
         <a class="cta-ghost" href="process.html">매칭 방식 보기</a>
       </div>
       <div class="trust-row">
         <span><i class="dot"></i>군산 학교 사정에 밝은 선생님</span>
-        <span><i class="dot"></i>첫 수업 후 결제</span>
-        <span><i class="dot"></i>불만족 시 무료 재매칭</span>
+        <span><i class="dot"></i>30분 무료체험수업 먼저 받아보기</span>
+        <span><i class="dot"></i>체험 후 결정, 부담 없어요</span>
       </div>
     </div>
     <div>
@@ -229,8 +229,8 @@ index_body = '''
   <div class="wrap">
     <div><div class="num mono">80개교</div><div class="lbl">군산 전체 초·중·고 매칭 가능</div></div>
     <div><div class="num mono">4단계</div><div class="lbl">선생님 검증 절차</div></div>
+    <div><div class="num mono">30분</div><div class="lbl">무료체험수업 제공</div></div>
     <div><div class="num mono">24h</div><div class="lbl">이내 매칭 안내</div></div>
-    <div><div class="num mono">1회</div><div class="lbl">무료 재매칭 지원</div></div>
   </div>
 </div>
 
@@ -269,7 +269,7 @@ index_body = '''
   <div class="process-track">
     <div class="p-step"><div class="n">01</div><h4>학습 진단</h4><p>현재 수준과 약점, 학습 성향을 먼저 파악해요.</p></div>
     <div class="p-step"><div class="n">02</div><h4>맞춤 설계</h4><p>목표와 생활 패턴에 맞춘 1:1 커리큘럼을 구성해요.</p></div>
-    <div class="p-step"><div class="n">03</div><h4>실시간 화상 수업</h4><p>정해진 시간에 화면으로 만나 밀착 지도가 시작돼요.</p></div>
+    <div class="p-step"><div class="n">03</div><h4>30분 무료체험수업</h4><p>선생님과 화면으로 만나 30분 동안 무료로 먼저 받아보고 궁합을 확인해요.</p></div>
     <div class="p-step"><div class="n">04</div><h4>숙제·오답 관리</h4><p>배운 내용을 확실히 내 것으로 만들어요.</p></div>
     <div class="p-step"><div class="n">05</div><h4>리포트·피드백</h4><p>진행 상황을 학부모님께 정기 공유해요.</p></div>
   </div>
@@ -280,10 +280,9 @@ index_body = '''
   <div class="trust-grid">
     <div class="trust-item"><div class="ico">\U0001F6E1️</div><h4>철저한 검증</h4><p>학력·신원·경력을 확인한 선생님만 매칭에 참여해요.</p></div>
     <div class="trust-item"><div class="ico">\U0001F9ED</div><h4>궁합 기반 매칭</h4><p>성적만이 아니라 성향·목표까지 분석해 연결해요.</p></div>
-    <div class="trust-item"><div class="ico">\U0001F4B3</div><h4>첫 수업 후 결제</h4><p>수업을 직접 겪어본 뒤 결정하는 안심 구조예요.</p></div>
+    <div class="trust-item"><div class="ico">\U0001F3AC</div><h4>30분 무료체험수업</h4><p>정식 신청 전에 30분 동안 선생님과 무료로 먼저 만나보고 결정할 수 있어요.</p></div>
     <div class="trust-item"><div class="ico">\U0001F4CB</div><h4>꼼꼼한 학습 관리</h4><p>수업 리포트와 진도 관리로 흐름을 놓치지 않아요.</p></div>
-    <div class="trust-item"><div class="ico">\U0001F501</div><h4>무료 재매칭</h4><p>선생님이 맞지 않으면 추가 비용 없이 다시 연결해요.</p></div>
-    <div class="trust-item"><div class="ico">⏱️</div><h4>빠른 응대</h4><p>신청 후 24시간 이내 선생님을 안내해 드려요.</p></div>
+    <div class="trust-item"><div class="ico">⏱️</div><h4>빠른 응대</h4><p>신청 후 24시간 이내 체험 수업을 안내해 드려요.</p></div>
   </div>
 </section>
 
@@ -306,7 +305,7 @@ index_body = '''
       <ul class="apply-perks">
         <li>상담·매칭 신청 전 과정 무료</li>
         <li>검증된 선생님만 매칭에 참여</li>
-        <li>첫 수업 후 결제, 불만족 시 무료 재매칭</li>
+        <li>30분 무료체험수업 먼저 받아보고 결정</li>
       </ul>
     </div>
     {apply_form}
@@ -386,16 +385,16 @@ process_body = '''
   <div class="process-track">
     <div class="p-step"><div class="n">01</div><h4>학습 진단</h4><p>현재 수준·약점을 정확히 파악합니다. 최근 시험 결과와 학습 습관을 함께 확인해요.</p></div>
     <div class="p-step"><div class="n">02</div><h4>맞춤 설계</h4><p>목표에 맞춘 1:1 커리큘럼을 만듭니다. 단기 내신 대비인지 장기 실력 향상인지에 따라 설계가 달라져요.</p></div>
-    <div class="p-step"><div class="n">03</div><h4>실시간 화상 수업</h4><p>정해진 시간에 화면으로 만나 밀착 지도합니다. 수업마다 이해도를 확인하며 속도를 조절해요.</p></div>
-    <div class="p-step"><div class="n">04</div><h4>숙제·오답 관리</h4><p>배운 내용을 확실히 내 것으로 만듭니다. 오답 노트와 복습 계획을 함께 챙겨요.</p></div>
+    <div class="p-step"><div class="n">03</div><h4>30분 무료체험수업</h4><p>정해진 시간에 화면으로 만나 30분 동안 무료로 먼저 수업을 받아봐요. 이 시간으로 선생님과의 궁합을 확인해요.</p></div>
+    <div class="p-step"><div class="n">04</div><h4>숙제·오답 관리</h4><p>정식 수업을 시작하면 배운 내용을 확실히 내 것으로 만듭니다. 오답 노트와 복습 계획을 함께 챙겨요.</p></div>
     <div class="p-step"><div class="n">05</div><h4>리포트·피드백</h4><p>진행 상황을 학부모님께 정기적으로 공유합니다. 필요하면 커리큘럼을 다시 조정해요.</p></div>
   </div>
 </section>
 <section>
-  <div class="head-row"><div><span class="eyebrow">한 가지 더</span><h2>선생님이 안 맞으면, 다시 맞춰드려요</h2></div></div>
+  <div class="head-row"><div><span class="eyebrow">한 가지 더</span><h2>결제는 체험 수업 다음에 결정하세요</h2></div></div>
   <div class="trust-grid" style="grid-template-columns:repeat(2,1fr);">
-    <div class="trust-item"><div class="ico">\U0001F504</div><h4>무료 재매칭</h4><p>수업을 진행해봤는데 아이와 맞지 않는다면, 추가 비용 없이 다른 선생님으로 다시 연결해 드려요.</p></div>
-    <div class="trust-item"><div class="ico">\U0001F4B3</div><h4>첫 수업 후 결제</h4><p>첫 수업을 먼저 경험해보고 결제 여부를 결정할 수 있어 부담이 적어요.</p></div>
+    <div class="trust-item"><div class="ico">\U0001F3AC</div><h4>30분 무료체험수업</h4><p>정식 신청 전에 선생님과 30분 동안 무료로 먼저 만나볼 수 있어요. 궁합이 어떤지 직접 확인해보세요.</p></div>
+    <div class="trust-item"><div class="ico">\U0001F4AC</div><h4>체험 후 자유롭게 결정</h4><p>체험 수업이 마음에 들 때만 정식으로 시작하시면 돼요. 부담 갖지 않으셔도 됩니다.</p></div>
   </div>
 </section>
 '''
@@ -527,9 +526,9 @@ blog_body = '''
 # ---------------------------------------------------------------
 apply_body = '''
 <section class="page-hero">
-  <span class="eyebrow">무료 상담</span>
-  <h1>학습 궁합부터 확인하는 화상과외 상담 신청</h1>
-  <p>이름과 연락처만 남겨주시면 24시간 이내에 담당자가 직접 연락드려요. 상담과 매칭 신청은 모두 무료입니다.</p>
+  <span class="eyebrow">30분 무료체험</span>
+  <h1>학습 궁합부터 확인하는 화상과외 체험 신청</h1>
+  <p>이름과 연락처만 남겨주시면 24시간 이내에 담당자가 직접 연락드려요. 상담과 30분 체험 수업은 모두 무료입니다.</p>
 </section>
 <section>
   <div class="apply-wrap">
@@ -538,8 +537,8 @@ apply_body = '''
       <h2>이렇게 진행됩니다</h2>
       <ul class="apply-perks">
         <li>신청 후 24시간 이내 담당자 연락</li>
-        <li>학습 진단 → 선생님 추천 → 첫 화상 수업</li>
-        <li>첫 수업 후 결제, 불만족 시 무료 재매칭</li>
+        <li>학습 진단 → 선생님 추천 → 30분 무료체험수업</li>
+        <li>체험 수업이 마음에 들 때만 정식으로 결정</li>
       </ul>
     </div>
     {apply_form}
