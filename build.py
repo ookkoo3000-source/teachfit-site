@@ -14,6 +14,8 @@ NAV_ITEMS = [
     ("blog.html", "블로그"),
 ]
 
+BRAND = "티치핏군산"
+
 def head(title, desc, path_prefix, canonical, noindex=False):
     robots_tag = '<meta name="robots" content="noindex,nofollow">\n' if noindex else ''
     return '''<!DOCTYPE html>
@@ -48,7 +50,7 @@ def header(path_prefix, active):
         mlinks.append('<a href="{p}{href}"{cur}>{label}</a>'.format(p=path_prefix, href=href, cur=cur, label=label))
     return '''<header class="site">
   <div class="wrap">
-    <a class="logo" href="{p}index.html"><span class="mark">TF</span>티치핏</a>
+    <a class="logo" href="{p}index.html"><span class="mark">TF</span>티치핏군산</a>
     <div class="navwrap">
       <nav class="main">
         {links}
@@ -70,7 +72,7 @@ def footer(path_prefix):
     return '''<footer>
   <div class="wrap">
     <div>
-      <a class="logo" href="{p}index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏</a>
+      <a class="logo" href="{p}index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏군산</a>
       <div class="fnav">
         <a href="{p}services.html">화상과외 소개</a><a href="{p}process.html">매칭 방식</a><a href="{p}teachers.html">선생님</a><a href="{p}regions.html">군산 학교검색</a><a href="{p}blog.html">블로그</a>
       </div>
@@ -274,7 +276,7 @@ index_body = '''
 </section>
 
 <section>
-  <div class="head-row"><div><span class="eyebrow">왜 티치핏인가</span><h2>믿고 맡길 수 있는 이유</h2></div></div>
+  <div class="head-row"><div><span class="eyebrow">왜 티치핏군산인가</span><h2>믿고 맡길 수 있는 이유</h2></div></div>
   <div class="trust-grid">
     <div class="trust-item"><div class="ico">\U0001F6E1️</div><h4>철저한 검증</h4><p>학력·신원·경력을 확인한 선생님만 매칭에 참여해요.</p></div>
     <div class="trust-item"><div class="ico">\U0001F9ED</div><h4>궁합 기반 매칭</h4><p>성적만이 아니라 성향·목표까지 분석해 연결해요.</p></div>
@@ -313,7 +315,7 @@ index_body = '''
 '''
 
 APPLY_FORM = '''<form class="form-card" action="https://formsubmit.co/ookkoo12@naver.com" method="POST">
-      <input type="hidden" name="_subject" value="[티치핏] 새 상담 신청">
+      <input type="hidden" name="_subject" value="[티치핏군산] 새 상담 신청">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="thanks.html">
       <div class="field"><label for="tf-name">이름</label><input id="tf-name" name="이름" type="text" placeholder="학부모님 성함" required></div>
@@ -339,7 +341,7 @@ services_body = '''
 <section class="page-hero">
   <span class="eyebrow">화상과외 소개</span>
   <h1>군산 학생을 위한 화상과외, 이렇게 다릅니다</h1>
-  <p>티치핏은 방문 수업이나 입시 컨설팅 없이, 오직 화상과외 하나에만 집중합니다. 대신 그 안에서 군산 지역 학교 사정까지 반영한 매칭을 제공해요.</p>
+  <p>티치핏군산은 방문 수업이나 입시 컨설팅 없이, 오직 화상과외 하나에만 집중합니다. 대신 그 안에서 군산 지역 학교 사정까지 반영한 매칭을 제공해요.</p>
 </section>
 <section>
   <div class="services">
@@ -367,7 +369,7 @@ services_body = '''
   <div class="head-row"><div><span class="eyebrow">방문 수업이 필요하시다면</span><h2>화상으로 먼저 경험해보세요</h2></div></div>
   <div class="apply-wrap" style="grid-template-columns:1fr;">
     <div>
-      <p style="color:#DCEEE8;">티치핏은 현재 화상과외 하나에만 집중하고 있어요. 방문 수업이 꼭 필요한 경우라면 상담 시 말씀해 주세요 — 상황에 따라 안내해 드릴 수 있는 방법을 함께 찾아볼게요.</p>
+      <p style="color:#DCEEE8;">티치핏군산은 현재 화상과외 하나에만 집중하고 있어요. 방문 수업이 꼭 필요한 경우라면 상담 시 말씀해 주세요 — 상황에 따라 안내해 드릴 수 있는 방법을 함께 찾아볼게요.</p>
       <div style="margin-top:18px;"><a class="cta-btn" href="apply.html" style="background:var(--accent);color:var(--primary-strong)!important;">무료 상담 신청하기</a></div>
     </div>
   </div>
@@ -440,7 +442,7 @@ def regions_body_and_js():
             )
             for s in items
         )
-        groups.append('''<div class="school-group" data-group="{level}">
+        groups.append('''<div class="school-group" data-group="{level}" hidden>
       <h3 style="font-size:15px;margin:22px 0 10px;">{level} <span class="mono" style="font-size:12px;color:var(--muted-2);font-weight:400;">({count}곳)</span></h3>
       <ul class="school-list" id="list-{level}">
         {lis}
@@ -458,6 +460,7 @@ def regions_body_and_js():
     <label for="school-search">학교 이름으로 검색</label>
     <input id="school-search" type="text" placeholder="예: 군산제일, 수송, 월명중" autocomplete="off">
   </div>
+  <p id="search-prompt" class="sample-note">학교 이름을 입력하면 결과가 나타나요. 예: 제일, 수송, 월명</p>
   <p id="search-empty" class="sample-note" hidden>검색 결과가 없어요. 학교 이름을 다시 확인해 주세요.</p>
   <div id="school-groups">
     {groups}
@@ -468,18 +471,26 @@ def regions_body_and_js():
     js = '''<script>
 (function(){{
   var input = document.getElementById('school-search');
+  var prompt = document.getElementById('search-prompt');
   var empty = document.getElementById('search-empty');
   var groups = document.querySelectorAll('.school-group');
   if(!input) return;
   input.addEventListener('input', function(){{
     var q = input.value.trim().toLowerCase();
+    if(q === ''){{
+      prompt.hidden = false;
+      empty.hidden = true;
+      groups.forEach(function(g){{ g.hidden = true; }});
+      return;
+    }}
+    prompt.hidden = true;
     var anyVisible = false;
     groups.forEach(function(g){{
       var items = g.querySelectorAll('li');
       var groupHasMatch = false;
       items.forEach(function(li){{
         var name = (li.getAttribute('data-name') || '').toLowerCase();
-        var match = q === '' || name.indexOf(q) !== -1;
+        var match = name.indexOf(q) !== -1;
         li.hidden = !match;
         if(match) groupHasMatch = true;
       }});
@@ -560,7 +571,7 @@ def school_body(school):
   <div class="prose">
     <h2>{school_name} {stage}이 상담에서 자주 이야기하는 고민</h2>
     <p>{school_name} 학생과 학부모님이 상담에서 가장 많이 말씀하시는 건 <strong>{focus}</strong>이에요. 특히 <strong>{worry}</strong>을 어려워하는 경우가 많아요. 학교마다 진도와 분위기가 다르기 때문에, 같은 학년이라도 접근 방식을 다르게 가져가야 해요.</p>
-    <p>티치핏에서는 상담 시 최근 학습 상태와 취약 부분을 먼저 확인한 뒤, {school_name} 같은 {level} 학생을 지도해본 경험이 있거나 군산 지역 사정을 아는 선생님을 화상으로 연결해 드립니다.</p>
+    <p>티치핏군산에서는 상담 시 최근 학습 상태와 취약 부분을 먼저 확인한 뒤, {school_name} 같은 {level} 학생을 지도해본 경험이 있거나 군산 지역 사정을 아는 선생님을 화상으로 연결해 드립니다.</p>
     <h3>왜 화상과외가 {school_name} 학생에게 잘 맞을까요</h3>
     <p>군산 안에서 원하는 과목·시간대·스타일의 선생님을 구하기 어려운 경우가 많아요. 화상 수업이면 지역 제약 없이 훨씬 넓은 범위에서 맞는 선생님을 찾을 수 있고, 이동 시간이 없어 저녁 시간대도 유연하게 잡을 수 있어요. 수업은 녹화되어 복습에도 활용할 수 있습니다.</p>
     <h3>과목별 과외 안내</h3>
@@ -593,26 +604,26 @@ def school_body(school):
 # ---------------------------------------------------------------
 # generate all pages
 # ---------------------------------------------------------------
-page("index.html", "티치핏 | 군산 화상과외 매칭", "군산 학생만을 위한 1:1 화상과외 매칭 서비스, 티치핏.", "index.html",
+page("index.html", "티치핏군산 | 군산 화상과외 매칭", "군산 학생만을 위한 1:1 화상과외 매칭 서비스, 티치핏군산.", "index.html",
      index_body.format(apply_form=APPLY_FORM),
      path_prefix="", canonical=BASE_URL + "/index.html")
 
-page("services.html", "화상과외 소개 | 티치핏", "군산 학생을 위한 실시간 화상과외, 녹화 복습, 지역 맞춤 매칭을 소개합니다.", "services.html",
+page("services.html", "화상과외 소개 | 티치핏군산", "군산 학생을 위한 실시간 화상과외, 녹화 복습, 지역 맞춤 매칭을 소개합니다.", "services.html",
      services_body, path_prefix="", canonical=BASE_URL + "/services.html")
 
-page("process.html", "매칭 방식 | 티치핏", "학습 진단부터 리포트까지, 티치핏의 5단계 화상과외 매칭 프로세스를 소개합니다.", "process.html",
+page("process.html", "매칭 방식 | 티치핏군산", "학습 진단부터 리포트까지, 티치핏군산의 5단계 화상과외 매칭 프로세스를 소개합니다.", "process.html",
      process_body, path_prefix="", canonical=BASE_URL + "/process.html")
 
-page("teachers.html", "선생님 소개 | 티치핏", "학력·신원·경력 검증을 거친 티치핏 화상과외 선생님 매칭 기준을 소개합니다.", "teachers.html",
+page("teachers.html", "선생님 소개 | 티치핏군산", "학력·신원·경력 검증을 거친 티치핏군산 화상과외 선생님 매칭 기준을 소개합니다.", "teachers.html",
      teachers_body, path_prefix="", canonical=BASE_URL + "/teachers.html")
 
-page("regions.html", "군산 학교검색 | 티치핏", "군산 초·중·고 80개 학교를 검색해서 바로 찾는 티치핏 화상과외 학교 안내입니다.", "regions.html",
+page("regions.html", "군산 학교검색 | 티치핏군산", "군산 초·중·고 80개 학교를 검색해서 바로 찾는 티치핏군산 화상과외 학교 안내입니다.", "regions.html",
      regions_body, path_prefix="", canonical=BASE_URL + "/regions.html", extra_js=regions_js)
 
-page("blog.html", "블로그 | 티치핏", "군산 학교별 내신 대비, 과목별 화상과외 학습 전략을 소개하는 티치핏 블로그입니다.", "blog.html",
+page("blog.html", "블로그 | 티치핏군산", "군산 학교별 내신 대비, 과목별 화상과외 학습 전략을 소개하는 티치핏군산 블로그입니다.", "blog.html",
      blog_body, path_prefix="", canonical=BASE_URL + "/blog.html")
 
-page("apply.html", "무료 상담 신청 | 티치핏", "티치핏 군산 화상과외 매칭 무료 상담을 신청하세요.", "apply.html",
+page("apply.html", "무료 상담 신청 | 티치핏군산", "티치핏군산 화상과외 매칭 무료 상담을 신청하세요.", "apply.html",
      apply_body, path_prefix="", canonical=BASE_URL + "/apply.html", noindex=True)
 
 thanks_body = '''
@@ -623,14 +634,14 @@ thanks_body = '''
   <div style="margin-top:22px;"><a class="cta-btn" href="index.html">홈으로 돌아가기</a></div>
 </section>
 '''
-page("thanks.html", "신청 완료 | 티치핏", "티치핏 상담 신청이 정상적으로 접수되었습니다.", "",
+page("thanks.html", "신청 완료 | 티치핏군산", "티치핏군산 상담 신청이 정상적으로 접수되었습니다.", "",
      thanks_body, path_prefix="", canonical=BASE_URL + "/thanks.html", noindex=True)
 
 for school in SCHOOLS:
     page(
         "schools/{}.html".format(school["slug"]),
-        "{} 화상과외 | 티치핏".format(school["name"]),
-        "{} 학생을 위한 1:1 화상과외 매칭, 티치핏에서 상담해보세요.".format(school["name"]),
+        "{} 화상과외 | 티치핏군산".format(school["name"]),
+        "{} 학생을 위한 1:1 화상과외 매칭, 티치핏군산에서 상담해보세요.".format(school["name"]),
         "regions.html",
         school_body(school),
         path_prefix="../",
