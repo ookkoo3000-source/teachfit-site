@@ -3,4 +3,4 @@ Disallow: /apply.html
 Disallow: /thanks.html
 Allow: /
 
-Sitemap: https://teachfit.example/sitemap.xml
+Sitemap: https://slovrest.com/sitemap.xml

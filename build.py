@@ -94,7 +94,7 @@ def page(filename, title, desc, active, body, path_prefix="", canonical="", noin
         f.write(full)
     print("wrote", filename)
 
-BASE_URL = "https://teachfit.example"  # placeholder domain, update once real domain is registered
+BASE_URL = "https://slovrest.com"
 
 # ---------------------------------------------------------------
 # Revised Romanization (approximate, URL-slug purposes only)
