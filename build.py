@@ -15,6 +15,8 @@ PHONE_DISPLAY = "010-3131-5305"
 PHONE_TEL = "01031315305"
 BASE_URL = "https://slovrest.com"   # 이 지역 사이트의 실제 도메인
 LEAD_EMAIL = "ookkoo12@naver.com"   # 상담 신청 폼이 도착할 이메일 (FormSubmit 릴레이)
+NAVER_VERIFICATION = "24cc1c4678a952a91fe1248a4ce9dd147a24e2f6"  # 네이버 서치어드바이저 소유확인
+GOOGLE_VERIFICATION = ""  # 구글 서치콘솔 소유확인 (등록 시 채워넣기)
 
 # 학교 목록 — 시/군 교육지원청 공식 학교안내 기준으로 초/중/고 전체를 넣을 것
 # (perfectedu 벤치마킹 원칙: 일부만 골라 넣지 않고 관할 전체를 포함 — 형평성 문제 방지)
@@ -59,6 +61,11 @@ NAV_ITEMS = [
 
 def head(title, desc, path_prefix, canonical, noindex=False):
     robots_tag = '<meta name="robots" content="noindex,nofollow">\n' if noindex else ''
+    verify_tags = ''
+    if NAVER_VERIFICATION:
+        verify_tags += '<meta name="naver-site-verification" content="{}">\n'.format(NAVER_VERIFICATION)
+    if GOOGLE_VERIFICATION:
+        verify_tags += '<meta name="google-site-verification" content="{}">\n'.format(GOOGLE_VERIFICATION)
     return '''<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -67,11 +74,11 @@ def head(title, desc, path_prefix, canonical, noindex=False):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
-{robots}{font}
+{verify}{robots}{font}
 <link rel="stylesheet" href="{p}assets/style.css">
 </head>
 <body>
-'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag)
+'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag, verify=verify_tags)
 
 def topbar():
     return f'''<div class="topbar">

@@ -1,0 +1,28 @@
+[제목]
+커스텀 도메인 HTTPS 인증서가 24시간 넘게 "new"/"authorization_created" 상태에서 멈춰있습니다 (저장소: ookkoo3000-source/teachfit-site, 도메인: slovrest.com)
+
+[본문]
+저장소: ookkoo3000-source/teachfit-site
+커스텀 도메인: slovrest.com (apex 도메인) 및 www.slovrest.com
+
+약 24시간 전에 GitHub Pages에 slovrest.com을 커스텀 도메인으로 등록했습니다. DNS는 그 이후 계속 정상적으로 설정되어 있습니다:
+- apex(@) 도메인이 185.199.108.153 / 109.153 / 110.153 / 111.153로 A레코드 설정됨
+- www는 ookkoo3000-source.github.io로 CNAME 설정됨
+- CAA 레코드로 인증기관을 제한하고 있지 않음
+- 구글 DNS(8.8.8.8), 클라우드플레어 DNS(1.1.1.1) 양쪽에서 24시간 내내 정상적으로 조회됨
+
+사이트 자체는 일반 HTTP로는 정상 작동합니다(200 OK). 하지만 커스텀 도메인용 자동 HTTPS 인증서가 Pages API 응답(GET /repos/ookkoo3000-source/teachfit-site/pages)에서 계속 "new" / "authorization_created" 상태에 머물러 있고, https_enforced를 켤 수 없습니다.
+
+이미 시도해본 방법들(전부 Pages API를 통해 진행, 전부 효과 없었음):
+1. 커스텀 도메인을 껐다 켜기(PUT cname="" 후 PUT cname="slovrest.com") — 즉시 시도, 30분 이상 대기 후 시도 등 여러 번
+2. Pages 사이트를 완전히 삭제 후 재생성(DELETE 후 POST /pages)
+3. 기본 커스텀 도메인을 일시적으로 www.slovrest.com으로 바꿨다가 다시 slovrest.com으로 되돌림 — 이때 인증서 상태 표시가 "authorization_created"에서 "new"로 리셋되긴 했지만, 이후 30분 이상 기다려도 더 이상 진행되지 않음
+4. build_type을 "legacy"(Jekyll)에서 "workflow"(GitHub Actions의 actions/deploy-pages 사용)로 전환 — 배포 자체는 성공하고 사이트도 정상 작동하지만 인증서 상태에는 영향 없음
+5. 아무것도 건드리지 않고 30분 이상 완전히 방치(2회) — 인증서 상태가 스스로 진행되지 않음
+
+현재 상태(이 글 작성 시점):
+{"url":"https://api.github.com/repos/ookkoo3000-source/teachfit-site/pages","status":"built","cname":"slovrest.com","custom_404":false,"html_url":"http://slovrest.com/","build_type":"workflow","source":{"branch":"main","path":"/"},"public":true,"protected_domain_state":null,"pending_domain_unverified_at":null,"https_certificate":{"state":"new","description":"This domain was recently added. The certificate request process will begin shortly.","domains":["slovrest.com","www.slovrest.com"]},"https_enforced":false}
+
+이 도메인에 대한 Let's Encrypt 인증/인증서 발급이 왜 진행되지 않는지 확인해 주시고, 가능하다면 수동으로 다시 트리거하거나 문제를 해결해 주실 수 있을까요?
+
+감사합니다!
