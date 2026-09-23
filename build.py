@@ -74,11 +74,12 @@ def head(title, desc, path_prefix, canonical, noindex=False):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="{brand} 블로그" href="{base}/rss.xml">
 {verify}{robots}{font}
 <link rel="stylesheet" href="{p}assets/style.css">
 </head>
 <body>
-'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag, verify=verify_tags)
+'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag, verify=verify_tags, brand=BRAND, base=BASE_URL)
 
 def topbar():
     return f'''<div class="topbar">
@@ -555,7 +556,7 @@ blog_body = f'''
 <section class="page-hero">
   <span class="eyebrow">블로그</span>
   <h1>{REGION_SHORT} 학교별 내신·과목별 학습 전략</h1>
-  <p>{REGION_SHORT} 학교별 내신 대비, 학년별·과목별 화상과외 학습 전략을 꾸준히 올리고 있어요.</p>
+  <p>{REGION_SHORT} 학교별 내신 대비, 학년별·과목별 화상과외 학습 전략을 꾸준히 올리고 있어요. <a href="rss.xml">RSS 구독</a></p>
 </section>
 <section>
   <div class="article-grid">
