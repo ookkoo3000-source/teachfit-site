@@ -3,3 +3,4 @@
 군산금강중학교 국어과외 — published 2026-09-24 — slug: gunsangeumgang-jungdeung-gugeo-gwaoe
 군산진포중학교 영어과외 — published 2026-09-24 — slug: gunsanjinpo-jungdeung-yeongeo-gwaoe
 옥구중학교 수학과외 — published 2026-09-24 — slug: oggu-jungdeung-suhak-gwaoe
+군산고등학교 수학과외 — published 2026-09-25 — slug: gunsan-godeung-suhak-gwaoe
