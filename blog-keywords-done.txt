@@ -5,3 +5,4 @@
 옥구중학교 수학과외 — published 2026-09-24 — slug: oggu-jungdeung-suhak-gwaoe
 군산고등학교 수학과외 — published 2026-09-25 — slug: gunsan-godeung-suhak-gwaoe
 군산여자고등학교 영어과외 — published 2026-09-25 — slug: gunsanyeoja-godeung-yeongeo-gwaoe
+전북외국어고등학교 내신관리 과외 — published 2026-09-26 — slug: jeonbugoegugeo-naesin-gwaoe
