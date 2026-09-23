@@ -834,7 +834,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "gunsangeumgang-jungdeung-gugeo-gwaoe",
     "title": "군산금강중학교 국어과외, 문학보다 비문학에서 갈리는 이유",
-    "date": "2026-09-24",
+    "date": "2026-09-23",
     "category": "중등 국어",
     "teaser": "군산금강중학교 국어 내신, 문학은 곧잘 하는데 비문학에서 막히는 학생이 많아요. 원인과 대처법을 정리했어요.",
     "body": '''
@@ -893,7 +893,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "gunsanjinpo-jungdeung-yeongeo-gwaoe",
     "title": "군산진포중학교 영어과외, 단어는 아는데 독해가 안 될 때",
-    "date": "2026-09-24",
+    "date": "2026-09-23",
     "category": "중등 영어",
     "teaser": "단어 시험은 잘 보는데 긴 지문만 나오면 막히는 학생들, 군산진포중학교 영어과외에서 이렇게 접근해요.",
     "body": '''
@@ -947,7 +947,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "oggu-jungdeung-suhak-gwaoe",
     "title": "옥구중학교 수학과외, 오답노트를 안 쓰는 아이라면",
-    "date": "2026-09-24",
+    "date": "2026-09-23",
     "category": "중등 수학",
     "teaser": "같은 실수를 반복하는 아이, 오답노트를 만들어도 다시 안 펴보는 경우가 많아요. 옥구중학교 수학과외에서 이 습관을 어떻게 잡는지 정리했어요.",
     "body": '''
@@ -1018,7 +1018,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "gunsan-godeung-suhak-gwaoe",
     "title": "군산고등학교 수학과외, 내신과 수능을 함께 잡는 법",
-    "date": "2026-09-25",
+    "date": "2026-09-23",
     "category": "고등 수학",
     "teaser": "내신 따로, 수능 따로 준비하다 둘 다 놓치는 경우가 많아요. 군산고등학교 수학과외에서 균형 잡는 방법을 정리했어요.",
     "body": '''
@@ -1088,7 +1088,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "gunsanyeoja-godeung-yeongeo-gwaoe",
     "title": "군산여자고등학교 영어과외, 내신은 되는데 모의고사가 안 나올 때",
-    "date": "2026-09-25",
+    "date": "2026-09-23",
     "category": "고등 영어",
     "teaser": "내신 등급은 안정적인데 모의고사만 아쉬운 학생들, 군산여자고등학교 영어과외에서 이 간극을 어떻게 메우는지 정리했어요.",
     "body": '''
@@ -1155,7 +1155,7 @@ BLOG_POSTS.append({
 BLOG_POSTS.append({
     "slug": "jeonbugoegugeo-naesin-gwaoe",
     "title": "전북외국어고등학교 내신관리 과외, 전공어와 일반교과 균형 잡기",
-    "date": "2026-09-26",
+    "date": "2026-09-23",
     "category": "고등 내신관리",
     "teaser": "전공어 수업에 밀려 일반 교과 시간이 부족해지는 학생들, 전북외국어고등학교 내신관리 과외에서 시간 배분 전략을 정리했어요.",
     "body": '''
