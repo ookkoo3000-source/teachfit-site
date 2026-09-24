@@ -249,3 +249,14 @@ footer .disclaimer{max-width:640px; line-height:1.7; margin-top:14px; font-size:
 .mid-cta{background:var(--surface-2); border-radius:14px; padding:18px 20px; margin:26px 0; font-size:15px; line-height:1.9;}
 .mid-cta .cta-btn{margin-left:8px;}
 .related-list{padding-left:18px; font-size:14.5px;}
+
+.prose ul,.prose ol{margin:0 0 16px; padding-left:22px;}
+.prose li{margin-bottom:8px; font-size:15px; line-height:1.75;}
+.prose h2{padding-left:12px; border-left:4px solid var(--primary);}
+.prose p{line-height:1.85;}
+.summary-box{background:var(--surface-2); border-radius:14px; padding:18px 22px; margin:0 0 24px;}
+.summary-box strong{display:block; margin-bottom:8px; font-size:15px;}
+.summary-box ul{margin:0; padding-left:20px;}
+.callout{border-left:4px solid var(--accent-strong, #d9a400); background:var(--surface-2); border-radius:8px; padding:14px 18px; margin:0 0 16px; font-size:14.5px; line-height:1.8;}
+.callout strong{display:block; margin-bottom:4px;}
+.prose .cmp td:first-child{font-weight:600;}
