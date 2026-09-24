@@ -153,8 +153,27 @@ def mobile_cta_bar(path_prefix):
 </div>
 '''
 
-def page(filename, title, desc, active, body, path_prefix="", canonical="", noindex=False, extra_js=""):
-    full = head(title, desc, path_prefix, canonical, noindex) + topbar() + header(path_prefix, active) + '<main class="wrap">\n' + body + '\n</main>\n' + footer(path_prefix)
+def og_tags(title, desc, canonical, og_image, is_article):
+    t = title.replace('"', '&quot;')
+    d = desc.replace('"', '&quot;')
+    lines = [
+        '<meta property="og:type" content="{}">'.format("article" if is_article else "website"),
+        '<meta property="og:site_name" content="{}">'.format(BRAND),
+        '<meta property="og:title" content="{}">'.format(t),
+        '<meta property="og:description" content="{}">'.format(d),
+        '<meta property="og:url" content="{}">'.format(canonical),
+    ]
+    if og_image:
+        lines += ['<meta property="og:image" content="{}">'.format(og_image),
+                  '<meta name="twitter:card" content="summary_large_image">',
+                  '<meta name="twitter:image" content="{}">'.format(og_image)]
+    return chr(10).join(lines) + chr(10)
+
+def page(filename, title, desc, active, body, path_prefix="", canonical="", noindex=False, extra_js="", og_image=""):
+    full = head(title, desc, path_prefix, canonical, noindex)
+    if not noindex:
+        full = full.replace('</head>', og_tags(title, desc, canonical, og_image, filename.startswith("blog/")) + '</head>', 1)
+    full = full + topbar() + header(path_prefix, active) + '<main class="wrap">\n' + body + '\n</main>\n' + footer(path_prefix)
     full = full.replace('</body>', kakao_fab() + '\n</body>')
     if os.path.basename(filename) not in ("apply.html", "thanks.html"):
         full = full.replace('</body>', mobile_cta_bar(path_prefix) + '\n</body>')
@@ -2411,6 +2430,7 @@ for post in BLOG_POSTS:
         blog_post_body(post),
         path_prefix="../",
         canonical=BASE_URL + "/blog/{}.html".format(post["slug"]),
+        og_image=(BASE_URL + "/blog/img/{}.jpg".format(post["slug"])) if os.path.exists(os.path.join(ROOT, "blog", "img", post["slug"] + ".webp")) else "",
     )
 
 page("apply.html", f"무료 상담 신청 | {BRAND}", f"{BRAND} 화상과외 매칭 무료 상담을 신청하세요.", "apply.html",
