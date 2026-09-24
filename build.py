@@ -3,6 +3,8 @@ import os
 import json
 import random
 import re
+import time
+CSS_VER = str(int(time.time()))
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -80,10 +82,10 @@ def head(title, desc, path_prefix, canonical, noindex=False):
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" type="application/rss+xml" title="{brand} 블로그" href="{base}/rss.xml">
 {verify}{robots}{font}
-<link rel="stylesheet" href="{p}assets/style.css">
+<link rel="stylesheet" href="{p}assets/style.css?v={CSS_VER}">
 </head>
 <body>
-'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag, verify=verify_tags, brand=BRAND, base=BASE_URL)
+'''.format(title=title, desc=desc, canonical=canonical, font=FONT_LINK, p=path_prefix, robots=robots_tag, verify=verify_tags, brand=BRAND, base=BASE_URL, CSS_VER=CSS_VER)
 
 def topbar():
     return f'''<div class="topbar">
@@ -823,7 +825,7 @@ def intro_banner():
 def wrap_boxes(body):
     body = body.replace("30분 무료체험수업", '<mark class="free">30분 무료체험수업</mark>')
     parts = re.split(r'(?=<h2>)', body)
-    out = [parts[0], intro_banner()]
+    out = [intro_banner(), parts[0]]
     n = 0
     has_mid = 'mid-cta' in body
     for p in parts[1:]:
