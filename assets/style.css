@@ -232,3 +232,20 @@ footer .disclaimer{max-width:640px; line-height:1.7; margin-top:14px; font-size:
   .kakao-fab-ico{font-size:28px;}
   .kakao-fab-label{display:none;}
 }
+
+.subj-tabs{display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;}
+.subj-tabs a{padding:7px 16px; border-radius:20px; background:var(--surface-2); color:var(--ink); font-size:14px; font-weight:600;}
+.subj-tabs a.on{background:var(--primary); color:#fff;}
+.subj-link{display:inline-block; margin:2px 8px 2px 0; font-size:14px; font-weight:600;}
+.check-list{list-style:none; padding:0; margin:0 0 14px;}
+.check-list li{position:relative; padding-left:24px; margin-bottom:8px; font-size:15px;}
+.check-list li:before{content:"✓"; position:absolute; left:0; color:var(--primary); font-weight:700;}
+.step-list{padding-left:20px; margin-bottom:14px;}
+.step-list li{margin-bottom:8px; font-size:15px;}
+.cmp-wrap{overflow-x:auto; margin-bottom:18px;}
+.cmp{width:100%; border-collapse:collapse; font-size:14px;}
+.cmp th,.cmp td{border:1px solid var(--line, #e3e3e3); padding:9px 10px; text-align:left;}
+.cmp thead th{background:var(--surface-2);}
+.mid-cta{background:var(--surface-2); border-radius:14px; padding:18px 20px; margin:26px 0; font-size:15px; line-height:1.9;}
+.mid-cta .cta-btn{margin-left:8px;}
+.related-list{padding-left:18px; font-size:14.5px;}
