@@ -782,7 +782,8 @@ def blog_card(post):
     </div>'''.format(date=post["date"], category=post["category"], title=post["title"], teaser=post["teaser"], slug=post["slug"])
 
 def build_blog_body():
-    cards = "\n    ".join(blog_card(p) for p in BLOG_POSTS)
+    latest_first = sorted(enumerate(BLOG_POSTS), key=lambda t: (t[1]["date"], t[0]), reverse=True)
+    cards = "\n    ".join(blog_card(p) for _, p in latest_first)
     return f'''
 <section class="page-hero">
   <span class="eyebrow">블로그</span>
