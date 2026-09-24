@@ -409,7 +409,7 @@ APPLY_FORM = f'''<form class="form-card" action="https://formsubmit.co/{LEAD_EMA
       <input type="hidden" name="_subject" value="[{BRAND}] 새 상담 신청">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="thanks.html">
-      <div class="field"><label for="tf-name">이름</label><input id="tf-name" name="이름" type="text" placeholder="학부모님 성함" required></div>
+      <div class="field"><label for="tf-name">학생 이름</label><input id="tf-name" name="학생이름" type="text" placeholder="학생 이름" required></div>
       <div class="field"><label for="tf-phone">연락처</label><input id="tf-phone" name="연락처" type="tel" placeholder="010-0000-0000" required></div>
       <div class="field"><label for="tf-school">재학 중인 학교 ({REGION_SHORT} 소재)</label><input id="tf-school" name="학교" type="text" placeholder="예: {next((s['name'] for s in SCHOOLS if s['level'] == '중학교'), SCHOOLS[0]['name'] if SCHOOLS else '')}"></div>
       <div class="field">
