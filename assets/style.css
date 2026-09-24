@@ -286,3 +286,24 @@ footer .disclaimer{max-width:640px; line-height:1.7; margin-top:14px; font-size:
   .cta-big{grid-template-columns:1fr; padding:26px 22px;}
   .pbox{padding:20px 18px 8px;}
 }
+
+/* 컬러 리스트 카드 / 팁 박스 / 무료체험 강조 */
+:root{--tip-bg:#EAFBF1; --tip-line:#B5EBCB; --tip-ink:#0E5A38; --card-bg:#F4F6F8; --check:#16A34A;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}}
+:root[data-theme="dark"]{--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}
+.blog-prose ul,.blog-prose ol{list-style:none; padding:0; margin:0 0 16px; counter-reset:li;}
+.blog-prose ul li,.blog-prose ol li{position:relative; background:var(--card-bg); border-radius:14px; padding:16px 18px 16px 58px; margin-bottom:10px; line-height:1.8;}
+.blog-prose ul li:before{content:"✓"; position:absolute; left:16px; top:15px; width:28px; height:28px; border-radius:50%; background:var(--check); color:#fff; font-weight:800; font-size:15px; display:flex; align-items:center; justify-content:center;}
+.blog-prose ol li{counter-increment:li;}
+.blog-prose ol li:before{content:counter(li); position:absolute; left:16px; top:15px; width:28px; height:28px; border-radius:50%; background:var(--primary); color:#fff; font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center;}
+.blog-prose .summary-box li{background:transparent; padding:6px 0 6px 34px; margin:0;}
+.blog-prose .summary-box li:before{left:0; top:7px; width:22px; height:22px; font-size:12px;}
+.callout{background:var(--tip-bg); border:1.5px solid var(--tip-line); border-left:1.5px solid var(--tip-line); border-radius:16px; padding:18px 22px; color:var(--ink);}
+.callout strong{color:var(--tip-ink); font-size:16px;}
+.callout strong:before{content:"💡 ";}
+.summary-box{background:var(--tip-bg); border:1.5px solid var(--tip-line);}
+.summary-box strong{color:var(--tip-ink); font-size:16px;}
+.summary-box strong:before{content:"📌 ";}
+mark.free{background:linear-gradient(transparent 55%, var(--accent-soft) 55%); color:var(--accent-strong); font-weight:800; padding:0 2px;}
+.mid-cta mark.free,.cta-big mark.free{background:none; color:inherit;}
+.blog-prose p strong{color:var(--primary); }

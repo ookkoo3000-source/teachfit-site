@@ -811,8 +811,11 @@ def cta_big(prefix="../"):
 </div>'''
 
 def wrap_boxes(body):
+    body = body.replace("30분 무료체험수업", '<mark class="free">30분 무료체험수업</mark>')
     parts = re.split(r'(?=<h2>)', body)
     out = [parts[0]]
+    n = 0
+    has_mid = 'mid-cta' in body
     for p in parts[1:]:
         m = re.search(r'\s*<h3>', p)
         if m:
@@ -821,6 +824,9 @@ def wrap_boxes(body):
             out.append('<div class="pbox faq-box">' + faq + '</div>')
         else:
             out.append('<div class="pbox">' + p + '</div>')
+        n += 1
+        if n == 3 and not has_mid:
+            out.append('<div class="mid-cta"><strong>우리 아이에게 맞는지 궁금하시다면</strong><br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요. <a class="cta-btn" href="../apply.html">무료체험 신청하기 →</a></div>')
     return "".join(out)
 
 def blog_post_body(post):
