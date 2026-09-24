@@ -2372,7 +2372,7 @@ def school_subject_body(school, subj):
 import concise_data
 for _p in BLOG_POSTS:
     if _p["slug"] in concise_data.D:
-        _p["body"] = concise_data.render(concise_data.D[_p["slug"]])
+        _p["body"] = concise_data.render(concise_data.D[_p["slug"]], _p["slug"])
 
 # generate all pages
 # ---------------------------------------------------------------

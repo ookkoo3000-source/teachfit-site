@@ -318,3 +318,7 @@ mark.free{background:linear-gradient(transparent 55%, var(--accent-soft) 55%); c
 .ib-kakao{background:#FEE500; color:#2A1F00 !important;}
 .ib-apply{background:#C4784F; color:#fff !important;}
 .ib-apply i{background:rgba(255,255,255,.25)!important;}
+
+.kw-chips{margin:8px 0 18px; display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+.kw-chips strong{width:100%; font-size:13.5px; color:var(--muted);}
+.kw-chips span{background:var(--primary-soft); color:var(--primary-strong); font-size:13px; font-weight:600; padding:5px 12px; border-radius:999px;}
