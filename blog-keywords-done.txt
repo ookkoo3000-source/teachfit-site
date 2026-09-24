@@ -8,3 +8,4 @@
 전북외국어고등학교 내신관리 과외 — published 2026-09-23 — slug: jeonbugoegugeo-naesin-gwaoe
 군산월명중학교 국어과외 — published 2026-09-24 — slug: gunsanwolmyeong-jungdeung-gugeo-gwaoe
 나포중학교 영어과외 — published 2026-09-24 — slug: napo-jungdeung-yeongeo-gwaoe
+군산대성중학교 수학과외(선행학습) — published 2026-09-24 — slug: gunsandaeseong-jungdeung-suhak-seonhaeng-gwaoe
