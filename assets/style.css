@@ -1,48 +1,53 @@
 :root{
-  --bg:#F3F6F4;
+  --bg:#F5FBF8;
   --surface:#FFFFFF;
-  --surface-2:#EAF0EC;
-  --ink:#0F211D;
-  --muted:#54655F;
-  --muted-2:#7C8B85;
-  --primary:#125A50;
-  --primary-strong:#0B3E37;
-  --primary-soft:#DCEBE7;
-  --accent:#DB9A34;
-  --accent-strong:#B87B1F;
-  --accent-soft:#F6E4C0;
-  --line:#D7E0DB;
-  --shadow: 0 18px 40px -22px rgba(11,44,38,.35);
-  --radius-lg: 22px;
-  --radius-md: 14px;
+  --surface-2:#E6F5EE;
+  --ink:#12302A;
+  --muted:#4B6660;
+  --muted-2:#7F958F;
+  --primary:#1A8C6B;
+  --primary-strong:#0E6A50;
+  --primary-soft:#DDF3EA;
+  --accent:#F2B233;
+  --accent-strong:#C98A10;
+  --accent-soft:#FFF1CC;
+  --line:#D5EAE1;
+  --shadow: 0 18px 40px -24px rgba(26,140,107,.35);
+  --radius-lg: 20px;
+  --radius-md: 12px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0A1512; --surface:#11201C; --surface-2:#16261F; --ink:#E9F3EF;
-    --muted:#9FB4AC; --muted-2:#7C9089; --primary:#5FCBB1; --primary-strong:#3FA88F;
-    --primary-soft:#173029; --accent:#F0B75E; --accent-strong:#F5C97C; --accent-soft:#2E2410;
+    --muted:#9FB4AC; --muted-2:#7C9089; --primary:#4FC3A1; --primary-strong:#7FD8BD;
+    --primary-soft:#173029; --accent:#F2B233; --accent-strong:#F5C97C; --accent-soft:#2E2410;
     --line:#213631; --shadow: 0 18px 40px -20px rgba(0,0,0,.55);
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0A1512; --surface:#11201C; --surface-2:#16261F; --ink:#E9F3EF;
-  --muted:#9FB4AC; --muted-2:#7C9089; --primary:#5FCBB1; --primary-strong:#3FA88F;
-  --primary-soft:#173029; --accent:#F0B75E; --accent-strong:#F5C97C; --accent-soft:#2E2410;
-  --line:#213631; --shadow: 0 18px 40px -20px rgba(0,0,0,.55);
+    --bg:#0A1512; --surface:#11201C; --surface-2:#16261F; --ink:#E9F3EF;
+    --muted:#9FB4AC; --muted-2:#7C9089; --primary:#4FC3A1; --primary-strong:#7FD8BD;
+    --primary-soft:#173029; --accent:#F2B233; --accent-strong:#F5C97C; --accent-soft:#2E2410;
+    --line:#213631; --shadow: 0 18px 40px -20px rgba(0,0,0,.55);
 }
 
-/* 지역 톤: 진한 배경 위 글자, 블로그 상단 배너, 최상단 밴드 */
+/* 군산: 밝은 풍경 테마 (연민트 강변 + 금빛 해) — 패널(상단바·상담박스·CTA·배너)은 밝게, 글자는 진하게. 다크모드에서도 패널은 밝게 유지 */
 :root{
-  --topbar-ink:#EFF7F4; --on-dark-ink:#EAF3F0; --on-dark:#DCEEE8; --on-dark-muted:#BFDCD3;
-  --cta-big-text:#D5EBE4; --banner-bg:#16241f; --banner-glow:#24483c; --banner-text:#D5E6DF; --banner-apply:#C4784F;
-  --pbox-shadow:rgba(11,44,38,.35);
-  --band-top:#0B3E37; --band-bottom:#1A6B5F; --band-hi:#DB9A34; --band-soft:#F6E4C0; --band-ink:#072B26;
+  --panel-ink:#0F3D31; --panel-muted:#587A70;
+  --topbar-ink:#0F3D31; --on-dark-ink:#0F3D31; --on-dark:#2B5248; --on-dark-muted:#587A70;
+  --cta-big-text:#2B5248; --banner-bg:#E4F5EC; --banner-glow:#FFF1CC; --banner-text:#2B5248; --banner-apply:#F2B233;
+  --pbox-shadow:rgba(26,140,107,.25);
+  --band-top:#E2F4EA; --band-bottom:#A9DCC5; --band-hi:#F2B233; --band-soft:#FFFFFF; --band-ink:#3B8F72;
+  --panel:#E4F5EC; --panel-2:#CFEBDD; --on-accent:#3A2A00; --banner-mark:#0E6A50;
+  --b-hero-bg:#E7F6EF; --b-fade:rgba(245,251,248,.96); --b-fade-mid:rgba(245,251,248,.82);
+  --b-ink:#12302A; --b-lead:#4B6660; --b-brand:#1A8C6B; --b-brand-strong:#0E6A50;
+  --b-shadow:rgba(26,140,107,.45); --b-line:#D5EAE1; --b-line-strong:#A5D6C1; --b-section:#EAF6F0;
+  --b-ph-art:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110'%3E%3Ccircle cx='560' cy='28' r='17' fill='#F7C65A'/%3E%3Cpath d='M0 110 C 100 94 180 84 260 86 C 340 76 420 80 600 84 V110 Z' fill='#C8E8D8'/%3E%3Cg fill='#3B8F72'%3E%3Cpath d='M400 100 V70 L440 54 L480 70 V100 Z'/%3E%3Crect x='435' y='40' width='10' height='16'/%3E%3Cpath d='M432 40 L440 32 L448 40 Z'/%3E%3Cpath d='M488 100 V78 L508 68 L528 78 V100 Z'/%3E%3Cpath d='M334 100 V80 L352 72 L370 80 V100 Z'/%3E%3C/g%3E%3Cg fill='none' stroke='#3B8F72' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M250 40 l5 -4 l5 4'/%3E%3Cpath d='M272 30 l5 -4 l5 4'/%3E%3Cpath d='M292 42 l4 -3 l4 3'/%3E%3C/g%3E%3C/svg%3E");
+  --b-ph-ground:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'%3E%3Cpath d='M0 40 V24 C 360 14 720 28 1080 18 C 1260 14 1380 20 1440 18 V40 Z' fill='#A9DCC5'/%3E%3Cpath d='M0 34 H1440 V40 H0 Z' fill='#D4EDC6'/%3E%3C/svg%3E");
+  --tip-bg:#EAF7F0; --tip-line:#BCE3CF; --tip-ink:#0E6A50; --card-bg:#F1F7F4; --check:#1A8C6B;
 }
-
-/* 진한 패널(상단바·통계띠·상담박스·CTA) — 다크모드에서도 진하게 유지해서 글자 대비 확보 */
-:root{ --panel:#0B3E37; --panel-2:#125A50; --on-accent:#0B3E37; --banner-mark:#FFD86B; }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --panel:#0F2E28; --panel-2:#184A40; --on-accent:#0A1512; } }
-:root[data-theme="dark"]{ --panel:#0F2E28; --panel-2:#184A40; --on-accent:#0A1512; }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --panel:#E4F5EC; --panel-2:#CFEBDD; --on-accent:#3A2A00; } }
+:root[data-theme="dark"]{ --panel:#E4F5EC; --panel-2:#CFEBDD; --on-accent:#3A2A00; }
 *{box-sizing:border-box;}
 html{background:var(--bg);}
 body{
@@ -357,6 +362,93 @@ mark.free{background:linear-gradient(transparent 55%, var(--accent-soft) 55%); c
 .post-hero{text-align:center;}
 .post-hero h1{margin-inline:auto;}
 .post-hero .hero-cta{justify-content:center;}
-/* 군산: 블로그 소제목 번호를 금색 테두리 원으로 */
-.pbox h2:before{background:var(--primary); box-shadow:0 0 0 3px var(--accent-soft);}
-.pbox{border-top:3px solid var(--primary-soft);}
+
+/* =================================================================
+   밝은 풍경 테마 (region.py BRIGHT = True 인 지역만 포함) — 구미 디자인 일반화
+   색은 theme.css의 --b-* 변수로 지역마다 다르게
+   ================================================================= */
+body{overflow-x:clip;}
+
+/* 메인 히어로: 화면 가로 전체 풍경 그림 + 왼쪽 글자 (그림이 밝아서 다크모드에서도 글자색 고정) */
+.hero{position:relative; isolation:isolate; overflow:hidden; background:var(--b-hero-bg);
+  margin-inline:calc(50% - 50vw); padding-inline:calc(50vw - 50%); padding-block:72px 240px;}
+.hero .grid{grid-template-columns:1fr;}
+.hero .grid > div:first-child{max-width:560px;}
+.hero .grid > div:last-child{position:absolute; inset:0; z-index:-2;}
+.hero-land{width:100%; height:100%; display:block;}
+.hero::before{content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(90deg, var(--b-fade) 0%, var(--b-fade-mid) 32%, transparent 60%);}
+.hero h1{color:var(--b-ink);}
+.hero h1 em{color:var(--b-brand);}
+.hero p.lead{color:var(--b-lead);}
+.hero .eyebrow{color:var(--b-brand-strong); background:#fff; padding:6px 12px 6px 10px; border-radius:999px; box-shadow:0 4px 14px -8px var(--b-shadow);}
+.hero .trust-row{color:var(--b-lead);}
+.hero .cta-btn{background:var(--b-brand); color:#fff !important;}
+.hero .cta-ghost{background:#fff; border-color:#fff; color:var(--b-ink); box-shadow:0 6px 18px -10px var(--b-shadow);}
+.eyebrow::before{width:7px; height:7px; border-radius:50%; background:var(--accent);}
+
+/* 통계: 풍경 아래쪽에 걸쳐 떠 있는 흰 카드 */
+.stats{position:relative; z-index:2; background:#fff; border:1px solid var(--b-line); margin-top:-72px;
+  box-shadow:0 24px 50px -28px var(--b-shadow);}
+.stats::before{display:none;}
+.stats .num{color:var(--b-brand); font-family:'Space Mono',monospace; letter-spacing:-.02em;}
+.stats .lbl{color:var(--b-lead);}
+.stats .wrap > div + div{border-left:1px solid var(--b-line);}
+
+/* 섹션: 연한 배경 가로 전체로 교차 */
+#services,#process,#regions{margin-inline:calc(50% - 50vw); padding-inline:calc(50vw - 50%); background:var(--b-section);}
+
+/* 카드: 테두리 대신 부드러운 그림자, 호버 시 살짝 뜸 + 이모지 아이콘 */
+.svc-card,.t-card,.region-card,.article-card{border-color:transparent; box-shadow:0 12px 32px -20px var(--b-shadow); transition:transform .15s, box-shadow .15s;}
+.svc-card:hover,.t-card:hover,.region-card:hover,.article-card:hover{transform:translateY(-3px); box-shadow:0 18px 40px -20px var(--b-shadow);}
+.svc-card::before{font-size:30px; line-height:1;}
+#grades .svc-card:nth-child(1)::before{content:"🎒";}
+#grades .svc-card:nth-child(2)::before{content:"📘";}
+#grades .svc-card:nth-child(3)::before{content:"🎓";}
+#services .svc-card:nth-child(1)::before{content:"💻";}
+#services .svc-card:nth-child(2)::before{content:"🎬";}
+#services .svc-card:nth-child(3)::before{content:"📍";}
+.svc-card .tag{background:var(--primary-soft); color:var(--b-brand-strong);}
+.trust-item .ico{border-radius:12px; background:var(--primary-soft); color:var(--b-brand);}
+
+/* 하위 페이지 상단: 연한 배경 + 오른쪽 아래 지역 실루엣(--b-ph-art) */
+.page-hero{position:relative; margin-inline:calc(50% - 50vw); padding-inline:calc(50vw - 50%); padding-bottom:70px; margin-bottom:12px;
+  background:var(--b-ph-art) right bottom / auto 110px no-repeat, var(--b-ph-ground) left bottom / 100% 40px no-repeat,
+    linear-gradient(180deg, var(--b-hero-bg), var(--bg));}
+.page-hero h1{color:var(--b-ink);}
+.page-hero p{color:var(--b-lead);}
+.page-hero .eyebrow,.breadcrumb{color:var(--b-brand-strong);}
+
+/* 밝은 패널(상단바·상담박스·큰 CTA·블로그 배너) 위 글자 */
+.topbar a.phone{color:var(--b-brand-strong);}
+.apply-wrap{border:1px solid var(--b-line);}
+.apply-wrap::before{display:none;}
+.apply-wrap h2,.cta-big,.cta-big h2{color:var(--panel-ink);}
+.apply-wrap p,.cta-big p{color:var(--on-dark);}
+.apply-wrap .cta-ghost{color:var(--panel-ink) !important; border-color:var(--b-line-strong) !important; background:#fff;}
+.cta-sub{background:#fff; color:var(--panel-ink) !important; border-color:var(--b-line-strong);}
+.cta-big{box-shadow:0 18px 40px -26px var(--b-shadow);}
+.intro-banner{border:1px solid var(--b-line); box-shadow:none;}
+.ib-tag{background:#fff; color:var(--b-brand-strong);}
+.intro-banner mark.free{color:var(--b-brand-strong);}
+.form-card{box-shadow:0 10px 30px -18px var(--b-shadow);}
+
+/* 블로그: 소제목 번호 원 + 포인트색 테두리, 카드 왼쪽 선 */
+.pbox{border-left:3px solid var(--b-brand);}
+.pbox h2:before{background:var(--b-brand); box-shadow:0 0 0 2px var(--surface), 0 0 0 3.5px var(--accent);}
+mark.free{color:var(--b-brand-strong);}
+
+/* 모바일: 글자 아래에 풍경 그림, 통계 카드는 그림 위로 살짝 */
+@media (max-width:900px){
+  .hero{padding-block:36px 0;}
+  .hero::before{display:none;}
+  .hero .grid > div:last-child{position:relative; inset:auto; z-index:0; height:230px; margin-inline:calc(50% - 50vw); margin-top:8px;}
+  .stats{margin-top:-40px;}
+  .stats .wrap > div + div{border-left:0;}
+  .page-hero{background-size:auto 70px, 100% 30px, auto; padding-bottom:56px;}
+}
+/* 군산: 블로그 팁박스·체크를 초록으로, 소제목 번호 원에 금색 테두리 */
+:root{--tip-bg:#EAF7F0; --tip-line:#BCE3CF; --tip-ink:#0E6A50; --card-bg:#F1F7F4; --check:#1A8C6B;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}}
+:root[data-theme="dark"]{--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}
+.cta-main{box-shadow:0 10px 24px -10px rgba(201,138,16,.55);}
