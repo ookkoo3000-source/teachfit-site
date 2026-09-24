@@ -886,12 +886,18 @@ def wrap_boxes(body):
             out.append('<div class="mid-cta"><strong>우리 아이에게 맞는지 궁금하시다면</strong><br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요. <a class="cta-btn" href="../apply.html">무료체험 신청하기 →</a></div>')
     return "".join(out)
 
+def cover_html(post):
+    if os.path.exists(os.path.join(ROOT, "blog", "img", post["slug"] + ".webp")):
+        return '<img class="post-cover" src="img/{}.webp" width="720" height="720" alt="{} 1:1 화상과외 안내" loading="eager">'.format(post["slug"], post["title"].split(",")[0])
+    return ""
+
 def blog_post_body(post):
     return f'''
 <nav class="breadcrumb"><a href="../blog.html">블로그</a> / {post["category"]}</nav>
 <section class="page-hero">
   <span class="eyebrow">{post["date"]} · {post["category"]}</span>
   <h1>{post["title"]}</h1>
+  {cover_html(post)}
   <div class="hero-cta"><a class="cta-main" href="../apply.html">30분 무료체험 신청하기 →</a><span>상담·체험 모두 무료</span></div>
 </section>
 <section>
