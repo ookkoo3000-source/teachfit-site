@@ -810,10 +810,20 @@ def cta_big(prefix="../"):
   </div>
 </div>'''
 
+def intro_banner():
+    return f'''<div class="intro-banner">
+  <span class="ib-tag">무료 상담 · 무료 체험</span>
+  <p>학생 학습 상태 진단과 학교 시험 분석을 함께 안내드려요.<br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요.</p>
+  <div class="ib-btns">
+    <a class="ib-kakao" href="{KAKAO_URL}" target="_blank" rel="noopener">카카오톡 상담 <i>↗</i></a>
+    <a class="ib-apply" href="../apply.html">무료체험 신청 <i>✨</i></a>
+  </div>
+</div>'''
+
 def wrap_boxes(body):
     body = body.replace("30분 무료체험수업", '<mark class="free">30분 무료체험수업</mark>')
     parts = re.split(r'(?=<h2>)', body)
-    out = [parts[0]]
+    out = [parts[0], intro_banner()]
     n = 0
     has_mid = 'mid-cta' in body
     for p in parts[1:]:
