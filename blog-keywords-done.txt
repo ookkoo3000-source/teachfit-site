@@ -9,3 +9,4 @@
 군산월명중학교 국어과외 — published 2026-09-24 — slug: gunsanwolmyeong-jungdeung-gugeo-gwaoe
 나포중학교 영어과외 — published 2026-09-24 — slug: napo-jungdeung-yeongeo-gwaoe
 군산대성중학교 수학과외(선행학습) — published 2026-09-24 — slug: gunsandaeseong-jungdeung-suhak-seonhaeng-gwaoe
+군산상일고등학교 영어과외 — published 2026-09-24 — slug: gunsansangil-godeung-yeongeo-gwaoe
