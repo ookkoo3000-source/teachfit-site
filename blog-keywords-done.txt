@@ -11,3 +11,4 @@
 군산대성중학교 수학과외(선행학습) — published 2026-09-24 — slug: gunsandaeseong-jungdeung-suhak-seonhaeng-gwaoe
 군산상일고등학교 영어과외 — published 2026-09-24 — slug: gunsansangil-godeung-yeongeo-gwaoe
 군산중앙고등학교 수학과외 — published 2026-09-24 — slug: gunsanjungang-godeung-suhak-gwaoe
+군산신흥초등학교 국어과외 — published 2026-09-24 — slug: gunsansinheung-chodeung-gugeo-gwaoe
