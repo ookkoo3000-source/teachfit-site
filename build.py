@@ -894,7 +894,7 @@ def cover_html(post):
 def blog_post_body(post):
     return f'''
 <nav class="breadcrumb"><a href="../blog.html">블로그</a> / {post["category"]}</nav>
-<section class="page-hero">
+<section class="page-hero post-hero">
   <span class="eyebrow">{post["date"]} · {post["category"]}</span>
   <h1>{post["title"]}</h1>
   {cover_html(post)}
