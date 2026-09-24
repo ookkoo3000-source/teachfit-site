@@ -2369,6 +2369,11 @@ def school_subject_body(school, subj):
 </section>
 '''
 
+import concise_data
+for _p in BLOG_POSTS:
+    if _p["slug"] in concise_data.D:
+        _p["body"] = concise_data.render(concise_data.D[_p["slug"]])
+
 # generate all pages
 # ---------------------------------------------------------------
 page("index.html", f"{REGION_SHORT} 과외 | 초등·중등·고등 수학 영어 1:1 화상과외 · {BRAND}", f"{REGION_SHORT} 과외를 찾고 계신가요? 초등학생부터 고등학생까지, 수학·영어·국어 등 전 과목 1:1 화상과외를 30분 무료체험수업으로 먼저 받아보세요.", "index.html",
