@@ -13,3 +13,6 @@
 군산중앙고등학교 수학과외 — published 2026-09-24 — slug: gunsanjungang-godeung-suhak-gwaoe
 군산신흥초등학교 국어과외 — published 2026-09-24 — slug: gunsansinheung-chodeung-gugeo-gwaoe
 군산용문초등학교 영어과외 — published 2026-09-24 — slug: gunsanyongmun-chodeung-yeongeo-gwaoe
+군산남초등학교 수학과외(기초학력) — published 2026-09-24 — slug: gunsannam-chodeung-suhak-gwaoe
+군산제일중학교 영어과외(중간고사) — published 2026-09-24 — slug: gunsanjeil-jungdeung-yeongeo-jungganggosa-gwaoe
+군산동고등학교 국어과외(비문학) — published 2026-09-24 — slug: gunsandong-godeung-gugeo-naesin-gwaoe
