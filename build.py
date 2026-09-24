@@ -822,7 +822,52 @@ def intro_banner():
   </div>
 </div>'''
 
+def _split_long_p(m):
+    inner = m.group(1)
+    if "<br" in inner or len(inner) < 170:
+        return m.group(0)
+    sents = [x for x in re.split(r'(?<=[.!?])\s+', inner.strip()) if x]
+    chunks, cur = [], []
+    for sx in sents:
+        cur.append(sx)
+        if len(" ".join(cur)) >= 90 or len(cur) >= 2:
+            chunks.append(" ".join(cur)); cur = []
+    if cur:
+        if chunks and len(" ".join(cur)) < 40:
+            chunks[-1] += " " + " ".join(cur)
+        else:
+            chunks.append(" ".join(cur))
+    for c in chunks:
+        if c.count("<strong>") != c.count("</strong>"):
+            return m.group(0)
+    return "".join("<p>{}</p>".format(c) for c in chunks)
+
+def _auto_format(body):
+    if "summary-box" in body:
+        return body
+    body = re.sub(r'<p>(.*?)</p>', _split_long_p, body, flags=re.S)
+    titles = re.findall(r'<h2>(.*?)</h2>', body)
+    items = "".join("<li>{}</li>".format(t) for t in titles[:5])
+    box = ('<div class="summary-box"><strong>이 글 한눈에 보기</strong><ul>' + items +
+           '<li><b>30분 무료체험수업</b>으로 먼저 확인해보실 수 있어요.</li></ul></div>')
+    body = box + body
+    def to_callout(sec, force):
+        if "<h3>" in sec or "callout" in sec:
+            return sec
+        ps = list(re.finditer(r'<p>([^<]*?)</p>', sec))
+        if not ps:
+            return sec
+        last = ps[-1]
+        if sec[last.end():].strip():
+            return sec
+        if not (force or re.match(r'(결국|무엇보다|중요한 건)', last.group(1))):
+            return sec
+        return sec[:last.start()] + '<div class="callout"><strong>핵심 정리</strong>' + last.group(1) + '</div>' + sec[last.end():]
+    parts = re.split(r'(?=<h2>)', body)
+    return parts[0] + "".join(to_callout(p, i in (1, 3)) for i, p in enumerate(parts[1:]))
+
 def wrap_boxes(body):
+    body = _auto_format(body)
     body = body.replace("30분 무료체험수업", '<mark class="free">30분 무료체험수업</mark>')
     parts = re.split(r'(?=<h2>)', body)
     out = [intro_banner(), parts[0]]
