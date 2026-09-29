@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 28 Sep 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 29 Sep 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산나운초등학교 수학과외, 분수 개념 확실하게</title>
+    <link>https://slovrest.com/blog/gunsan-naun-es-suhak-bunsu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-naun-es-suhak-bunsu.html</guid>
+    <description>분수만 나오면 헷갈려 하는 군산나운초등학교 학생을 위해 분수의 의미부터 크기 비교, 통분과 약분, 분수 계산까지 단계별로 정리했어요.</description>
+    <pubDate>Tue, 29 Sep 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>전북외국어고등학교 국어과외, 화법과 작문 내신 대비</title>
+    <link>https://slovrest.com/blog/gunsan-jeonbuk-foreign-hs-gugeo-hwajak.html</link>
+    <guid>https://slovrest.com/blog/gunsan-jeonbuk-foreign-hs-gugeo-hwajak.html</guid>
+    <description>화법과 작문 과목의 내신 문제 유형이 낯선 전북외국어고등학교 학생을 위해 화법 영역과 작문 영역별 공부법, 서술형 대비를 정리했어요.</description>
+    <pubDate>Tue, 29 Sep 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>임피중학교 영어과외, 듣기평가 만점 전략</title>
+    <link>https://slovrest.com/blog/gunsan-impi-ms-yeongeo-deutgi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-impi-ms-yeongeo-deutgi.html</guid>
+    <description>영어 듣기평가에서 한두 문제씩 놓치는 임피중학교 학생을 위해 듣기 유형별 전략과 매일 할 수 있는 듣기 훈련법을 정리했어요.</description>
+    <pubDate>Tue, 29 Sep 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산금광초등학교 국어과외, 독서록 쓰기 부담 줄이기</title>
+    <link>https://slovrest.com/blog/gunsan-geumgwang-es-gugeo-dokseorok.html</link>
+    <guid>https://slovrest.com/blog/gunsan-geumgwang-es-gugeo-dokseorok.html</guid>
+    <description>책은 읽었는데 독서록만 쓰려면 막막해하는 군산금광초등학교 학생을 위해 독서록을 쉽고 알차게 쓰는 단계별 방법을 정리했어요.</description>
+    <pubDate>Tue, 29 Sep 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산동원중학교 수학과외, 확률과 경우의 수 정복</title>
+    <link>https://slovrest.com/blog/gunsan-dongwon-ms-suhak-hwakryul.html</link>
+    <guid>https://slovrest.com/blog/gunsan-dongwon-ms-suhak-hwakryul.html</guid>
+    <description>경우의 수를 빠뜨리거나 중복해서 세는 실수가 잦은 군산동원중학교 학생을 위해 경우의 수와 확률을 빈틈없이 푸는 방법을 정리했어요.</description>
+    <pubDate>Tue, 29 Sep 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산고등학교 수학과외, 기초부터 심화까지 단계별 지도</title>
     <link>https://slovrest.com/blog/gunsan-hs-suhak-dangye-jido.html</link>
