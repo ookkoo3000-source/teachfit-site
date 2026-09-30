@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 29 Sep 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 30 Sep 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산미장초등학교 수학과외, 소수의 계산 정확하게</title>
+    <link>https://slovrest.com/blog/gunsan-mijang-es-suhak-sosu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-mijang-es-suhak-sosu.html</guid>
+    <description>소수점 위치를 자주 틀리는 군산미장초등학교 학생을 위해 소수의 의미부터 덧셈과 뺄셈, 곱셈과 나눗셈의 소수점 규칙까지 단계별로 정리했어요.</description>
+    <pubDate>Wed, 30 Sep 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산영광중학교 영어과외, 수동태 헷갈림 없애기</title>
+    <link>https://slovrest.com/blog/gunsan-yeonggwang-ms-yeongeo-sudongtae.html</link>
+    <guid>https://slovrest.com/blog/gunsan-yeonggwang-ms-yeongeo-sudongtae.html</guid>
+    <description>능동태와 수동태 전환에서 시제와 동사 형태를 자주 틀리는 군산영광중학교 학생을 위해 수동태의 원리와 전환 순서, 시험 대비법을 정리했어요.</description>
+    <pubDate>Wed, 30 Sep 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산내흥초등학교 국어과외, 속담과 관용 표현 익히기</title>
+    <link>https://slovrest.com/blog/gunsan-naeheung-es-gugeo-sokdam.html</link>
+    <guid>https://slovrest.com/blog/gunsan-naeheung-es-gugeo-sokdam.html</guid>
+    <description>교과서와 책에 나오는 속담, 관용 표현의 뜻을 몰라 글 이해에 어려움을 겪는 군산내흥초등학교 학생을 위해 재미있게 익히는 방법을 정리했어요.</description>
+    <pubDate>Wed, 30 Sep 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산여자고등학교 국어과외, 언어와 매체 개념 정리</title>
+    <link>https://slovrest.com/blog/gunsan-girls-hs-gugeo-eonmae.html</link>
+    <guid>https://slovrest.com/blog/gunsan-girls-hs-gugeo-eonmae.html</guid>
+    <description>언어와 매체 과목에서 문법 개념과 매체 문제가 헷갈리는 군산여자고등학교 학생을 위해 언어 영역과 매체 영역별 공부법과 시험 대비를 정리했어요.</description>
+    <pubDate>Wed, 30 Sep 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>회현중학교 수학과외, 정수와 유리수 계산 완성</title>
+    <link>https://slovrest.com/blog/gunsan-hoehyeon-ms-suhak-jeongsu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-hoehyeon-ms-suhak-jeongsu.html</guid>
+    <description>음수가 들어간 계산에서 부호 실수가 잦은 회현중학교 학생을 위해 정수와 유리수의 개념부터 사칙연산, 혼합 계산까지 단계별로 정리했어요.</description>
+    <pubDate>Wed, 30 Sep 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산나운초등학교 수학과외, 분수 개념 확실하게</title>
     <link>https://slovrest.com/blog/gunsan-naun-es-suhak-bunsu.html</link>
