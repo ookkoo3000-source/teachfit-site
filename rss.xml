@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 30 Sep 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 01 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산문화초등학교 수학과외, 분수의 덧셈과 뺄셈</title>
+    <link>https://slovrest.com/blog/gunsan-munhwa-es-suhak-bunsu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-munhwa-es-suhak-bunsu.html</guid>
+    <description>분모가 다른 분수의 덧셈과 뺄셈에서 통분을 헷갈리고 대분수 계산에서 실수하는 군산문화초등학교 학생을 위해 원리부터 정리했어요.</description>
+    <pubDate>Thu, 01 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산남중학교 영어과외, 비교급과 최상급 정리</title>
+    <link>https://slovrest.com/blog/gunsan-nam-ms-yeongeo-bigyogeup.html</link>
+    <guid>https://slovrest.com/blog/gunsan-nam-ms-yeongeo-bigyogeup.html</guid>
+    <description>비교급과 최상급의 형태 변화와 원급 비교 표현이 헷갈리는 군산남중학교 학생을 위해 비교 구문을 한 번에 정리했어요.</description>
+    <pubDate>Thu, 01 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산동초등학교 영어과외, 파닉스로 혼자 읽기</title>
+    <link>https://slovrest.com/blog/gunsan-dong-es-yeongeo-phonics.html</link>
+    <guid>https://slovrest.com/blog/gunsan-dong-es-yeongeo-phonics.html</guid>
+    <description>알파벳은 아는데 영어 단어를 소리 내어 읽지 못하는 군산동초등학교 학생을 위해 파닉스로 스스로 읽는 힘을 키우는 방법을 정리했어요.</description>
+    <pubDate>Thu, 01 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산고등학교 국어과외, 인문 독서 지문 정복</title>
+    <link>https://slovrest.com/blog/gunsan-hs-gugeo-inmun-dokseo.html</link>
+    <guid>https://slovrest.com/blog/gunsan-hs-gugeo-inmun-dokseo.html</guid>
+    <description>인문·철학 독서 지문의 추상적인 개념과 학자들의 관점 비교에서 막히는 군산고등학교 학생을 위해 인문 지문 독해법을 정리했어요.</description>
+    <pubDate>Thu, 01 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산중앙중학교 수학과외, 일차함수 그래프 완벽 이해</title>
+    <link>https://slovrest.com/blog/gunsan-jungang-ms-suhak-ilchahamsu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-jungang-ms-suhak-ilchahamsu.html</guid>
+    <description>기울기와 절편의 의미가 헷갈리고 그래프를 보고 식을 세우지 못하는 군산중앙중학교 학생을 위해 일차함수 단원을 정리했어요.</description>
+    <pubDate>Thu, 01 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산미장초등학교 수학과외, 소수의 계산 정확하게</title>
     <link>https://slovrest.com/blog/gunsan-mijang-es-suhak-sosu.html</link>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>군산중앙중학교 수학과외, 일차함수 그래프 완벽 이해 | 티치핏군산</title>
+<meta name="description" content="기울기와 절편의 의미가 헷갈리고 그래프를 보고 식을 세우지 못하는 군산중앙중학교 학생을 위해 일차함수 단원을 정리했어요.">
+<link rel="canonical" href="https://slovrest.com/blog/gunsan-jungang-ms-suhak-ilchahamsu.html">
+<link rel="alternate" type="application/rss+xml" title="티치핏군산 블로그" href="https://slovrest.com/rss.xml">
+<meta name="naver-site-verification" content="24cc1c4678a952a91fe1248a4ce9dd147a24e2f6">
+<meta name="google-site-verification" content="zf_2UYRhfkhlS2WU-rOXMoIZvEmeivqqsPSfX-OIQLU">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=55cc4374a5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="티치핏군산">
+<meta property="og:title" content="군산중앙중학교 수학과외, 일차함수 그래프 완벽 이해 | 티치핏군산">
+<meta property="og:description" content="기울기와 절편의 의미가 헷갈리고 그래프를 보고 식을 세우지 못하는 군산중앙중학교 학생을 위해 일차함수 단원을 정리했어요.">
+<meta property="og:url" content="https://slovrest.com/blog/gunsan-jungang-ms-suhak-ilchahamsu.html">
+<meta property="og:image" content="https://slovrest.com/blog/img/gunsan-jungang-ms-suhak-ilchahamsu.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://slovrest.com/blog/img/gunsan-jungang-ms-suhak-ilchahamsu.jpg">
+</head>
+<body>
+<div class="band band-gunsan" aria-hidden="true">
+<svg class="band-bg" viewBox="0 0 800 56" preserveAspectRatio="none">
+  <defs><linearGradient id="gunsanBandSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:var(--band-top)"/><stop offset="100%" style="stop-color:var(--band-bottom)"/></linearGradient></defs>
+  <rect x="0" y="0" width="800" height="56" fill="url(#gunsanBandSky)"/>
+  <path d="M0 44 Q 20 36 40 44 T 80 44 T 120 44 T 160 44 T 200 44 T 240 44 T 280 44 T 320 44 T 360 44 T 400 44 T 440 44 T 480 44 T 520 44 T 560 44 T 600 44 T 640 44 T 680 44 T 720 44 T 760 44 T 800 44" fill="none" stroke="var(--band-soft)" stroke-width="2" opacity=".55"/>
+  <path d="M0 51 Q 20 45 40 51 T 80 51 T 120 51 T 160 51 T 200 51 T 240 51 T 280 51 T 320 51 T 360 51 T 400 51 T 440 51 T 480 51 T 520 51 T 560 51 T 600 51 T 640 51 T 680 51 T 720 51 T 760 51 T 800 51" fill="none" stroke="var(--band-hi)" stroke-width="1.5" opacity=".4"/>
+  <g fill="none" stroke="var(--band-soft)" stroke-width="1.3" stroke-linecap="round" opacity=".7">
+    <path d="M60 20 l4 -3 l4 3"/>
+    <path d="M78 14 l4 -3 l4 3"/>
+    <path d="M96 22 l4 -3 l4 3"/>
+    <path d="M118 12 l4 -3 l4 3"/>
+    <path d="M140 19 l4 -3 l4 3"/>
+    <path d="M230 16 l4 -3 l4 3"/>
+    <path d="M252 10 l4 -3 l4 3"/>
+    <path d="M270 18 l4 -3 l4 3"/>
+    <path d="M390 14 l4 -3 l4 3"/>
+    <path d="M412 21 l4 -3 l4 3"/>
+    <path d="M520 12 l4 -3 l4 3"/>
+    <path d="M540 18 l4 -3 l4 3"/>
+  </g>
+</svg>
+<svg class="band-motif" viewBox="0 0 200 56" preserveAspectRatio="xMaxYMax meet">
+  <circle cx="34" cy="20" r="9" fill="var(--band-hi)" opacity=".9"/>
+  <g fill="var(--band-ink)">
+    <path d="M70 46 V30 L100 18 L130 30 V46 Z"/>
+    <rect x="96" y="8" width="8" height="12"/>
+    <path d="M94 8 L100 2 L106 8 Z"/>
+    <path d="M136 46 V34 L151 26 L166 34 V46 Z"/>
+    <path d="M170 46 V36 L182 30 L194 36 V46 Z"/>
+  </g>
+  <g fill="var(--band-hi)" opacity=".85">
+    <rect x="78" y="34" width="5" height="6"/><rect x="90" y="34" width="5" height="6"/><rect x="105" y="34" width="5" height="6"/><rect x="117" y="34" width="5" height="6"/>
+    <rect x="148" y="37" width="5" height="5"/><rect x="180" y="39" width="4" height="4"/>
+  </g>
+</svg>
+</div>
+<div class="topbar">
+  <div class="wrap">
+    <span>지금 신청하면 30분 무료체험수업부터 받아보실 수 있어요</span>
+    <a class="phone" href="tel:01031315305">📞 010-3131-5305 (09:00–21:00)</a>
+  </div>
+</div>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="mark">TF</span>티치핏군산</a>
+    <div class="navwrap">
+      <nav class="main">
+        <a href="../index.html">홈</a>
+        <a href="../services.html">화상과외 소개</a>
+        <a href="../process.html">매칭 방식</a>
+        <a href="../teachers.html">선생님</a>
+        <a href="../regions.html">군산 학교별 과외</a>
+        <a href="../blog.html" aria-current="page">블로그</a>
+      </nav>
+      <a class="cta-btn" href="../apply.html">무료 상담 신청</a>
+      <button class="menu-btn" aria-label="메뉴">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav-wrap">
+    <nav class="mobile-nav">
+      <a href="../index.html">홈</a>
+      <a href="../services.html">화상과외 소개</a>
+      <a href="../process.html">매칭 방식</a>
+      <a href="../teachers.html">선생님</a>
+      <a href="../regions.html">군산 학교별 과외</a>
+      <a href="../blog.html" aria-current="page">블로그</a>
+      <a href="../apply.html">무료 상담 신청</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="breadcrumb"><a href="../blog.html">블로그</a> / 중등 수학</nav>
+<section class="page-hero post-hero">
+  <span class="eyebrow">2026-10-01 · 중등 수학</span>
+  <h1>군산중앙중학교 수학과외, 일차함수 그래프 완벽 이해</h1>
+  <img class="post-cover" src="img/gunsan-jungang-ms-suhak-ilchahamsu.webp" width="720" height="720" alt="군산중앙중학교 수학과외 1:1 화상과외 안내" loading="eager">
+  <div class="hero-cta"><a class="cta-main" href="../apply.html">30분 무료체험 신청하기 →</a><span>상담·체험 모두 무료</span></div>
+</section>
+<section>
+  <article class="prose blog-prose">
+    <div class="intro-banner">
+  <span class="ib-tag">무료 상담 · 무료 체험</span>
+  <p>학생 학습 상태 진단과 학교 시험 분석을 함께 안내드려요.<br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요.</p>
+  <div class="ib-btns">
+    <a class="ib-kakao" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담 <i>↗</i></a>
+    <a class="ib-apply" href="../apply.html">무료체험 신청 <i>✨</i></a>
+  </div>
+</div><div class="summary-box"><strong>이 글 한눈에 보기</strong><ul><li>군산중앙중학교 학생이 일차함수를 어려워하는 이유</li><li>함수와 일차함수의 뜻</li><li>기울기와 절편</li><li>그래프 그리기와 성질</li><li>식 구하기와 활용</li><li><b><mark class="free">30분 무료체험수업</mark></b>으로 먼저 확인해보실 수 있어요.</li></ul></div>
+<p>군산중앙중학교 2학년 학생들이 2학기에 배우는 일차함수 단원은 중학교 수학에서 함수를 본격적으로 다루는 첫 단원이에요. 1학년 때 좌표평면과 정비례, 반비례를 배웠지만, 일차함수에서는 기울기, y절편, x절편, 평행이동, 그래프의 성질까지 한꺼번에 나오면서 많은 학생이 어려움을 느껴요.</p><p>특히 기울기를 구할 때 x의 증가량과 y의 증가량의 순서를 바꾸거나, 그래프를 보고 식을 세우지 못하거나, 두 직선의 교점을 연립방정식과 연결하지 못하는 경우가 자주 있어요.</p><p>일차함수는 3학년 이차함수와 고등학교의 모든 함수 단원으로 이어지는 매우 중요한 기초예요. 식과 그래프의 관계를 이해하고 기울기의 뜻을 정확히 알면 일차함수는 충분히 정복할 수 있어요.</p><p>이 글에서는 군산중앙중학교 학생이 일차함수를 어려워하는 이유, 함수와 일차함수의 뜻, 기울기와 절편, 그래프 그리기와 성질, 식 구하기와 활용, 그리고 1:1 화상 수학 수업 활용법까지 차례대로 정리해 드릴게요.</p>
+<div class="pbox"><h2>군산중앙중학교 학생이 일차함수를 어려워하는 이유</h2>
+<p>일차함수를 어려워하는 첫 번째 이유는 함수라는 개념 자체가 낯설기 때문이에요. x의 값이 정해지면 y의 값이 하나로 정해지는 관계라는 뜻을 정확히 이해하지 못하면 이후의 내용도 흔들리게 돼요.</p>
+<p>두 번째 이유는 기울기의 뜻을 공식으로만 외우는 거예요. 기울기가 x가 1만큼 증가할 때 y가 얼마나 증가하는지를 나타낸다는 의미를 모르면 그래프 문제에서 기울기를 찾지 못해요.</p>
+<p>세 번째 이유는 증가량의 순서를 헷갈리는 거예요. 기울기는 y의 증가량을 x의 증가량으로 나눈 값인데, 분자와 분모를 바꾸어 계산하는 실수가 자주 생겨요.</p>
+<p>네 번째 이유는 식과 그래프를 따로 공부하는 거예요. 식을 보고 그래프의 모양을 떠올리거나, 그래프를 보고 식을 세우는 연습이 부족하면 문제를 풀 때 막히게 돼요.</p>
+<p>다섯 번째 이유는 일차방정식과 연립방정식이 흔들리는 거예요. 일차함수는 1학기에 배운 일차방정식과 연립방정식을 그대로 활용하기 때문에, 앞 단원이 불안하면 일차함수도 어려워요.</p>
+<p>여섯 번째로, 좌표를 정확히 읽지 못하는 경우도 있어요. 그래프 위의 점의 좌표를 잘못 읽으면 기울기와 절편을 모두 틀리게 돼요.</p>
+<p>이런 원인은 식과 그래프를 함께 보며 의미를 이해하는 연습을 하면 충분히 해결할 수 있어요.</p>
+<p>최근 단원평가나 문제집에서 틀린 문제를 다시 살펴보세요. 기울기, 절편, 그래프 해석, 식 구하기 중 어디서 틀렸는지 나눠 보면 약점이 보여요.</p>
+<p>일차방정식이나 연립방정식이 흔들린다면 그 부분부터 먼저 복습하는 것이 일차함수를 빠르게 잡는 지름길이에요.</p>
+<p>아래에서 함수와 일차함수의 뜻부터 차근차근 살펴볼게요.</p>
+<p>기초부터 쌓으면 일차함수는 오히려 규칙이 분명한 재미있는 단원이 될 수 있어요.</p>
+<p>함수를 제대로 이해하는 경험은 이후 모든 수학 공부의 든든한 바탕이 돼요.</p>
+</div><div class="pbox"><h2>함수와 일차함수의 뜻</h2>
+<p>함수는 x의 값이 하나 정해지면 그에 따라 y의 값이 오직 하나로 정해지는 관계예요. 예를 들어 한 개에 500원인 연필을 x개 살 때 내야 할 돈 y는 x에 따라 하나로 정해지니까 y는 x의 함수예요.</p>
+<p>반대로 x의 값 하나에 y의 값이 여러 개 대응하거나 하나도 대응하지 않으면 함수가 아니에요. 자연수 x의 약수 y처럼 x가 6일 때 y가 1, 2, 3, 6으로 여러 개라면 함수가 아니에요.</p>
+<p>함수인지 판단할 때는 표를 만들어 x에 여러 값을 넣어보세요. 모든 x에 대해 y가 하나씩만 정해지는지 확인하면 쉽게 판단할 수 있어요.</p>
+<p>함숫값은 x의 값에 대응하는 y의 값이에요. f(x)라는 기호로 나타내고, f(2)는 x가 2일 때의 함숫값을 뜻해요.</p>
+<p>일차함수는 y가 x에 대한 일차식으로 나타나는 함수예요. y는 ax 더하기 b의 꼴이고, a는 0이 아니어야 해요. a가 0이면 x항이 사라져서 일차함수가 아니에요.</p>
+<p>일차함수인지 판단하는 문제에서는 식을 정리한 뒤 x의 최고차항이 일차인지 확인하세요. 괄호를 풀거나 이항했을 때 x제곱 항이 사라지거나 x항이 사라지는 경우를 조심해야 해요.</p>
+<p>분모에 x가 있는 식은 일차함수가 아니라는 점도 기억하세요. y는 x분의 2처럼 반비례 관계의 식은 일차식이 아니에요.</p>
+<p>생활 속에서 일차함수 관계를 찾아보는 것도 좋아요. 택시 요금, 물탱크의 물의 양, 일정한 속력으로 걸은 거리처럼 일정하게 변하는 관계는 대부분 일차함수로 나타낼 수 있어요.</p>
+<p>교과서의 예제를 풀며 함수인지, 일차함수인지 판단하는 연습을 충분히 하세요.</p>
+<p>개념을 자신의 말로 설명할 수 있을 때까지 정리해 보세요.</p>
+<div class="callout"><strong>핵심 정리</strong>뜻을 정확히 알면 그래프의 성질도 훨씬 쉽게 이해할 수 있어요.</div>
+</div><div class="pbox"><h2>기울기와 절편</h2>
+<p>일차함수 y는 ax 더하기 b에서 a를 기울기라고 해요. 기울기는 x의 값이 1만큼 증가할 때 y의 값이 얼마나 증가하는지를 나타내요.</p>
+<p>기울기는 y의 증가량을 x의 증가량으로 나누어 구해요. 그래프 위의 두 점을 알면 두 점의 y좌표의 차를 x좌표의 차로 나누면 돼요. 이때 두 점의 순서를 분자와 분모에서 똑같이 맞춰야 해요.</p>
+<p>기울기가 양수이면 그래프는 오른쪽 위로 올라가고, 음수이면 오른쪽 아래로 내려가요. 기울기의 절댓값이 클수록 그래프는 y축에 가깝게 가파르게 그려져요.</p>
+<p>y절편은 그래프가 y축과 만나는 점의 y좌표예요. 일차함수 y는 ax 더하기 b에서 x에 0을 넣으면 y는 b가 되니까 y절편은 b예요.</p>
+<p>x절편은 그래프가 x축과 만나는 점의 x좌표예요. y에 0을 넣고 x의 값을 구하면 x절편이 나와요.</p>
+<p>기울기와 y절편을 헷갈리지 않으려면 식에서 x 앞의 수가 기울기, 상수항이 y절편이라고 기억하세요. 다만 식이 y는 ax 더하기 b의 꼴로 정리되어 있어야 해요.</p>
+<p>평행이동도 알아두세요. y는 ax의 그래프를 y축 방향으로 b만큼 평행이동하면 y는 ax 더하기 b의 그래프가 돼요. 평행이동해도 기울기는 변하지 않아요.</p>
+<p>그래프를 보고 기울기를 구할 때는 좌표가 정수인 두 점을 찾으세요. 격자점을 이용하면 계산이 정확하고 빨라져요.</p>
+<p>계단 모양으로 오른쪽으로 몇 칸, 위나 아래로 몇 칸 움직이는지 세어 보면 기울기를 눈으로 확인할 수 있어요.</p>
+<p>기울기와 절편을 구하는 문제를 매일 몇 개씩 꾸준히 풀어보세요.</p>
+<p>기울기의 뜻을 확실히 이해하면 일차함수 단원의 절반은 해결한 셈이에요.</p>
+</div><div class="mid-cta"><strong>우리 아이에게 맞는지 궁금하시다면</strong><br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요. <a class="cta-btn" href="../apply.html">무료체험 신청하기 →</a></div><div class="pbox"><h2>그래프 그리기와 성질</h2>
+<p>일차함수의 그래프는 직선이에요. 직선은 두 점만 알면 그릴 수 있어서 일차함수의 그래프는 두 점을 이용해 쉽게 그릴 수 있어요.</p>
+<p>첫 번째 방법은 x에 두 값을 넣어 두 점을 구하는 방법이에요. x에 0과 1처럼 계산하기 쉬운 값을 넣어 점을 찍고 직선으로 이으면 돼요.</p>
+<p>두 번째 방법은 x절편과 y절편을 이용하는 방법이에요. 두 절편을 구해 x축과 y축 위에 점을 찍고 이으면 그래프가 완성돼요.</p>
+<p>세 번째 방법은 y절편과 기울기를 이용하는 방법이에요. y절편에 점을 찍고, 기울기만큼 오른쪽과 위아래로 이동해 다른 한 점을 찍은 뒤 이으면 돼요.</p>
+<p>그래프가 지나는 사분면도 판단할 수 있어야 해요. 기울기와 y절편의 부호를 보면 그래프가 어느 사분면을 지나는지 알 수 있어요.</p>
+<p>두 일차함수의 그래프가 평행하려면 기울기가 같고 y절편이 달라야 해요. 기울기와 y절편이 모두 같으면 두 그래프는 일치해요.</p>
+<p>두 그래프의 교점은 두 일차방정식을 연립해서 구할 수 있어요. 교점의 좌표가 바로 연립방정식의 해라는 점이 중요해요.</p>
+<p>연립방정식의 해가 없거나 무수히 많은 경우도 그래프로 이해할 수 있어요. 두 직선이 평행하면 해가 없고, 일치하면 해가 무수히 많아요.</p>
+<p>그래프를 그릴 때는 자를 사용해 반듯하게 그리고, 눈금을 정확히 세세요.</p>
+<p>그래프를 직접 여러 번 그려보면 식과 그래프의 관계가 자연스럽게 몸에 익어요.</p>
+<div class="callout"><strong>핵심 정리</strong>그래프의 성질을 알면 식을 보자마자 모양을 떠올릴 수 있게 돼요.</div>
+</div><div class="pbox"><h2>식 구하기와 활용</h2>
+<p>일차함수 단원에서는 주어진 조건으로 식을 구하는 문제가 자주 출제돼요. 조건의 종류에 따라 식을 세우는 방법이 달라서 유형별로 정리해 두세요.</p>
+<p>기울기와 y절편이 주어지면 y는 ax 더하기 b에 바로 넣으면 돼요. 가장 간단한 유형이에요.</p>
+<p>기울기와 지나는 한 점이 주어지면 y는 ax 더하기 b에 기울기를 넣고, 지나는 점의 좌표를 대입해 b를 구하세요.</p>
+<p>지나는 두 점이 주어지면 먼저 두 점으로 기울기를 구한 뒤, 한 점을 대입해 y절편을 구하세요.</p>
+<p>x절편과 y절편이 주어지면 두 점의 좌표로 생각해서 기울기를 구하고, y절편은 바로 b로 쓰면 돼요.</p>
+<p>활용 문제도 자주 나와요. 물을 일정하게 채우는 문제, 양초가 일정하게 타는 문제, 일정한 속력으로 이동하는 문제처럼 일정하게 변하는 상황을 일차함수로 나타내요.</p>
+<p>활용 문제에서는 먼저 무엇이 x이고 무엇이 y인지 정하세요. 처음의 값은 y절편, 일정하게 변하는 양은 기울기가 되는 경우가 많아요.</p>
+<p>식을 세운 뒤에는 문제에서 묻는 x나 y의 값을 대입해 답을 구하고, 단위와 상황에 맞는지 확인하세요.</p>
+<p>서술형에서는 식을 세우는 과정과 대입, 계산 과정을 빠짐없이 써야 해요. 어떤 조건으로 기울기를 구했는지도 분명하게 적으세요.</p>
+<p>시험 전에는 교과서 예제와 학교 프린트, 기출 유형을 중심으로 문제를 반복해서 풀어보세요.</p>
+<p>조건과 식의 형태를 연결하는 연습이 쌓이면 어떤 문제가 나와도 시작할 수 있어요.</p>
+</div><div class="pbox"><h2>1:1 화상 수학 수업으로 일차함수 잡기</h2>
+<p>일차함수는 식과 그래프를 함께 보며 설명할 때 가장 잘 이해돼요. 1:1 수업에서는 선생님이 학생이 그래프를 어떻게 이해하는지 직접 확인하고, 막히는 부분을 바로 짚어줄 수 있어요.</p>
+<p>화상 수업에서는 화면 공유와 필기 도구를 이용해 좌표평면에 그래프를 직접 그리며 기울기와 절편을 설명해요. 학생이 푼 과정을 함께 보며 실수가 생기는 지점을 확인할 수 있어요.</p>
+<p>군산중앙중학교 학생이라면 학교 진도와 시험 일정에 맞춰 수업을 구성할 수 있어요. 시험 범위와 학교 프린트를 기준으로 서술형까지 대비할 수 있어요.</p>
+<p>이동 시간이 없어서 방과 후 시간을 효율적으로 쓸 수 있고, 수업은 녹화되어 복습할 때 다시 볼 수 있어요.</p>
+<p>티치핏군산에서는 상담할 때 학년, 최근 수학 성적, 어려워하는 단원을 먼저 여쭤봐요. 연립방정식이 흔들린다면 그 부분부터 보완하는 계획을 세워 드려요.</p>
+<p>일차함수 이후에는 일차함수와 일차방정식의 관계, 도형 단원까지 이어서 학습할 수 있어서 2학년 2학기 수학 전체를 체계적으로 준비할 수 있어요.</p>
+<p>수업 후에는 배운 개념과 문제, 과제를 정리해 드려서 다음 수업 전까지 스스로 복습할 수 있어요.</p>
+<p>일차함수가 고민이시라면 <mark class="free">30분 무료체험수업</mark>으로 먼저 수업 방식을 확인해 보세요. 최근 시험지나 문제집을 준비해 오시면 약점 분석부터 함께 해볼 수 있어요.</p>
+<p>상담과 체험은 모두 무료예요. 일차함수를 확실히 잡으면 3학년 이차함수도 훨씬 자신 있게 맞이할 수 있어요.</p>
+<p>군산 지역에서 학원을 오가는 시간이 부담스러운 학생도 집에서 바로 수업을 받을 수 있어서, 그 시간을 문제 풀이에 쓸 수 있어요.</p>
+<p>식과 그래프를 연결하는 힘은 수학 전체를 이해하는 중요한 열쇠가 돼요.</p>
+<p><strong>Q. 일차함수 단원만 집중해서 수업할 수 있나요?</strong><br>
+네, 학생이 어려워하는 단원에 맞춰 함수의 뜻부터 활용 문제까지 집중적으로 수업할 수 있어요.</p>
+<p><strong>Q. 기울기 구할 때 자꾸 순서를 바꿔요.</strong><br>
+격자점을 이용해 오른쪽으로 몇 칸, 위로 몇 칸 이동하는지 세는 방법으로 기울기의 뜻을 눈으로 익히도록 도와 드려요.</p>
+<p><strong>Q. 서술형도 대비할 수 있나요?</strong><br>
+네, 식을 세우는 과정과 근거를 쓰는 연습을 하고, 학생이 쓴 풀이를 함께 보며 감점 요인을 짚어 드려요.</p>
+</div>
+  </article>
+</section>
+<section>
+  <div class="cta-big">
+  <div class="cta-big-text">
+    <span class="cta-badge">무료</span>
+    <h2>30분 무료체험수업 먼저 받아보세요</h2>
+    <p>이름과 연락처만 남기시면 24시간 이내에 담당자가 연락드려요. 체험 후 마음에 들 때만 결정하세요.</p>
+  </div>
+  <div class="cta-big-btns">
+    <a class="cta-main" href="../apply.html">무료체험 신청하기 →</a>
+    <a class="cta-sub" href="tel:01031315305">전화 010-3131-5305</a>
+    <a class="cta-sub" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담</a>
+  </div>
+</div>
+</section>
+<p style="margin-top:14px;"><a href="../blog.html">← 블로그 목록으로</a></p>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="../index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏군산</a>
+      <div class="fnav">
+        <a href="../services.html">화상과외 소개</a><a href="../process.html">매칭 방식</a><a href="../teachers.html">선생님</a><a href="../regions.html">군산 학교별 과외</a><a href="../blog.html">블로그</a>
+      </div>
+      <p class="disclaimer">전화 010-3131-5305 · 운영시간 09:00–21:00 · 상담 및 매칭 신청은 무료이며, 실제 수업 진행 여부와 비용은 상담 후 안내해 드립니다. 사업자 정보는 확정 후 별도 고지 예정입니다.</p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js?v=6af2d58710"></script>
+<a class="kakao-fab" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">
+  <span class="kakao-fab-ico">💬</span><span class="kakao-fab-label">카톡 상담</span>
+</a>
+
+<div class="mobile-cta-bar">
+  <a class="msc-call" href="tel:01031315305">📞 전화상담</a>
+  <a class="msc-apply" href="../apply.html">무료 상담 신청</a>
+</div>
+<div class="q-modal" id="qModal" aria-hidden="true">
+  <form class="quick" action="https://formsubmit.co/ookkoo12@naver.com" method="POST">
+    <input type="hidden" name="_subject" value="[티치핏군산] 팝업 상담 신청">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://slovrest.com/thanks.html">
+    <input type="hidden" name="신청경로" value="팝업">
+    <input type="hidden" name="과목" class="q-in-sub">
+    <input type="hidden" name="학년" class="q-in-grade">
+    <button type="button" class="q-close" aria-label="닫기">✕</button>
+    <div class="q-step q-s1 on">
+      <span class="q-badge">30분 무료체험수업</span>
+      <div class="q-title">어떤 과목이 고민이세요?<small>과목만 고르시면 군산 학교 진도에 맞는 선생님을 찾아 연락드려요</small></div>
+      <div class="q-tiles"><button type="button" data-s="수학과외" data-h="빠진 단원부터 찾아 채워요"><b>📐</b>수학과외<i>빠진 단원부터 찾아 채워요</i></button><button type="button" data-s="영어과외" data-h="단어·문법·서술형까지"><b>🔤</b>영어과외<i>단어·문법·서술형까지</i></button><button type="button" data-s="국어과외" data-h="교과서 지문·문법·독해"><b>📖</b>국어과외<i>교과서 지문·문법·독해</i></button><button type="button" data-s="초등 전과목" data-h="기초 학습 습관부터"><b>✏️</b>초등 전과목<i>기초 학습 습관부터</i></button><button type="button" data-s="과학·사회" data-h="개념 정리와 서술형 대비"><b>🔬</b>과학·사회<i>개념 정리와 서술형 대비</i></button><button type="button" data-s="자기주도학습" data-h="공부 계획과 습관 만들기"><b>🧭</b>자기주도학습<i>공부 계획과 습관 만들기</i></button></div>
+      <div class="q-alt"><a href="tel:01031315305">📞 010-3131-5305</a><a href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">💬 카톡 상담</a></div>
+    </div>
+    <div class="q-step q-s2">
+      <button type="button" class="q-back">← 다시 고르기</button>
+      <div class="q-chosen"></div><div class="q-hint"></div>
+      <span class="q-lbl">학년</span>
+      <div class="q-chips"><button type="button">초1~3</button><button type="button">초4~6</button><button type="button">중1</button><button type="button">중2</button><button type="button">중3</button><button type="button">고1</button><button type="button">고2</button><button type="button">고3</button></div>
+      <span class="q-lbl">연락처</span>
+      <div class="q-row2"><input type="text" name="학생이름" placeholder="학생 이름 *" required><input type="tel" name="연락처" placeholder="연락처 *" required></div>
+      <input type="text" name="학교" placeholder="재학 중인 학교 (선택)">
+      <button type="submit" class="q-submit">무료체험 신청하기</button>
+      <p class="q-note">상담·체험 모두 무료 · 24시간 이내 연락드려요</p>
+    </div>
+  </form>
+</div>
+<button type="button" class="q-fab" id="qFab">⚡ 무료체험 신청</button>
+
+</body>
+</html>
