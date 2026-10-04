@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>군산여자고등학교 수학과외, 수열의 합과 시그마 정리 | 티치핏군산</title>
+<meta name="description" content="등차수열과 등비수열의 합 공식을 헷갈리고 시그마 계산과 군수열 문제에서 막히는 군산여자고등학교 학생을 위해 수열의 합을 정리했어요.">
+<link rel="canonical" href="https://slovrest.com/blog/gunsan-girls-hs-suhak-suyeol-hap.html">
+<link rel="alternate" type="application/rss+xml" title="티치핏군산 블로그" href="https://slovrest.com/rss.xml">
+<meta name="naver-site-verification" content="24cc1c4678a952a91fe1248a4ce9dd147a24e2f6">
+<meta name="google-site-verification" content="zf_2UYRhfkhlS2WU-rOXMoIZvEmeivqqsPSfX-OIQLU">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=55cc4374a5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="티치핏군산">
+<meta property="og:title" content="군산여자고등학교 수학과외, 수열의 합과 시그마 정리 | 티치핏군산">
+<meta property="og:description" content="등차수열과 등비수열의 합 공식을 헷갈리고 시그마 계산과 군수열 문제에서 막히는 군산여자고등학교 학생을 위해 수열의 합을 정리했어요.">
+<meta property="og:url" content="https://slovrest.com/blog/gunsan-girls-hs-suhak-suyeol-hap.html">
+<meta property="og:image" content="https://slovrest.com/blog/img/gunsan-girls-hs-suhak-suyeol-hap.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://slovrest.com/blog/img/gunsan-girls-hs-suhak-suyeol-hap.jpg">
+</head>
+<body>
+<div class="band band-gunsan" aria-hidden="true">
+<svg class="band-bg" viewBox="0 0 800 56" preserveAspectRatio="none">
+  <defs><linearGradient id="gunsanBandSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:var(--band-top)"/><stop offset="100%" style="stop-color:var(--band-bottom)"/></linearGradient></defs>
+  <rect x="0" y="0" width="800" height="56" fill="url(#gunsanBandSky)"/>
+  <path d="M0 44 Q 20 36 40 44 T 80 44 T 120 44 T 160 44 T 200 44 T 240 44 T 280 44 T 320 44 T 360 44 T 400 44 T 440 44 T 480 44 T 520 44 T 560 44 T 600 44 T 640 44 T 680 44 T 720 44 T 760 44 T 800 44" fill="none" stroke="var(--band-soft)" stroke-width="2" opacity=".55"/>
+  <path d="M0 51 Q 20 45 40 51 T 80 51 T 120 51 T 160 51 T 200 51 T 240 51 T 280 51 T 320 51 T 360 51 T 400 51 T 440 51 T 480 51 T 520 51 T 560 51 T 600 51 T 640 51 T 680 51 T 720 51 T 760 51 T 800 51" fill="none" stroke="var(--band-hi)" stroke-width="1.5" opacity=".4"/>
+  <g fill="none" stroke="var(--band-soft)" stroke-width="1.3" stroke-linecap="round" opacity=".7">
+    <path d="M60 20 l4 -3 l4 3"/>
+    <path d="M78 14 l4 -3 l4 3"/>
+    <path d="M96 22 l4 -3 l4 3"/>
+    <path d="M118 12 l4 -3 l4 3"/>
+    <path d="M140 19 l4 -3 l4 3"/>
+    <path d="M230 16 l4 -3 l4 3"/>
+    <path d="M252 10 l4 -3 l4 3"/>
+    <path d="M270 18 l4 -3 l4 3"/>
+    <path d="M390 14 l4 -3 l4 3"/>
+    <path d="M412 21 l4 -3 l4 3"/>
+    <path d="M520 12 l4 -3 l4 3"/>
+    <path d="M540 18 l4 -3 l4 3"/>
+  </g>
+</svg>
+<svg class="band-motif" viewBox="0 0 200 56" preserveAspectRatio="xMaxYMax meet">
+  <circle cx="34" cy="20" r="9" fill="var(--band-hi)" opacity=".9"/>
+  <g fill="var(--band-ink)">
+    <path d="M70 46 V30 L100 18 L130 30 V46 Z"/>
+    <rect x="96" y="8" width="8" height="12"/>
+    <path d="M94 8 L100 2 L106 8 Z"/>
+    <path d="M136 46 V34 L151 26 L166 34 V46 Z"/>
+    <path d="M170 46 V36 L182 30 L194 36 V46 Z"/>
+  </g>
+  <g fill="var(--band-hi)" opacity=".85">
+    <rect x="78" y="34" width="5" height="6"/><rect x="90" y="34" width="5" height="6"/><rect x="105" y="34" width="5" height="6"/><rect x="117" y="34" width="5" height="6"/>
+    <rect x="148" y="37" width="5" height="5"/><rect x="180" y="39" width="4" height="4"/>
+  </g>
+</svg>
+</div>
+<div class="topbar">
+  <div class="wrap">
+    <span>지금 신청하면 30분 무료체험수업부터 받아보실 수 있어요</span>
+    <a class="phone" href="tel:01031315305">📞 010-3131-5305 (09:00–21:00)</a>
+  </div>
+</div>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="mark">TF</span>티치핏군산</a>
+    <div class="navwrap">
+      <nav class="main">
+        <a href="../index.html">홈</a>
+        <a href="../services.html">화상과외 소개</a>
+        <a href="../process.html">매칭 방식</a>
+        <a href="../teachers.html">선생님</a>
+        <a href="../regions.html">군산 학교별 과외</a>
+        <a href="../blog.html" aria-current="page">블로그</a>
+      </nav>
+      <a class="cta-btn" href="../apply.html">무료 상담 신청</a>
+      <button class="menu-btn" aria-label="메뉴">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav-wrap">
+    <nav class="mobile-nav">
+      <a href="../index.html">홈</a>
+      <a href="../services.html">화상과외 소개</a>
+      <a href="../process.html">매칭 방식</a>
+      <a href="../teachers.html">선생님</a>
+      <a href="../regions.html">군산 학교별 과외</a>
+      <a href="../blog.html" aria-current="page">블로그</a>
+      <a href="../apply.html">무료 상담 신청</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="breadcrumb"><a href="../blog.html">블로그</a> / 고등 수학</nav>
+<section class="page-hero post-hero">
+  <span class="eyebrow">2026-10-04 · 고등 수학</span>
+  <h1>군산여자고등학교 수학과외, 수열의 합과 시그마 정리</h1>
+  <img class="post-cover" src="img/gunsan-girls-hs-suhak-suyeol-hap.webp" width="720" height="720" alt="군산여자고등학교 수학과외 1:1 화상과외 안내" loading="eager">
+  <div class="hero-cta"><a class="cta-main" href="../apply.html">30분 무료체험 신청하기 →</a><span>상담·체험 모두 무료</span></div>
+</section>
+<section>
+  <article class="prose blog-prose">
+    <div class="intro-banner">
+  <span class="ib-tag">무료 상담 · 무료 체험</span>
+  <p>학생 학습 상태 진단과 학교 시험 분석을 함께 안내드려요.<br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요.</p>
+  <div class="ib-btns">
+    <a class="ib-kakao" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담 <i>↗</i></a>
+    <a class="ib-apply" href="../apply.html">무료체험 신청 <i>✨</i></a>
+  </div>
+</div><div class="summary-box"><strong>이 글 한눈에 보기</strong><ul><li>군산여자고등학교 학생이 수열의 합을 어려워하는 이유</li><li>등차수열의 합</li><li>등비수열의 합</li><li>시그마의 뜻과 성질</li><li>여러 가지 수열의 합</li><li><b><mark class="free">30분 무료체험수업</mark></b>으로 먼저 확인해보실 수 있어요.</li></ul></div>
+<p>군산여자고등학교 2학년 학생들이 수학Ⅰ에서 가장 많은 시간을 쓰는 단원이 수열이에요. 등차수열과 등비수열의 일반항은 구할 수 있는데, 합 공식으로 넘어가면 항의 개수를 잘못 세거나 등비수열 합 공식에서 공비가 1보다 큰지 작은지에 따라 식을 헷갈리는 경우가 많아요.</p><p>시그마 기호가 나오면 성질을 잘못 적용하고, 분수꼴 수열의 합이나 군수열처럼 규칙을 찾아야 하는 문제에서 손을 놓는 학생도 많아요. 수열의 합은 내신과 수능에서 매년 출제되는 핵심 내용이에요.</p><p>공식을 단순히 외우는 것이 아니라 공식이 어떻게 만들어졌는지 이해하면 처음 보는 유형도 스스로 해결할 수 있어요. 합의 원리와 시그마의 성질, 자주 나오는 유형별 풀이를 정리하면 이 단원은 충분히 자신 있게 해결할 수 있어요.</p><p>이 글에서는 군산여자고등학교 학생이 수열의 합을 어려워하는 이유, 등차수열의 합, 등비수열의 합, 시그마의 뜻과 성질, 여러 가지 수열의 합, 그리고 1:1 화상 수학 수업 활용법까지 차례대로 정리해 드릴게요.</p>
+<div class="pbox"><h2>군산여자고등학교 학생이 수열의 합을 어려워하는 이유</h2>
+<p>수열의 합을 어려워하는 첫 번째 이유는 공식이 만들어지는 원리를 모르고 결과만 외운 거예요. 공식이 어디서 나왔는지 모르면 조건이 조금만 바뀌어도 어떤 식을 써야 할지 판단하지 못해요.</p>
+<p>두 번째 이유는 항의 개수를 잘못 세는 거예요. 제3항부터 제10항까지의 합처럼 시작이 1이 아닌 경우 항의 개수를 7개로 세는 실수가 자주 나와요. 실제로는 8개예요.</p>
+<p>세 번째 이유는 등비수열 합 공식의 형태를 헷갈리는 거예요. 공비가 1보다 클 때와 작을 때 쓰는 식의 모양이 다르고, 공비가 1일 때는 공식을 쓸 수 없다는 점을 놓치는 경우가 많아요.</p>
+<p>네 번째 이유는 시그마의 성질을 잘못 적용하는 거예요. 곱의 시그마를 시그마의 곱으로 나누거나, 상수의 시그마를 상수 그대로 쓰는 실수가 대표적이에요.</p>
+<p>다섯 번째 이유는 합과 일반항의 관계를 활용하지 못하는 거예요. 합 Sn이 주어지고 일반항을 구하는 문제에서 첫째항을 따로 확인해야 한다는 점을 놓치면 틀린 답을 쓰게 돼요.</p>
+<p>여섯 번째로, 분수꼴 수열이나 군수열처럼 변형된 유형을 어려워하는 경우도 있어요. 부분분수 분해나 규칙 찾기를 연습하지 않으면 이런 문제에서 막히게 돼요.</p>
+<p>이런 어려움은 합 공식의 원리를 직접 유도해 보고, 유형별 풀이 순서를 정리하면 충분히 해결할 수 있어요.</p>
+<p>최근 시험이나 모의고사에서 틀린 수열 문제를 다시 살펴보세요. 항의 개수, 등비수열 합, 시그마 계산, 분수꼴 수열 중 어디서 자주 틀리는지 확인하면 약점이 보여요.</p>
+<p>등차수열과 등비수열의 일반항이 흔들린다면 그 부분부터 짧게 복습하는 것이 좋아요. 합은 일반항을 정확히 알아야 구할 수 있기 때문이에요.</p>
+<p>아래에서 등차수열의 합부터 차근차근 살펴볼게요.</p>
+<p>원리를 이해한 공식은 외우지 않아도 필요할 때 다시 만들어 쓸 수 있어요.</p>
+<p>수열의 합을 확실히 잡으면 수학Ⅰ 후반부와 수능 준비가 훨씬 수월해져요.</p>
+</div><div class="pbox"><h2>등차수열의 합</h2>
+<p>등차수열의 합은 첫째항부터 끝항까지 더한 값을 거꾸로 한 번 더 써서 더하는 방법으로 구해요. 이 원리를 알면 공식을 외우지 않아도 언제든 다시 만들 수 있어요.</p>
+<p>1부터 100까지의 합을 생각해 보세요. 1 더하기 100, 2 더하기 99처럼 앞과 뒤를 짝지으면 모두 101이고, 이런 짝이 50개니까 합은 5050이에요. 이것이 등차수열 합의 원리예요.</p>
+<p>첫째항이 a, 끝항이 l, 항의 개수가 n인 등차수열의 합은 n 곱하기 괄호 a 더하기 l을 2로 나눈 값이에요. 첫째항과 끝항을 알 때 쓰기 편한 공식이에요.</p>
+<p>끝항 대신 공차 d를 알 때는 n 곱하기 괄호 2a 더하기 괄호 n 빼기 1 곱하기 d를 2로 나눈 값으로 구해요. 끝항 l이 a 더하기 괄호 n 빼기 1 곱하기 d라는 것을 대입하면 같은 식이 나와요.</p>
+<p>항의 개수는 정확히 세야 해요. 제m항부터 제n항까지의 항의 개수는 n 빼기 m 더하기 1이에요. 1을 더하는 것을 빠뜨리지 않도록 주의하세요.</p>
+<p>등차수열의 합은 n에 대한 이차식이에요. 상수항이 없는 이차식 형태의 합이 주어지면 등차수열이라는 것을 알 수 있어요. 이 성질을 묻는 문제도 자주 나와요.</p>
+<p>합의 최댓값이나 최솟값을 묻는 문제도 있어요. 공차가 음수인 등차수열에서 합이 최대가 되는 것은 양수인 항까지 더했을 때예요. 처음으로 음수가 되는 항을 찾으면 답이 보여요.</p>
+<p>두 수 사이에 수를 넣어 등차수열을 만드는 문제도 연습하세요. 넣은 수들의 합은 양 끝 수의 평균에 넣은 수의 개수를 곱하면 빠르게 구할 수 있어요.</p>
+<p>등차중항의 성질을 활용하면 계산이 쉬워지는 경우가 많아요. 대칭인 위치의 두 항의 합이 항상 같다는 성질을 기억하세요.</p>
+<p>공식을 쓰기 전에 첫째항, 공차, 항의 개수를 먼저 정리하는 습관을 들이세요. 조건을 정리하면 실수가 크게 줄어요.</p>
+<div class="callout"><strong>핵심 정리</strong>짝지어 더하는 원리 하나가 등차수열 합의 모든 공식을 설명해줘요.</div>
+</div><div class="pbox"><h2>등비수열의 합</h2>
+<p>등비수열의 합은 합에 공비를 곱한 식을 원래 식에서 빼는 방법으로 구해요. 이 과정을 직접 해보면 공식의 모양을 정확히 이해할 수 있어요.</p>
+<p>첫째항이 a, 공비가 r인 등비수열의 합 Sn에 r을 곱하면 rSn은 첫째항이 ar부터 시작해요. Sn에서 rSn을 빼면 가운데 항들이 모두 사라지고 a 빼기 ar의 n제곱만 남아요.</p>
+<p>그래서 공비가 1이 아닐 때 등비수열의 합은 a 곱하기 괄호 1 빼기 r의 n제곱을 1 빼기 r로 나눈 값이에요. 분자와 분모에 모두 마이너스 1을 곱하면 a 곱하기 괄호 r의 n제곱 빼기 1을 r 빼기 1로 나눈 값이 돼요.</p>
+<p>두 식은 같은 값이에요. 보통 공비가 1보다 작으면 앞의 식을, 1보다 크면 뒤의 식을 쓰면 계산할 때 음수가 줄어들어 편해요.</p>
+<p>공비가 1이면 모든 항이 같으니까 합은 n 곱하기 a예요. 이 경우에는 분모가 0이 되어 공식을 쓸 수 없다는 점을 꼭 기억하세요. 공비가 문자로 주어진 문제에서 r이 1인 경우를 따로 따져야 해요.</p>
+<p>등비수열의 합이 주어지고 일반항을 구하는 문제도 자주 나와요. Sn이 A 곱하기 r의 n제곱 더하기 B 꼴일 때 A 더하기 B가 0이면 첫째항부터 등비수열이에요.</p>
+<p>원리합계 문제도 등비수열의 합을 활용해요. 매년 일정 금액을 적립할 때 이자가 붙는 상황은 등비수열의 합으로 계산해요. 각 해의 금액이 몇 년 동안 이자가 붙는지 정리하면 식을 세울 수 있어요.</p>
+<p>등비수열의 합에서는 지수 계산이 함께 나와요. 지수법칙이 흔들리면 계산 실수가 생기니 함께 점검하세요.</p>
+<p>공식을 쓴 뒤에는 n에 1을 넣어 Sn이 첫째항과 같은지 확인하는 간단한 검산을 해보세요. 식의 모양이 맞는지 바로 알 수 있어요.</p>
+<p>빼서 지우는 원리를 이해하면 등비수열의 합뿐 아니라 등차와 등비가 곱해진 수열의 합도 같은 방법으로 구할 수 있어요.</p>
+<p>공비가 1인 경우를 따로 확인하는 습관이 등비수열 문제에서 점수를 지켜줘요.</p>
+</div><div class="mid-cta"><strong>우리 아이에게 맞는지 궁금하시다면</strong><br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요. <a class="cta-btn" href="../apply.html">무료체험 신청하기 →</a></div><div class="pbox"><h2>시그마의 뜻과 성질</h2>
+<p>시그마는 수열의 합을 간단하게 나타내는 기호예요. 시그마 아래에는 시작하는 번호, 위에는 끝나는 번호, 옆에는 일반항을 써요.</p>
+<p>시그마 k는 1부터 n까지 ak는 a1 더하기 a2 더하기 계속해서 an까지 더한 값이에요. 기호를 풀어서 몇 개의 항을 직접 써보면 의미가 분명해져요.</p>
+<p>시그마의 성질을 정리하세요. 합의 시그마는 시그마의 합으로 나눌 수 있어요. 시그마 괄호 ak 더하기 bk는 시그마 ak 더하기 시그마 bk예요.</p>
+<p>상수배는 시그마 밖으로 꺼낼 수 있어요. 시그마 c 곱하기 ak는 c 곱하기 시그마 ak예요.</p>
+<p>상수의 시그마는 상수에 항의 개수를 곱한 값이에요. 시그마 k는 1부터 n까지 c는 cn이에요. 이를 c 그대로 쓰는 실수가 아주 많으니 주의하세요.</p>
+<p>곱의 시그마는 시그마의 곱이 아니에요. 시그마 ak 곱하기 bk는 시그마 ak 곱하기 시그마 bk와 같지 않아요. 이 실수를 묻는 문제가 자주 나와요.</p>
+<p>자연수의 거듭제곱의 합 공식을 정리하세요. 시그마 k는 n 곱하기 괄호 n 더하기 1을 2로 나눈 값, 시그마 k의 제곱은 n 곱하기 괄호 n 더하기 1 곱하기 괄호 2n 더하기 1을 6으로 나눈 값, 시그마 k의 세제곱은 시그마 k의 제곱이에요.</p>
+<p>시작 번호가 1이 아닌 시그마는 1부터의 합에서 앞부분을 빼서 구하세요. k가 5부터 n까지의 합은 1부터 n까지의 합에서 1부터 4까지의 합을 빼면 돼요.</p>
+<p>일반항이 다항식이면 전개한 뒤 시그마의 성질과 거듭제곱 합 공식을 적용해서 계산하세요. 전개 과정에서 실수가 없도록 한 줄씩 정리하세요.</p>
+<div class="callout"><strong>핵심 정리</strong>시그마를 풀어서 몇 항을 직접 써보는 습관이 기호에 대한 두려움을 없애줘요.</div>
+</div><div class="pbox"><h2>여러 가지 수열의 합</h2>
+<p>시그마와 기본 공식을 익혔다면 자주 나오는 변형 유형의 풀이법을 정리해 두세요.</p>
+<p>분수꼴 수열의 합은 부분분수로 분해해서 구해요. k 곱하기 괄호 k 더하기 1 분의 1은 k분의 1 빼기 k 더하기 1 분의 1로 나눌 수 있어요. 더하면 가운데 항들이 연달아 사라지고 처음과 끝만 남아요.</p>
+<p>분모의 두 인수의 차가 1이 아니면 그 차로 나누어 주어야 해요. k 곱하기 괄호 k 더하기 2 분의 1은 2분의 1 곱하기 괄호 k분의 1 빼기 k 더하기 2 분의 1이에요. 이때 남는 항이 처음 두 개와 끝 두 개라는 점에 주의하세요.</p>
+<p>근호가 있는 분수꼴 수열은 분모를 유리화해서 구해요. 유리화하면 연달아 사라지는 꼴이 되어 합을 쉽게 구할 수 있어요.</p>
+<p>계차수열을 이용하는 문제도 있어요. 이웃한 두 항의 차가 이루는 수열을 계차수열이라고 하고, 원래 수열의 일반항은 첫째항에 계차수열의 합을 더해서 구해요.</p>
+<p>합과 일반항의 관계도 중요해요. an은 Sn 빼기 Sn 빼기 1이고, 이 식은 n이 2 이상일 때만 성립해요. 첫째항은 반드시 S1로 따로 구해서 일반항에 맞는지 확인해야 해요.</p>
+<p>군수열은 수열을 일정한 규칙으로 묶어서 생각하는 유형이에요. 각 군의 항의 개수와 각 군의 첫째항을 표로 정리하면 몇 번째 군의 몇 번째 항인지 쉽게 찾을 수 있어요.</p>
+<p>규칙을 찾는 문제는 처음 몇 개의 항을 직접 써보는 것이 가장 확실해요. 손으로 써보면 숨은 규칙이 보이는 경우가 많아요.</p>
+<p>유형별로 대표 문제를 정리한 풀이 노트를 만드세요. 시험 직전에 노트만 훑어봐도 풀이 순서가 떠올라요.</p>
+<p>틀린 문제는 어느 단계에서 틀렸는지 표시해 두세요. 항의 개수, 부분분수, 첫째항 확인처럼 자주 틀리는 지점을 알면 같은 실수를 줄일 수 있어요.</p>
+<p>변형 유형을 정리해 두면 처음 보는 문제도 아는 유형으로 바꾸어 풀 수 있어요.</p>
+</div><div class="pbox"><h2>1:1 화상 수학 수업으로 수열의 합 잡기</h2>
+<p>수열의 합은 학생이 공식의 원리를 이해했는지 확인하고, 유형별 풀이에서 생기는 실수를 바로잡아 주는 것이 가장 효과적이에요. 1:1 수업에서는 선생님이 학생의 풀이를 한 줄씩 보며 항의 개수나 시그마 계산 실수를 바로 짚어줄 수 있어요.</p>
+<p>화상 수업에서는 화면 공유로 합 공식을 직접 유도하는 과정을 함께 보고, 부분분수 분해와 군수열 표 정리를 함께 연습해요.</p>
+<p>군산여자고등학교 학생이라면 학교 수학 진도와 시험 범위에 맞춰 수업을 구성할 수 있어요. 학교 기출 유형과 모의고사 유형을 함께 분석해 내신과 수능을 함께 대비해요.</p>
+<p>이동 시간이 없어서 방과 후와 야간자율학습 전후 시간을 효율적으로 쓸 수 있고, 수업은 녹화되어 복습할 때 다시 볼 수 있어요.</p>
+<p>티치핏군산에서는 상담할 때 학년, 최근 수학 성적, 어려워하는 단원을 먼저 여쭤봐요. 지수 계산이나 일반항 구하기가 흔들린다면 그 부분부터 보완하는 계획을 세워 드려요.</p>
+<p>수열의 합 이후에는 수학적 귀납법, 수학Ⅱ의 극한과 미분까지 이어서 학습할 수 있어요.</p>
+<p>수업 후에는 배운 개념과 유형별 풀이, 과제를 정리해 드려서 다음 수업 전까지 스스로 복습할 수 있어요.</p>
+<p>수열이 고민이시라면 <mark class="free">30분 무료체험수업</mark>으로 먼저 수업 방식을 확인해 보세요. 최근 시험지나 문제집을 준비해 오시면 약점 분석부터 함께 해볼 수 있어요.</p>
+<p>상담과 체험은 모두 무료예요. 공식의 원리가 보이기 시작하면 수열이 자신 있는 단원이 될 거예요.</p>
+<p>군산 지역에서 학원을 오가는 시간이 부담스러운 학생도 집에서 바로 수업을 받을 수 있어서, 그 시간을 문제 풀이와 복습에 쓸 수 있어요.</p>
+<p>탄탄한 수열 실력은 수능 수학의 든든한 기초가 돼요.</p>
+<p><strong>Q. 수열 단원만 집중해서 수업할 수 있나요?</strong><br>
+네, 등차·등비수열의 합부터 시그마, 분수꼴 수열, 군수열까지 수열의 합을 집중적으로 수업할 수 있어요.</p>
+<p><strong>Q. 시그마 계산에서 자꾸 실수해요.</strong><br>
+시그마를 풀어서 직접 써보는 연습과 성질별 오답 사례 정리로 상수의 시그마나 곱의 시그마 실수를 줄여 드려요.</p>
+<p><strong>Q. 내신과 수능을 함께 준비할 수 있나요?</strong><br>
+네, 학교 기출 유형과 모의고사 유형을 함께 분석해 내신과 수능을 동시에 대비할 수 있도록 수업을 구성해 드려요.</p>
+</div>
+  </article>
+</section>
+<section>
+  <div class="cta-big">
+  <div class="cta-big-text">
+    <span class="cta-badge">무료</span>
+    <h2>30분 무료체험수업 먼저 받아보세요</h2>
+    <p>이름과 연락처만 남기시면 24시간 이내에 담당자가 연락드려요. 체험 후 마음에 들 때만 결정하세요.</p>
+  </div>
+  <div class="cta-big-btns">
+    <a class="cta-main" href="../apply.html">무료체험 신청하기 →</a>
+    <a class="cta-sub" href="tel:01031315305">전화 010-3131-5305</a>
+    <a class="cta-sub" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담</a>
+  </div>
+</div>
+</section>
+<p style="margin-top:14px;"><a href="../blog.html">← 블로그 목록으로</a></p>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="../index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏군산</a>
+      <div class="fnav">
+        <a href="../services.html">화상과외 소개</a><a href="../process.html">매칭 방식</a><a href="../teachers.html">선생님</a><a href="../regions.html">군산 학교별 과외</a><a href="../blog.html">블로그</a>
+      </div>
+      <p class="disclaimer">전화 010-3131-5305 · 운영시간 09:00–21:00 · 상담 및 매칭 신청은 무료이며, 실제 수업 진행 여부와 비용은 상담 후 안내해 드립니다. 사업자 정보는 확정 후 별도 고지 예정입니다.</p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js?v=6af2d58710"></script>
+<a class="kakao-fab" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">
+  <span class="kakao-fab-ico">💬</span><span class="kakao-fab-label">카톡 상담</span>
+</a>
+
+<div class="mobile-cta-bar">
+  <a class="msc-call" href="tel:01031315305">📞 전화상담</a>
+  <a class="msc-apply" href="../apply.html">무료 상담 신청</a>
+</div>
+<div class="q-modal" id="qModal" aria-hidden="true">
+  <form class="quick" action="https://formsubmit.co/ookkoo12@naver.com" method="POST">
+    <input type="hidden" name="_subject" value="[티치핏군산] 팝업 상담 신청">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://slovrest.com/thanks.html">
+    <input type="hidden" name="신청경로" value="팝업">
+    <input type="hidden" name="과목" class="q-in-sub">
+    <input type="hidden" name="학년" class="q-in-grade">
+    <button type="button" class="q-close" aria-label="닫기">✕</button>
+    <div class="q-step q-s1 on">
+      <span class="q-badge">30분 무료체험수업</span>
+      <div class="q-title">어떤 과목이 고민이세요?<small>과목만 고르시면 군산 학교 진도에 맞는 선생님을 찾아 연락드려요</small></div>
+      <div class="q-tiles"><button type="button" data-s="수학과외" data-h="빠진 단원부터 찾아 채워요"><b>📐</b>수학과외<i>빠진 단원부터 찾아 채워요</i></button><button type="button" data-s="영어과외" data-h="단어·문법·서술형까지"><b>🔤</b>영어과외<i>단어·문법·서술형까지</i></button><button type="button" data-s="국어과외" data-h="교과서 지문·문법·독해"><b>📖</b>국어과외<i>교과서 지문·문법·독해</i></button><button type="button" data-s="초등 전과목" data-h="기초 학습 습관부터"><b>✏️</b>초등 전과목<i>기초 학습 습관부터</i></button><button type="button" data-s="과학·사회" data-h="개념 정리와 서술형 대비"><b>🔬</b>과학·사회<i>개념 정리와 서술형 대비</i></button><button type="button" data-s="자기주도학습" data-h="공부 계획과 습관 만들기"><b>🧭</b>자기주도학습<i>공부 계획과 습관 만들기</i></button></div>
+      <div class="q-alt"><a href="tel:01031315305">📞 010-3131-5305</a><a href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">💬 카톡 상담</a></div>
+    </div>
+    <div class="q-step q-s2">
+      <button type="button" class="q-back">← 다시 고르기</button>
+      <div class="q-chosen"></div><div class="q-hint"></div>
+      <span class="q-lbl">학년</span>
+      <div class="q-chips"><button type="button">초1~3</button><button type="button">초4~6</button><button type="button">중1</button><button type="button">중2</button><button type="button">중3</button><button type="button">고1</button><button type="button">고2</button><button type="button">고3</button></div>
+      <span class="q-lbl">연락처</span>
+      <div class="q-row2"><input type="text" name="학생이름" placeholder="학생 이름 *" required><input type="tel" name="연락처" placeholder="연락처 *" required></div>
+      <input type="text" name="학교" placeholder="재학 중인 학교 (선택)">
+      <button type="submit" class="q-submit">무료체험 신청하기</button>
+      <p class="q-note">상담·체험 모두 무료 · 24시간 이내 연락드려요</p>
+    </div>
+  </form>
+</div>
+<button type="button" class="q-fab" id="qFab">⚡ 무료체험 신청</button>
+
+</body>
+</html>

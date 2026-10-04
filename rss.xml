@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 03 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Sun, 04 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산영광중학교 국어과외, 문장 성분 정확하게 찾기</title>
+    <link>https://slovrest.com/blog/gunsan-yeonggwang-ms-gugeo-munjang-seongbun.html</link>
+    <guid>https://slovrest.com/blog/gunsan-yeonggwang-ms-gugeo-munjang-seongbun.html</guid>
+    <description>주어와 서술어는 찾지만 목적어와 보어, 관형어와 부사어를 헷갈리는 군산영광중학교 학생을 위해 문장 성분을 찾는 기준과 순서를 정리했어요.</description>
+    <pubDate>Sun, 04 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산여자고등학교 수학과외, 수열의 합과 시그마 정리</title>
+    <link>https://slovrest.com/blog/gunsan-girls-hs-suhak-suyeol-hap.html</link>
+    <guid>https://slovrest.com/blog/gunsan-girls-hs-suhak-suyeol-hap.html</guid>
+    <description>등차수열과 등비수열의 합 공식을 헷갈리고 시그마 계산과 군수열 문제에서 막히는 군산여자고등학교 학생을 위해 수열의 합을 정리했어요.</description>
+    <pubDate>Sun, 04 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>소룡초등학교 국어과외, 문장 부호 바르게 쓰기</title>
+    <link>https://slovrest.com/blog/gunsan-soryong-es-gugeo-munjang-buho.html</link>
+    <guid>https://slovrest.com/blog/gunsan-soryong-es-gugeo-munjang-buho.html</guid>
+    <description>글을 쓸 때 마침표와 쉼표를 빠뜨리고 큰따옴표와 작은따옴표를 헷갈리는 소룡초등학교 학생을 위해 문장 부호 쓰는 법을 정리했어요.</description>
+    <pubDate>Sun, 04 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산산북초등학교 영어과외, 색깔과 모양 영어로 말하기</title>
+    <link>https://slovrest.com/blog/gunsan-sanbuk-es-yeongeo-saekkal-moyang.html</link>
+    <guid>https://slovrest.com/blog/gunsan-sanbuk-es-yeongeo-saekkal-moyang.html</guid>
+    <description>영어 단어를 하나씩은 알지만 색깔과 모양을 묻고 답하는 문장으로 말하지 못하는 군산산북초등학교 학생을 위해 쉬운 표현과 연습법을 정리했어요.</description>
+    <pubDate>Sun, 04 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산미성초등학교 수학과외, 시각과 시간 정확하게 읽기</title>
+    <link>https://slovrest.com/blog/gunsan-miseong-es-suhak-sigak-sigan.html</link>
+    <guid>https://slovrest.com/blog/gunsan-miseong-es-suhak-sigak-sigan.html</guid>
+    <description>시계를 보고 몇 시 몇 분인지 읽는 데 오래 걸리고 걸린 시간을 구하는 문제에서 자주 틀리는 군산미성초등학교 학생을 위해 시각과 시간을 정리했어요.</description>
+    <pubDate>Sun, 04 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산고등학교 영어과외, 어휘 추론 유형 공략</title>
     <link>https://slovrest.com/blog/gunsan-hs-yeongeo-eohwi-churon.html</link>
