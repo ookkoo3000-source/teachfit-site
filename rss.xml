@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Mon, 05 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 06 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산상일고등학교 영어과외, 요지와 주장 찾기 독해</title>
+    <link>https://slovrest.com/blog/gunsan-sangil-hs-yeongeo-yoji.html</link>
+    <guid>https://slovrest.com/blog/gunsan-sangil-hs-yeongeo-yoji.html</guid>
+    <description>해석은 되는데 요지·주장 문제에서 선택지 두 개 사이에서 고민하다 틀리는 군산상일고등학교 학생을 위해 글의 핵심을 찾는 독해법을 정리했어요.</description>
+    <pubDate>Tue, 06 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산동산중학교 수학과외, 피타고라스 정리 활용 문제</title>
+    <link>https://slovrest.com/blog/gunsan-dongsan-ms-suhak-pitagoraseu.html</link>
+    <guid>https://slovrest.com/blog/gunsan-dongsan-ms-suhak-pitagoraseu.html</guid>
+    <description>공식은 외웠는데 빗변을 잘못 잡거나 입체도형 활용 문제에서 직각삼각형을 찾지 못하는 군산동산중학교 학생을 위해 피타고라스 정리를 정리했어요.</description>
+    <pubDate>Tue, 06 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>문창초등학교 국어과외, 글의 내용 간추리기 연습</title>
+    <link>https://slovrest.com/blog/gunsan-munchang-es-gugeo-yoyak.html</link>
+    <guid>https://slovrest.com/blog/gunsan-munchang-es-gugeo-yoyak.html</guid>
+    <description>요약하라고 하면 글을 거의 그대로 옮겨 쓰거나 중요한 내용을 빠뜨리는 문창초등학교 학생을 위해 글을 간추리는 방법을 단계별로 정리했어요.</description>
+    <pubDate>Tue, 06 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>미룡초등학교 영어과외, 길 묻고 안내하는 표현 익히기</title>
+    <link>https://slovrest.com/blog/gunsan-miryong-es-yeongeo-gil-mutgi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-miryong-es-yeongeo-gil-mutgi.html</guid>
+    <description>Where is the library? 같은 질문은 알아도 go straight, turn left, next to 같은 안내 표현에서 막히는 미룡초등학교 학생을 위해 길 묻기 표현을 정리했어요.</description>
+    <pubDate>Tue, 06 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산초등학교 수학과외, 분모가 같은 분수의 덧셈과 뺄셈</title>
+    <link>https://slovrest.com/blog/gunsan-es-suhak-bunsu-deotsem.html</link>
+    <guid>https://slovrest.com/blog/gunsan-es-suhak-bunsu-deotsem.html</guid>
+    <description>분모끼리 더해 버리거나 대분수 뺄셈에서 받아내림을 놓치는 군산초등학교 학생을 위해 분수의 덧셈과 뺄셈을 그림과 순서로 정리했어요.</description>
+    <pubDate>Tue, 06 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산진포초등학교 수학과외, 각도와 삼각형의 세 각</title>
     <link>https://slovrest.com/blog/gunsan-jinpo-es-suhak-gakdo-samgakhyeong.html</link>
