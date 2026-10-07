@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 06 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 07 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산중앙고등학교 국어과외, 현대시 화자와 표현 분석</title>
+    <link>https://slovrest.com/blog/gunsan-jungang-hs-gugeo-hyeondaesi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-jungang-hs-gugeo-hyeondaesi.html</guid>
+    <description>현대시를 읽으면 느낌은 오는데 화자의 정서와 태도, 시어의 의미, 표현상 특징을 근거로 설명하지 못하는 군산중앙고등학교 학생을 위해 정리했어요.</description>
+    <pubDate>Wed, 07 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산영광중학교 수학과외, 연립방정식 풀이와 활용 문제</title>
+    <link>https://slovrest.com/blog/gunsan-yeonggwang-ms-suhak-yeollip.html</link>
+    <guid>https://slovrest.com/blog/gunsan-yeonggwang-ms-suhak-yeollip.html</guid>
+    <description>가감법에서 부호를 놓치거나 대입법에서 괄호를 빠뜨리고 활용 문제에서 식 두 개를 세우지 못하는 군산영광중학교 학생을 위해 연립방정식을 정리했어요.</description>
+    <pubDate>Wed, 07 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>대야초등학교 국어과외, 인물의 마음 짐작하며 읽기</title>
+    <link>https://slovrest.com/blog/gunsan-daeya-es-gugeo-inmul-maeum.html</link>
+    <guid>https://slovrest.com/blog/gunsan-daeya-es-gugeo-inmul-maeum.html</guid>
+    <description>이야기를 읽고 인물의 마음을 물으면 좋았다, 슬펐다로만 답하고 근거를 찾지 못하는 대야초등학교 학생을 위해 인물의 마음을 짐작하는 읽기 방법을 정리했어요.</description>
+    <pubDate>Wed, 07 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>해성초등학교 영어과외, 음식 주문하고 권하는 표현</title>
+    <link>https://slovrest.com/blog/gunsan-haeseong-es-yeongeo-eumsik-jumun.html</link>
+    <guid>https://slovrest.com/blog/gunsan-haeseong-es-yeongeo-eumsik-jumun.html</guid>
+    <description>What would you like?에 대답하지 못하거나 I'd like와 I like를 헷갈리고 음식을 권하는 표현을 어려워하는 해성초등학교 학생을 위해 정리했어요.</description>
+    <pubDate>Wed, 07 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산풍문초등학교 수학과외, 두 자리 수 곱셈 자리 맞추기</title>
+    <link>https://slovrest.com/blog/gunsan-pungmun-es-suhak-gopsem.html</link>
+    <guid>https://slovrest.com/blog/gunsan-pungmun-es-suhak-gopsem.html</guid>
+    <description>두 자리 수끼리 곱할 때 십의 자리 곱을 한 칸 밀어 쓰지 않거나 받아올림을 빠뜨리는 군산풍문초등학교 학생을 위해 곱셈 원리와 세로셈 순서를 정리했어요.</description>
+    <pubDate>Wed, 07 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산상일고등학교 영어과외, 요지와 주장 찾기 독해</title>
     <link>https://slovrest.com/blog/gunsan-sangil-hs-yeongeo-yoji.html</link>
