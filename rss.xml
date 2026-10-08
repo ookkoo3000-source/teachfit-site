@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 07 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Thu, 08 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>전북외국어고등학교 영어과외, 문맥상 낱말 쓰임 어휘 문제</title>
+    <link>https://slovrest.com/blog/gunsan-jeonbuk-foreign-hs-yeongeo-eohwi-sseuim.html</link>
+    <guid>https://slovrest.com/blog/gunsan-jeonbuk-foreign-hs-yeongeo-eohwi-sseuim.html</guid>
+    <description>어휘 문제에서 낱말의 뜻은 아는데 문맥에 맞지 않는 쓰임을 찾지 못하고 반의어 함정에 걸리는 전북외국어고등학교 학생을 위해 어휘 추론법을 정리했어요.</description>
+    <pubDate>Thu, 08 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산월명중학교 수학과외, 일차부등식 풀이와 해의 범위</title>
+    <link>https://slovrest.com/blog/gunsan-wolmyeong-ms-suhak-budeungsik.html</link>
+    <guid>https://slovrest.com/blog/gunsan-wolmyeong-ms-suhak-budeungsik.html</guid>
+    <description>음수를 곱하거나 나눌 때 부등호 방향을 바꾸지 않거나 해를 수직선에 잘못 나타내는 군산월명중학교 학생을 위해 일차부등식 풀이를 정리했어요.</description>
+    <pubDate>Thu, 08 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>옥구초등학교 국어과외, 이어 주는 말로 문장 연결하기</title>
+    <link>https://slovrest.com/blog/gunsan-okgu-es-gugeo-ieojuneun-mal.html</link>
+    <guid>https://slovrest.com/blog/gunsan-okgu-es-gugeo-ieojuneun-mal.html</guid>
+    <description>그리고, 그러나, 그래서를 알맞게 고르지 못하거나 글을 쓸 때 그리고만 반복하는 옥구초등학교 학생을 위해 이어 주는 말의 쓰임을 정리했어요.</description>
+    <pubDate>Thu, 08 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산흥남초등학교 영어과외, 생일과 날짜 말하는 서수 표현</title>
+    <link>https://slovrest.com/blog/gunsan-heungnam-es-yeongeo-saengil.html</link>
+    <guid>https://slovrest.com/blog/gunsan-heungnam-es-yeongeo-saengil.html</guid>
+    <description>When is your birthday?에 May five처럼 기수로 대답하거나 first, second, third 같은 서수와 달 이름을 헷갈리는 군산흥남초등학교 학생을 위해 정리했어요.</description>
+    <pubDate>Thu, 08 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산푸른솔초등학교 수학과외, 삼각형 분류 기준 정리</title>
+    <link>https://slovrest.com/blog/gunsan-pureunsol-es-suhak-samgakhyeong.html</link>
+    <guid>https://slovrest.com/blog/gunsan-pureunsol-es-suhak-samgakhyeong.html</guid>
+    <description>이등변삼각형과 정삼각형, 예각삼각형과 둔각삼각형을 헷갈리고 변과 각 두 기준을 함께 적용하지 못하는 군산푸른솔초등학교 학생을 위해 정리했어요.</description>
+    <pubDate>Thu, 08 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산중앙고등학교 국어과외, 현대시 화자와 표현 분석</title>
     <link>https://slovrest.com/blog/gunsan-jungang-hs-gugeo-hyeondaesi.html</link>
