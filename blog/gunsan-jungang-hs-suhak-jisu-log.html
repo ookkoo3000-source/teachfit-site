@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>군산중앙고등학교 수학과외, 지수와 로그 성질 정리 | 티치핏군산</title>
+<meta name="description" content="거듭제곱근과 유리수 지수를 헷갈리고 로그의 성질을 잘못 적용해 계산이 꼬이는 군산중앙고등학교 학생을 위해 지수와 로그의 핵심 성질과 계산 순서를 정리했어요.">
+<link rel="canonical" href="https://slovrest.com/blog/gunsan-jungang-hs-suhak-jisu-log.html">
+<link rel="alternate" type="application/rss+xml" title="티치핏군산 블로그" href="https://slovrest.com/rss.xml">
+<link rel="icon" href="https://slovrest.com/favicon.ico?v=7dded793" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="https://slovrest.com/assets/icon-192.png?v=7dded793">
+<link rel="apple-touch-icon" href="https://slovrest.com/apple-touch-icon.png?v=7dded793">
+<meta name="naver-site-verification" content="24cc1c4678a952a91fe1248a4ce9dd147a24e2f6">
+<meta name="google-site-verification" content="zf_2UYRhfkhlS2WU-rOXMoIZvEmeivqqsPSfX-OIQLU">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=55cc4374a5">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="티치핏군산">
+<meta property="og:title" content="군산중앙고등학교 수학과외, 지수와 로그 성질 정리 | 티치핏군산">
+<meta property="og:description" content="거듭제곱근과 유리수 지수를 헷갈리고 로그의 성질을 잘못 적용해 계산이 꼬이는 군산중앙고등학교 학생을 위해 지수와 로그의 핵심 성질과 계산 순서를 정리했어요.">
+<meta property="og:url" content="https://slovrest.com/blog/gunsan-jungang-hs-suhak-jisu-log.html">
+<meta property="og:image" content="https://slovrest.com/blog/img/gunsan-jungang-hs-suhak-jisu-log.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://slovrest.com/blog/img/gunsan-jungang-hs-suhak-jisu-log.jpg">
+</head>
+<body>
+<div class="band band-gunsan" aria-hidden="true">
+<svg class="band-bg" viewBox="0 0 800 56" preserveAspectRatio="none">
+  <defs><linearGradient id="gunsanBandSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:var(--band-top)"/><stop offset="100%" style="stop-color:var(--band-bottom)"/></linearGradient></defs>
+  <rect x="0" y="0" width="800" height="56" fill="url(#gunsanBandSky)"/>
+  <path d="M0 44 Q 20 36 40 44 T 80 44 T 120 44 T 160 44 T 200 44 T 240 44 T 280 44 T 320 44 T 360 44 T 400 44 T 440 44 T 480 44 T 520 44 T 560 44 T 600 44 T 640 44 T 680 44 T 720 44 T 760 44 T 800 44" fill="none" stroke="var(--band-soft)" stroke-width="2" opacity=".55"/>
+  <path d="M0 51 Q 20 45 40 51 T 80 51 T 120 51 T 160 51 T 200 51 T 240 51 T 280 51 T 320 51 T 360 51 T 400 51 T 440 51 T 480 51 T 520 51 T 560 51 T 600 51 T 640 51 T 680 51 T 720 51 T 760 51 T 800 51" fill="none" stroke="var(--band-hi)" stroke-width="1.5" opacity=".4"/>
+  <g fill="none" stroke="var(--band-soft)" stroke-width="1.3" stroke-linecap="round" opacity=".7">
+    <path d="M60 20 l4 -3 l4 3"/>
+    <path d="M78 14 l4 -3 l4 3"/>
+    <path d="M96 22 l4 -3 l4 3"/>
+    <path d="M118 12 l4 -3 l4 3"/>
+    <path d="M140 19 l4 -3 l4 3"/>
+    <path d="M230 16 l4 -3 l4 3"/>
+    <path d="M252 10 l4 -3 l4 3"/>
+    <path d="M270 18 l4 -3 l4 3"/>
+    <path d="M390 14 l4 -3 l4 3"/>
+    <path d="M412 21 l4 -3 l4 3"/>
+    <path d="M520 12 l4 -3 l4 3"/>
+    <path d="M540 18 l4 -3 l4 3"/>
+  </g>
+</svg>
+<svg class="band-motif" viewBox="0 0 200 56" preserveAspectRatio="xMaxYMax meet">
+  <circle cx="34" cy="20" r="9" fill="var(--band-hi)" opacity=".9"/>
+  <g fill="var(--band-ink)">
+    <path d="M70 46 V30 L100 18 L130 30 V46 Z"/>
+    <rect x="96" y="8" width="8" height="12"/>
+    <path d="M94 8 L100 2 L106 8 Z"/>
+    <path d="M136 46 V34 L151 26 L166 34 V46 Z"/>
+    <path d="M170 46 V36 L182 30 L194 36 V46 Z"/>
+  </g>
+  <g fill="var(--band-hi)" opacity=".85">
+    <rect x="78" y="34" width="5" height="6"/><rect x="90" y="34" width="5" height="6"/><rect x="105" y="34" width="5" height="6"/><rect x="117" y="34" width="5" height="6"/>
+    <rect x="148" y="37" width="5" height="5"/><rect x="180" y="39" width="4" height="4"/>
+  </g>
+</svg>
+</div>
+<div class="topbar">
+  <div class="wrap">
+    <span>지금 신청하면 30분 무료체험수업부터 받아보실 수 있어요</span>
+    <a class="phone" href="tel:01031315305">📞 010-3131-5305 (09:00–21:00)</a>
+  </div>
+</div>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../index.html"><span class="mark">TF</span>티치핏군산</a>
+    <div class="navwrap">
+      <nav class="main">
+        <a href="../index.html">홈</a>
+        <a href="../services.html">화상과외 소개</a>
+        <a href="../process.html">매칭 방식</a>
+        <a href="../teachers.html">선생님</a>
+        <a href="../regions.html">군산 학교별 과외</a>
+        <a href="../blog.html" aria-current="page">블로그</a>
+      </nav>
+      <a class="cta-btn" href="../apply.html">무료 상담 신청</a>
+      <button class="menu-btn" aria-label="메뉴">☰</button>
+    </div>
+  </div>
+  <div class="mobile-nav-wrap">
+    <nav class="mobile-nav">
+      <a href="../index.html">홈</a>
+      <a href="../services.html">화상과외 소개</a>
+      <a href="../process.html">매칭 방식</a>
+      <a href="../teachers.html">선생님</a>
+      <a href="../regions.html">군산 학교별 과외</a>
+      <a href="../blog.html" aria-current="page">블로그</a>
+      <a href="../apply.html">무료 상담 신청</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+
+<nav class="breadcrumb"><a href="../blog.html">블로그</a> / 고등 수학</nav>
+<section class="page-hero post-hero">
+  <span class="eyebrow">2026-10-10 · 고등 수학</span>
+  <h1>군산중앙고등학교 수학과외, 지수와 로그 성질 정리</h1>
+  <img class="post-cover" src="img/gunsan-jungang-hs-suhak-jisu-log.webp" width="720" height="720" alt="군산중앙고등학교 수학과외 1:1 화상과외 안내" loading="eager">
+  <div class="hero-cta"><a class="cta-main" href="../apply.html">30분 무료체험 신청하기 →</a><span>상담·체험 모두 무료</span></div>
+</section>
+<section>
+  <article class="prose blog-prose">
+    <div class="intro-banner">
+  <span class="ib-tag">무료 상담 · 무료 체험</span>
+  <p>학생 학습 상태 진단과 학교 시험 분석을 함께 안내드려요.<br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요.</p>
+  <div class="ib-btns">
+    <a class="ib-kakao" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담 <i>↗</i></a>
+    <a class="ib-apply" href="../apply.html">무료체험 신청 <i>✨</i></a>
+  </div>
+</div><div class="summary-box"><strong>이 글 한눈에 보기</strong><ul><li>군산중앙고등학교 학생이 지수와 로그를 어려워하는 이유</li><li>거듭제곱근</li><li>지수의 확장과 지수법칙</li><li>로그의 정의와 성질</li><li>상용로그와 활용</li><li><b><mark class="free">30분 무료체험수업</mark></b>으로 먼저 확인해보실 수 있어요.</li></ul></div>
+<p>군산중앙고등학교 2학년 학생들이 수학Ⅰ을 시작하며 처음 만나는 단원이 지수와 로그예요. 중학교에서 배운 거듭제곱은 익숙하지만, 지수가 분수나 음수로 확장되면 계산 규칙이 헷갈리고, 거듭제곱근의 정의에서 실수인 근과 n제곱근을 구분하지 못해 개념 문제에서 틀리는 경우가 많아요.</p><p>로그를 배우면 log의 정의 자체가 낯설고, 로그의 성질을 외웠어도 log(a+b)를 log a + log b로 쪼개는 것처럼 성질을 잘못 적용하는 실수가 자주 나와요.</p><p>지수와 로그는 수학Ⅰ의 첫 단원이자 바로 이어지는 지수함수와 로그함수, 그리고 미적분의 지수 로그 함수 미분까지 이어지는 기초예요. 수능과 모의고사에서도 계산 문항으로 꾸준히 출제되기 때문에 정확한 성질과 계산 순서를 익혀 두는 것이 중요해요.</p><p>이 글에서는 군산중앙고등학교 학생이 지수와 로그를 어려워하는 이유, 거듭제곱근, 지수의 확장과 지수법칙, 로그의 정의, 로그의 성질과 밑 변환, 상용로그와 활용, 그리고 1:1 화상 수학 수업 활용법까지 차례대로 정리해 드릴게요.</p>
+<div class="pbox"><h2>군산중앙고등학교 학생이 지수와 로그를 어려워하는 이유</h2>
+<p>지수와 로그를 어려워하는 첫 번째 이유는 지수가 확장되는 과정을 이해하지 못하는 거예요. 지수가 0, 음의 정수, 유리수, 실수로 확장되는 이유를 모르고 결과만 외우면 응용 문제에서 막혀요.</p>
+<p>두 번째 이유는 거듭제곱근의 정의를 헷갈리는 거예요. n제곱근과 실수인 n제곱근을 구분해야 하는데, 짝수 제곱근과 홀수 제곱근의 개수가 다르다는 점을 정리하지 못한 경우가 많아요.</p>
+<p>세 번째 이유는 지수법칙을 잘못 적용하는 거예요. 곱하면 지수를 더하고, 거듭제곱하면 지수를 곱하는데, 둘을 헷갈려 계산이 틀리는 경우가 자주 나와요.</p>
+<p>네 번째 이유는 로그의 정의가 낯선 거예요. 로그가 지수를 다르게 표현한 것이라는 관계를 이해하지 못하면 로그를 의미 없는 기호로만 느끼게 돼요.</p>
+<p>다섯 번째 이유는 로그의 성질을 잘못 쓰는 거예요. 곱의 로그는 로그의 합이지만 합의 로그는 쪼갤 수 없어요. 이 차이를 놓치면 계산 전체가 틀려요.</p>
+<p>여섯 번째 이유는 밑과 진수의 조건을 확인하지 않는 거예요. 밑은 1이 아닌 양수, 진수는 양수여야 하는데, 이 조건을 빼먹어 정의역 문제에서 틀리는 경우가 많아요.</p>
+<p>일곱 번째 이유는 밑 변환 공식을 활용하지 못하는 거예요. 밑이 서로 다른 로그가 섞인 식은 밑을 통일해야 계산할 수 있는데, 공식을 언제 써야 할지 판단하지 못해요.</p>
+<p>여덟 번째 이유는 계산 연습량이 부족한 거예요. 지수와 로그는 성질을 아는 것만큼 빠르고 정확하게 계산하는 연습이 중요한데, 개념만 보고 넘어가면 시험에서 시간이 부족해요.</p>
+<p>지수와 로그는 확장의 원리를 이해하고 성질을 정확히 쓰는 연습을 하면 계산이 깔끔해져요. 거듭제곱근부터 차근차근 정리해 볼게요.</p>
+</div><div class="pbox"><h2>거듭제곱근</h2>
+<p>거듭제곱근은 n제곱해서 a가 되는 수예요. x의 n제곱이 a일 때 x를 a의 n제곱근이라고 해요. 예를 들어 2의 세제곱은 8이므로 2는 8의 세제곱근이에요.</p>
+<p>복소수 범위에서 a의 n제곱근은 n개 있어요. 하지만 고등학교 수학Ⅰ에서는 주로 실수인 n제곱근을 다뤄요. 실수인 n제곱근의 개수는 n이 짝수인지 홀수인지에 따라 달라져요.</p>
+<p>n이 홀수이면 실수인 n제곱근은 a의 부호와 관계없이 항상 하나예요. 8의 실수인 세제곱근은 2, 음수 8의 실수인 세제곱근은 음수 2예요.</p>
+<p>n이 짝수이면 a가 양수일 때 실수인 n제곱근은 양수와 음수 두 개, a가 0이면 0 하나, a가 음수이면 없어요. 16의 실수인 네제곱근은 2와 음수 2예요.</p>
+<p>근호 기호로 나타낸 n제곱근은 실수인 n제곱근 중 하나를 가리켜요. n이 짝수이고 a가 양수일 때 근호 기호는 양수인 값을 나타내요. 16의 네제곱근을 근호로 쓰면 2예요.</p>
+<p>거듭제곱근의 성질도 정리해요. 곱의 거듭제곱근은 거듭제곱근의 곱, 거듭제곱근의 거듭제곱근은 지수를 곱한 거듭제곱근이 돼요. 이 성질은 지수법칙으로 바꾸어 이해하면 쉬워요.</p>
+<p>개념 문제에서는 실수인 n제곱근의 개수를 묻는 문제가 자주 나와요. n의 짝홀과 a의 부호를 표로 정리해 두면 실수 없이 판단할 수 있어요.</p>
+<p>거듭제곱근은 유리수 지수와 바로 연결돼요. 근호로 쓰인 식을 분수 지수로 바꾸면 지수법칙으로 한 번에 계산할 수 있어서 계산이 훨씬 간단해져요.</p>
+<div class="callout"><strong>핵심 정리</strong>거듭제곱근을 익혔다면 이제 지수가 확장되는 원리와 지수법칙을 정리해 볼 차례예요.</div>
+</div><div class="pbox"><h2>지수의 확장과 지수법칙</h2>
+<p>지수는 자연수에서 정수, 유리수, 실수로 확장돼요. 확장할 때의 원칙은 기존의 지수법칙이 그대로 성립하도록 정의하는 거예요. 이 원리를 이해하면 결과를 외우지 않아도 떠올릴 수 있어요.</p>
+<p>0이 아닌 a의 0제곱은 1로 정의해요. 같은 수를 나누면 지수를 빼는 법칙에서 a의 m제곱을 a의 m제곱으로 나누면 a의 0제곱이고, 그 값이 1이기 때문이에요.</p>
+<p>음의 정수 지수는 역수로 정의해요. a의 음수 n제곱은 a의 n제곱 분의 1이에요. 2의 음수 3제곱은 8분의 1이에요.</p>
+<p>유리수 지수는 거듭제곱근으로 정의해요. a의 n분의 m제곱은 a의 m제곱의 n제곱근이에요. 이때 a는 양수여야 해요. 8의 3분의 2제곱은 8의 세제곱근인 2를 제곱한 4예요.</p>
+<p>지수법칙을 정리해요. 밑이 같은 수를 곱하면 지수를 더하고, 나누면 지수를 빼요. 거듭제곱을 다시 거듭제곱하면 지수를 곱해요. 곱의 거듭제곱은 각각을 거듭제곱해요.</p>
+<p>계산할 때는 밑을 소수로 통일하면 편해요. 4는 2의 제곱, 8은 2의 세제곱, 27은 3의 세제곱처럼 바꾸면 지수끼리 계산할 수 있어서 복잡한 식도 빠르게 정리돼요.</p>
+<p>근호가 섞인 식은 모두 분수 지수로 바꾸어 계산해요. 근호를 그대로 두고 계산하면 실수가 많아지므로, 처음부터 지수 꼴로 통일하는 습관을 들여요.</p>
+<p>자주 나오는 실수는 지수를 더해야 할 곳에서 곱하는 거예요. a의 2제곱과 a의 3제곱을 곱하면 a의 5제곱이지 6제곱이 아니에요. 법칙을 적용할 때마다 곱인지 거듭제곱인지 확인해요.</p>
+<p>지수를 익혔다면 이제 지수를 거꾸로 표현한 로그의 정의를 익혀 볼 차례예요.</p>
+</div><div class="mid-cta"><strong>우리 아이에게 맞는지 궁금하시다면</strong><br><mark class="free">30분 무료체험수업</mark>으로 먼저 확인해보세요. <a class="cta-btn" href="../apply.html">무료체험 신청하기 →</a></div><div class="pbox"><h2>로그의 정의와 성질</h2>
+<p>로그는 지수를 구하는 기호예요. a의 x제곱이 N일 때 x를 a를 밑으로 하는 N의 로그라고 하고 log_a N으로 나타내요. 2의 3제곱이 8이므로 log₂8은 3이에요.</p>
+<p>로그의 정의에는 조건이 있어요. 밑 a는 1이 아닌 양수, 진수 N은 양수여야 해요. 이 조건은 로그가 포함된 방정식과 부등식에서 꼭 확인해야 해요.</p>
+<p>기본 성질부터 정리해요. 밑과 진수가 같으면 로그 값은 1이고, 진수가 1이면 로그 값은 0이에요. log_a a는 1, log_a 1은 0이에요.</p>
+<p>곱의 로그는 로그의 합이에요. log_a MN은 log_a M과 log_a N의 합이에요. 나눗셈의 로그는 로그의 차예요. 거듭제곱의 로그는 지수를 앞으로 내려서 곱해요.</p>
+<p>합의 로그는 쪼갤 수 없어요. log(M+N)은 log M + log N이 아니에요. 이 실수가 가장 흔하므로, 진수가 곱이나 나눗셈일 때만 쪼갤 수 있다는 것을 꼭 기억해요.</p>
+<p>밑 변환 공식은 log_a b를 log_c b 나누기 log_c a로 바꾸는 거예요. 밑이 서로 다른 로그가 섞여 있을 때 같은 밑으로 통일해서 계산할 수 있어요.</p>
+<p>밑 변환에서 나오는 유용한 성질도 있어요. log_a b와 log_b a를 곱하면 1이고, 밑과 진수에 지수가 있으면 진수의 지수는 앞으로, 밑의 지수는 분모로 내려와요.</p>
+<p>로그 계산은 진수를 소인수분해하는 것부터 시작해요. log₂12는 log₂4와 log₂3의 합이므로 2와 log₂3의 합으로 정리할 수 있어요. 진수를 쪼개는 습관이 계산을 쉽게 만들어요.</p>
+<div class="callout"><strong>핵심 정리</strong>로그의 성질을 익혔다면 마지막으로 상용로그와 활용 문제를 정리해요.</div>
+</div><div class="pbox"><h2>상용로그와 활용</h2>
+<p>상용로그는 밑이 10인 로그예요. 밑 10은 보통 생략해서 log N으로 써요. 우리가 쓰는 십진법과 잘 맞아서 큰 수나 작은 수를 다룰 때 편리해요.</p>
+<p>상용로그의 값은 정수 부분과 소수 부분으로 나누어 생각해요. log 2가 약 0.3010이면 log 200은 log 100과 log 2의 합이므로 2.3010이에요. 자릿수가 바뀌면 정수 부분만 바뀌어요.</p>
+<p>상용로그로 자릿수를 구할 수 있어요. 어떤 수의 상용로그의 정수 부분이 n이면 그 수는 n+1자리 수예요. 2의 50제곱의 자릿수 같은 문제를 이 방법으로 풀어요.</p>
+<p>상용로그표를 읽는 방법도 익혀요. 표에서 진수의 앞 두 자리는 세로, 셋째 자리는 가로에서 찾아 만나는 값을 읽어요. 교과서와 모의고사에서 표가 함께 주어지는 경우가 있어요.</p>
+<p>활용 문제는 실생활의 변화율을 다뤄요. 인구 증가, 방사능 반감기, 소리의 크기, 지진의 규모처럼 지수적으로 변하는 현상을 로그로 계산하는 문제가 나와요.</p>
+<p>활용 문제는 주어진 관계식에 값을 대입하는 것부터 시작해요. 식을 세운 뒤 양변에 로그를 취하거나 지수 꼴로 바꾸어 정리하면 대부분의 문제를 풀 수 있어요.</p>
+<p>모의고사에서는 지수와 로그의 계산 문항이 앞 번호에 자주 나와요. 빠르고 정확하게 풀면 시간을 아낄 수 있으므로, 성질을 적용하는 계산 연습을 충분히 해 두어요.</p>
+<p>지수와 로그 단원은 오답 노트를 유형별로 정리하면 효과적이에요. 거듭제곱근 개수, 지수법칙 계산, 로그 성질, 밑 변환, 상용로그 활용으로 나누어 틀린 문제를 모아 두어요.</p>
+<p>지수와 로그를 확실히 익혀 두면 바로 이어지는 지수함수와 로그함수 단원을 그래프와 함께 자신 있게 공부할 수 있어요.</p>
+</div><div class="pbox"><h2>1:1 화상 수학 수업으로 지수와 로그 완성하기</h2>
+<p>티치핏 1:1 화상 수학 수업에서는 군산중앙고등학교 학생의 내신 시험지와 모의고사를 먼저 확인하고, 개념 이해가 약한지 계산 정확도가 약한지 약점부터 정확히 진단해요.</p>
+<p>화면 공유 판서로 지수가 확장되는 과정과 로그의 정의를 단계별로 보여 주기 때문에, 학생이 결과만 외우지 않고 원리를 이해한 상태로 성질을 쓸 수 있어요.</p>
+<p>학생이 직접 계산하는 과정을 화면으로 실시간 확인하면서 지수법칙을 잘못 쓰거나 로그를 잘못 쪼개는 실수를 바로 짚어 주고, 같은 유형을 반복해서 정확도를 높여요.</p>
+<p>학교 내신 기출 유형과 모의고사 계산 문항을 함께 연습하고, 시험 전에는 실전 문제로 시간 관리까지 점검해요.</p>
+<p>수업 후에는 성질 정리표와 오답 노트, 과제를 정리해 드려서 혼자서도 복습을 이어 갈 수 있어요.</p>
+<p>중학교 거듭제곱이나 인수분해가 흔들리는 학생은 필요한 부분만 짧게 보충해서 고등 수학을 자신 있게 이어 갈 수 있도록 도와요.</p>
+<p>궁금한 점은 수업 중 언제든 편하게 질문할 수 있어서, 헷갈리는 부분을 그냥 넘기지 않고 그 자리에서 해결할 수 있어요.</p>
+<p>고등 수학 내신이 고민이시라면 <mark class="free">30분 무료체험수업</mark>으로 먼저 수업 방식을 확인해 보세요. 시험지나 교재를 준비해 오시면 약점 분석부터 함께 해 볼 수 있어요.</p>
+<p>상담과 체험은 모두 무료예요. 군산 지역에서 학원을 오가는 시간이 부담스러운 학생도 집에서 편안하게 수업을 받을 수 있어요.</p>
+<p>학부모님께는 수업마다 학생의 진도와 보완할 부분을 짧게 공유해 드려서 가정에서도 학습 상황을 함께 확인하실 수 있어요.</p>
+<p>지수와 로그의 원리를 이해하면 수학Ⅰ 전체가 한결 단단해져요.</p>
+<p><strong>Q. 로그 성질을 외웠는데 계산에서 자꾸 틀려요.</strong><br>
+진수가 곱이나 나눗셈일 때만 쪼갤 수 있다는 원칙과 진수를 소인수분해하는 순서를 반복 연습해서 성질을 정확하게 적용하도록 도와 드려요.</p>
+<p><strong>Q. 거듭제곱근 개수 문제가 헷갈려요.</strong><br>
+n의 짝홀과 a의 부호에 따라 실수인 n제곱근의 개수를 표로 정리하고 그래프로 확인해서 확실하게 판단하도록 도와 드려요.</p>
+<p><strong>Q. 고등 수학도 화상 수업으로 충분한가요?</strong><br>
+네, 화면 공유 판서로 풀이 과정을 단계별로 보여 주고 학생의 풀이를 실시간으로 확인하기 때문에 대면 수업과 같은 밀도로 공부할 수 있어요.</p>
+</div>
+  </article>
+</section>
+<section>
+  <div class="cta-big">
+  <div class="cta-big-text">
+    <span class="cta-badge">무료</span>
+    <h2>30분 무료체험수업 먼저 받아보세요</h2>
+    <p>이름과 연락처만 남기시면 24시간 이내에 담당자가 연락드려요. 체험 후 마음에 들 때만 결정하세요.</p>
+  </div>
+  <div class="cta-big-btns">
+    <a class="cta-main" href="../apply.html">무료체험 신청하기 →</a>
+    <a class="cta-sub" href="tel:01031315305">전화 010-3131-5305</a>
+    <a class="cta-sub" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">카카오톡 상담</a>
+  </div>
+</div>
+</section>
+<p style="margin-top:14px;"><a href="../blog.html">← 블로그 목록으로</a></p>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="../index.html" style="margin-bottom:10px;"><span class="mark">TF</span>티치핏군산</a>
+      <div class="fnav">
+        <a href="../services.html">화상과외 소개</a><a href="../process.html">매칭 방식</a><a href="../teachers.html">선생님</a><a href="../regions.html">군산 학교별 과외</a><a href="../blog.html">블로그</a>
+      </div>
+      <p class="disclaimer">전화 010-3131-5305 · 운영시간 09:00–21:00 · 상담 및 매칭 신청은 무료이며, 실제 수업 진행 여부와 비용은 상담 후 안내해 드립니다. 사업자 정보는 확정 후 별도 고지 예정입니다.</p>
+    </div>
+  </div>
+</footer>
+<script src="../assets/site.js?v=6af2d58710"></script>
+<a class="kakao-fab" href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">
+  <span class="kakao-fab-ico">💬</span><span class="kakao-fab-label">카톡 상담</span>
+</a>
+
+<div class="mobile-cta-bar">
+  <a class="msc-call" href="tel:01031315305">📞 전화상담</a>
+  <a class="msc-apply" href="../apply.html">무료 상담 신청</a>
+</div>
+<div class="q-modal" id="qModal" aria-hidden="true">
+  <form class="quick" action="https://formsubmit.co/ookkoo12@naver.com" method="POST">
+    <input type="hidden" name="_subject" value="[티치핏군산] 팝업 상담 신청">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://slovrest.com/thanks.html">
+    <input type="hidden" name="신청경로" value="팝업">
+    <input type="hidden" name="과목" class="q-in-sub">
+    <input type="hidden" name="학년" class="q-in-grade">
+    <button type="button" class="q-close" aria-label="닫기">✕</button>
+    <div class="q-step q-s1 on">
+      <span class="q-badge">30분 무료체험수업</span>
+      <div class="q-title">어떤 과목이 고민이세요?<small>과목만 고르시면 군산 학교 진도에 맞는 선생님을 찾아 연락드려요</small></div>
+      <div class="q-tiles"><button type="button" data-s="수학과외" data-h="빠진 단원부터 찾아 채워요"><b>📐</b>수학과외<i>빠진 단원부터 찾아 채워요</i></button><button type="button" data-s="영어과외" data-h="단어·문법·서술형까지"><b>🔤</b>영어과외<i>단어·문법·서술형까지</i></button><button type="button" data-s="국어과외" data-h="교과서 지문·문법·독해"><b>📖</b>국어과외<i>교과서 지문·문법·독해</i></button><button type="button" data-s="초등 전과목" data-h="기초 학습 습관부터"><b>✏️</b>초등 전과목<i>기초 학습 습관부터</i></button><button type="button" data-s="과학·사회" data-h="개념 정리와 서술형 대비"><b>🔬</b>과학·사회<i>개념 정리와 서술형 대비</i></button><button type="button" data-s="자기주도학습" data-h="공부 계획과 습관 만들기"><b>🧭</b>자기주도학습<i>공부 계획과 습관 만들기</i></button></div>
+      <div class="q-alt"><a href="tel:01031315305">📞 010-3131-5305</a><a href="https://open.kakao.com/o/sVirPYOi" target="_blank" rel="noopener">💬 카톡 상담</a></div>
+    </div>
+    <div class="q-step q-s2">
+      <button type="button" class="q-back">← 다시 고르기</button>
+      <div class="q-chosen"></div><div class="q-hint"></div>
+      <span class="q-lbl">학년</span>
+      <div class="q-chips"><button type="button">초1~3</button><button type="button">초4~6</button><button type="button">중1</button><button type="button">중2</button><button type="button">중3</button><button type="button">고1</button><button type="button">고2</button><button type="button">고3</button></div>
+      <span class="q-lbl">연락처</span>
+      <div class="q-row2"><input type="text" name="학생이름" placeholder="학생 이름 *" required><input type="tel" name="연락처" placeholder="연락처 *" required></div>
+      <input type="text" name="학교" placeholder="재학 중인 학교 (선택)">
+      <button type="submit" class="q-submit">무료체험 신청하기</button>
+      <p class="q-note">상담·체험 모두 무료 · 24시간 이내 연락드려요</p>
+    </div>
+  </form>
+</div>
+<button type="button" class="q-fab" id="qFab">⚡ 무료체험 신청</button>
+
+</body>
+</html>

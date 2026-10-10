@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Thu, 08 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Sat, 10 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>서수초등학교 국어과외, 생생한 일기 쓰기 방법</title>
+    <link>https://slovrest.com/blog/gunsan-seosu-es-gugeo-ilgi-sseugi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-seosu-es-gugeo-ilgi-sseugi.html</guid>
+    <description>일기를 쓰라고 하면 무엇을 써야 할지 몰라 매일 비슷한 내용만 나열하는 서수초등학교 학생을 위해 글감 고르기부터 생생하게 쓰는 방법까지 정리했어요.</description>
+    <pubDate>Sat, 10 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산중앙고등학교 수학과외, 지수와 로그 성질 정리</title>
+    <link>https://slovrest.com/blog/gunsan-jungang-hs-suhak-jisu-log.html</link>
+    <guid>https://slovrest.com/blog/gunsan-jungang-hs-suhak-jisu-log.html</guid>
+    <description>거듭제곱근과 유리수 지수를 헷갈리고 로그의 성질을 잘못 적용해 계산이 꼬이는 군산중앙고등학교 학생을 위해 지수와 로그의 핵심 성질과 계산 순서를 정리했어요.</description>
+    <pubDate>Sat, 10 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산중학교 영어과외, to부정사 명사 형용사 부사적 용법</title>
+    <link>https://slovrest.com/blog/gunsan-ms-yeongeo-to-budeongsa-yongbeop.html</link>
+    <guid>https://slovrest.com/blog/gunsan-ms-yeongeo-to-budeongsa-yongbeop.html</guid>
+    <description>to부정사의 세 가지 용법을 문장에서 구분하지 못하고 해석이 어색해지는 군산중학교 학생을 위해 용법별 역할과 구분 방법, 자주 나오는 시험 포인트를 정리했어요.</description>
+    <pubDate>Sat, 10 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>대야남초등학교 영어과외, 날씨 묻고 답하는 영어 표현</title>
+    <link>https://slovrest.com/blog/gunsan-daeyanam-es-yeongeo-nalssi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-daeyanam-es-yeongeo-nalssi.html</guid>
+    <description>How's the weather? 질문에 바로 대답하지 못하거나 sunny, rainy 같은 날씨 낱말의 철자를 헷갈리는 대야남초등학교 학생을 위해 날씨 영어 표현을 정리했어요.</description>
+    <pubDate>Sat, 10 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>나포초등학교 수학과외, 평면도형의 이동 밀기 뒤집기 돌리기</title>
+    <link>https://slovrest.com/blog/gunsan-napo-es-suhak-pyeongmyeon-idong.html</link>
+    <guid>https://slovrest.com/blog/gunsan-napo-es-suhak-pyeongmyeon-idong.html</guid>
+    <description>도형을 뒤집거나 돌렸을 때 모양을 머릿속으로 떠올리지 못해 자꾸 틀리는 나포초등학교 학생을 위해 밀기, 뒤집기, 돌리기의 원리와 연습 방법을 정리했어요.</description>
+    <pubDate>Sat, 10 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>전북외국어고등학교 영어과외, 문맥상 낱말 쓰임 어휘 문제</title>
     <link>https://slovrest.com/blog/gunsan-jeonbuk-foreign-hs-yeongeo-eohwi-sseuim.html</link>
