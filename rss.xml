@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Sat, 10 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Tue, 13 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산여자고등학교 국어과외, 현대소설 갈등과 서술 방식</title>
+    <link>https://slovrest.com/blog/gunsan-girls-hs-gugeo-hyeondae-soseol-galdeung.html</link>
+    <guid>https://slovrest.com/blog/gunsan-girls-hs-gugeo-hyeondae-soseol-galdeung.html</guid>
+    <description>현대소설을 읽고 줄거리는 알지만 갈등의 양상과 서술자의 시점, 서술 방식의 효과를 묻는 문제에서 막히는 군산여자고등학교 학생을 위해 현대소설 감상법을 정리했어요.</description>
+    <pubDate>Tue, 13 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산서흥중학교 수학과외, 일차방정식 풀이 이항과 정리</title>
+    <link>https://slovrest.com/blog/gunsan-seoheung-ms-suhak-ilcha-bangjeongsik-puri.html</link>
+    <guid>https://slovrest.com/blog/gunsan-seoheung-ms-suhak-ilcha-bangjeongsik-puri.html</guid>
+    <description>이항할 때 부호를 바꾸지 않거나 괄호와 분수가 있는 일차방정식에서 계산이 꼬이는 군산서흥중학교 학생을 위해 일차방정식의 풀이 순서와 실수 줄이는 방법을 정리했어요.</description>
+    <pubDate>Tue, 13 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>회현초등학교 국어과외, 마음을 전하는 편지 쓰기</title>
+    <link>https://slovrest.com/blog/gunsan-hoehyeon-es-gugeo-pyeonji-sseugi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-hoehyeon-es-gugeo-pyeonji-sseugi.html</guid>
+    <description>편지를 쓰라고 하면 받는 사람과 첫인사만 쓰고 무엇을 써야 할지 몰라 짧게 끝내는 회현초등학교 학생을 위해 편지의 형식과 마음을 전하는 표현 방법을 정리했어요.</description>
+    <pubDate>Tue, 13 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>임피초등학교 영어과외, 요일 묻고 일과 말하기</title>
+    <link>https://slovrest.com/blog/gunsan-impi-es-yeongeo-yoil.html</link>
+    <guid>https://slovrest.com/blog/gunsan-impi-es-yeongeo-yoil.html</guid>
+    <description>What day is it today? 질문에 바로 답하지 못하고 Tuesday와 Thursday를 헷갈리는 임피초등학교 학생을 위해 요일 낱말과 요일별 일과를 말하는 영어 표현을 정리했어요.</description>
+    <pubDate>Tue, 13 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>당북초등학교 수학과외, 나눗셈 몫과 나머지 정확하게</title>
+    <link>https://slovrest.com/blog/gunsan-dangbuk-es-suhak-nanutsem-namoji.html</link>
+    <guid>https://slovrest.com/blog/gunsan-dangbuk-es-suhak-nanutsem-namoji.html</guid>
+    <description>나눗셈에서 나머지가 나누는 수보다 크게 나오거나 몫을 한 자리 잘못 쓰는 당북초등학교 학생을 위해 나눗셈의 원리와 세로셈, 검산 방법을 정리했어요.</description>
+    <pubDate>Tue, 13 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>서수초등학교 국어과외, 생생한 일기 쓰기 방법</title>
     <link>https://slovrest.com/blog/gunsan-seosu-es-gugeo-ilgi-sseugi.html</link>
