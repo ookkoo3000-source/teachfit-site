@@ -6,9 +6,44 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Tue, 13 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Wed, 14 Oct 2026 09:40:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>군산고등학교 수학과외, 집합의 뜻과 연산 정리</title>
+    <link>https://slovrest.com/blog/gunsan-hs-suhak-jiphap.html</link>
+    <guid>https://slovrest.com/blog/gunsan-hs-suhak-jiphap.html</guid>
+    <description>원소와 부분집합을 헷갈리고 합집합, 교집합, 여집합의 연산과 원소의 개수를 구하는 문제에서 실수하는 군산고등학교 학생을 위해 집합의 개념과 연산을 정리했어요.</description>
+    <pubDate>Wed, 14 Oct 2026 09:40:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>성산초등학교 국어과외, 띄어쓰기 규칙 바르게 익히기</title>
+    <link>https://slovrest.com/blog/gunsan-seongsan-es-gugeo-ttuieosseugi.html</link>
+    <guid>https://slovrest.com/blog/gunsan-seongsan-es-gugeo-ttuieosseugi.html</guid>
+    <description>조사를 앞말과 띄어 쓰거나 의존 명사와 단위를 붙여 써서 받아쓰기와 글쓰기에서 감점되는 성산초등학교 학생을 위해 띄어쓰기의 기본 규칙과 연습 방법을 정리했어요.</description>
+    <pubDate>Wed, 14 Oct 2026 09:30:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>발산초등학교 수학과외, 들이와 무게 어림하고 계산하기</title>
+    <link>https://slovrest.com/blog/gunsan-balsan-es-suhak-deuli-muge.html</link>
+    <guid>https://slovrest.com/blog/gunsan-balsan-es-suhak-deuli-muge.html</guid>
+    <description>L와 mL, kg과 g의 관계를 헷갈려 단위를 바꿀 때 0의 개수를 틀리고 받아올림이 있는 계산에서 실수하는 발산초등학교 학생을 위해 들이와 무게를 정리했어요.</description>
+    <pubDate>Wed, 14 Oct 2026 09:20:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>군산동산중학교 영어과외, 조동사 must와 have to 쓰임</title>
+    <link>https://slovrest.com/blog/gunsan-dongsan-ms-yeongeo-jodongsa-must.html</link>
+    <guid>https://slovrest.com/blog/gunsan-dongsan-ms-yeongeo-jodongsa-must.html</guid>
+    <description>must와 have to의 부정문 뜻이 다르다는 것을 모르거나 조동사 다음에 동사원형을 쓰지 않는 군산동산중학교 학생을 위해 의무와 추측을 나타내는 조동사를 정리했어요.</description>
+    <pubDate>Wed, 14 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>새만금초등학교 영어과외, 교통수단 묻고 답하기</title>
+    <link>https://slovrest.com/blog/gunsan-saemangeum-es-yeongeo-gyotong.html</link>
+    <guid>https://slovrest.com/blog/gunsan-saemangeum-es-yeongeo-gyotong.html</guid>
+    <description>How do you go to school? 질문에 by bus처럼 대답하지 못하거나 by와 on foot의 쓰임을 헷갈리는 새만금초등학교 학생을 위해 교통수단을 묻고 답하는 영어 표현을 정리했어요.</description>
+    <pubDate>Wed, 14 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산여자고등학교 국어과외, 현대소설 갈등과 서술 방식</title>
     <link>https://slovrest.com/blog/gunsan-girls-hs-gugeo-hyeondae-soseol-galdeung.html</link>
