@@ -518,3 +518,6 @@ mark.free{color:var(--b-brand-strong);}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}}
 :root[data-theme="dark"]{--tip-bg:#12261C; --tip-line:#245B3A; --tip-ink:#8FE3B4; --card-bg:#16261F; --check:#3DD68C;}
 .cta-main{box-shadow:0 10px 24px -10px rgba(201,138,16,.55);}
+
+.hub-prose a,.prose .hub-link a{color:var(--primary-strong); text-decoration:underline; text-underline-offset:3px;}
+.svc-card .hub-more{display:inline-block; margin-top:12px; font-size:14px; font-weight:700; color:var(--primary-strong);}
