@@ -6,9 +6,23 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Wed, 14 Oct 2026 09:40:00 +0900</lastBuildDate>
+  <lastBuildDate>Sat, 17 Oct 2026 09:10:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>고교학점제 이수 기준, 2026년부터 선택과목은 출석률만 봐요</title>
+    <link>https://slovrest.com/blog/gunsan-gogyo-hakjeomje-isu-gijun-2026.html</link>
+    <guid>https://slovrest.com/blog/gunsan-gogyo-hakjeomje-isu-gijun-2026.html</guid>
+    <description>2026학년도부터 고교학점제 선택과목은 학업성취율 기준 없이 출석률만으로 이수를 판단해요. 공통과목은 출석률과 학업성취율을 모두 봐요. 바뀐 기준과 적용 학년, 미이수 시 보충 방법을 교육부 발표 기준으로 정리했어요.</description>
+    <pubDate>Sat, 17 Oct 2026 09:10:00 +0900</pubDate>
+  </item>
+  <item>
+    <title>고등학교 내신 5등급제, 1등급은 상위 몇 %이고 성적표에는 무엇이 적히나요</title>
+    <link>https://slovrest.com/blog/naesin-5deunggeup-1deunggeup-biyul.html</link>
+    <guid>https://slovrest.com/blog/naesin-5deunggeup-1deunggeup-biyul.html</guid>
+    <description>2025년 고등학교 입학생부터 내신은 5등급 상대평가로 바뀌었어요. 1등급은 상위 10%이고, 성취도(A~E)도 함께 적혀요. 등급별 비율과 등급이 나오지 않는 과목, 성적표 읽는 법을 교육부 확정안 기준으로 정리했어요.</description>
+    <pubDate>Sat, 17 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>군산고등학교 수학과외, 집합의 뜻과 연산 정리</title>
     <link>https://slovrest.com/blog/gunsan-hs-suhak-jiphap.html</link>
@@ -503,7 +517,7 @@
     <title>군산제일고등학교 고1 내신 적응, 1학기 결과를 2학기 성적으로 바꾸는 방법</title>
     <link>https://slovrest.com/blog/gunsan-jeil-hs-go1-2haggi.html</link>
     <guid>https://slovrest.com/blog/gunsan-jeil-hs-go1-2haggi.html</guid>
-    <description>1학기 첫 내신 결과에 당황한 군산제일고등학교 1학년, 결과를 분석해 2학기 공부 방식을 바꾸고 등급을 끌어올리는 방법을 정리했어요.</description>
+    <description>1학기 첫 내신 결과에 당황한 군산제일고등학교 1학년, 5등급제로 바뀐 내신 구조와 함께 1학기 결과를 분석해 2학기 공부 방식을 바꾸는 방법을 정리했어요.</description>
     <pubDate>Sun, 27 Sep 2026 09:40:00 +0900</pubDate>
   </item>
   <item>
