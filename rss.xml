@@ -6,9 +6,16 @@
   <description>군산 학교별 내신·과목별 화상과외 학습 전략</description>
   <language>ko-kr</language>
   <atom:link href="https://slovrest.com/rss.xml" rel="self" type="application/rss+xml"/>
-  <lastBuildDate>Fri, 23 Oct 2026 09:00:00 +0900</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 09:00:00 +0900</lastBuildDate>
 
   <!-- RSS_ITEMS_START -->
+  <item>
+    <title>시험만 보면 긴장해서 아는 것도 틀리는 아이, 집에서 연습할 것</title>
+    <link>https://slovrest.com/blog/gunsan-siheom-ginjang-aneun-geotdo-teullim.html</link>
+    <guid>https://slovrest.com/blog/gunsan-siheom-ginjang-aneun-geotdo-teullim.html</guid>
+    <description>시험 때 긴장해서 아는 문제도 틀린다면 실전과 비슷한 상황을 미리 겪어 보고, 시험 중에 쓸 수 있는 순서를 정해 두는 연습이 도움이 돼요. 집에서 할 수 있는 실전 연습과 시험 중 대처 순서를 정리했어요.</description>
+    <pubDate>Fri, 30 Oct 2026 09:00:00 +0900</pubDate>
+  </item>
   <item>
     <title>수업 시간에 질문을 못 하는 아이, 질문을 쉽게 만드는 방법</title>
     <link>https://slovrest.com/blog/gunsan-sueop-jilmun-mot-haneun-ai.html</link>
